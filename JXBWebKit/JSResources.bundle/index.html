@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>测试</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" charset="UTF-8"/>
+            <style type="text/css">
+                *{
+                    margin:  0;
+                    padding: 0;
+                }
+            .box{
+                text-align: center;
+            }
+            .btn{
+                line-height: 44px;
+                text-align: center;
+                font-size: 14px;
+                border: 1px solid blue;
+                background-color: #fff;
+                margin-bottom: 20px;
+                padding: 0 10px;
+            }
+            .message{
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                color: #000;
+            }
+            </style>
+            
+    </head>
+    <body>
+        <div class="box">
+            <div class="message" id="message"></div>
+            <button class="btn" id="J_APIMethod" onclick="jumpSessionList();">跳转到会话列表</button><br/>
+            <button class="btn" id="J_APIMethod" onclick="jumpSessionDetail();">跳转到会话详情</button><br/>
+        </div>
+        <script>
+        function jumpSessionList() {
+            window.JXBJSBridge.Call({
+                target : "IM",
+                action : "list",
+                data : {"unreadCount":"20"},
+                callback : {
+                    success : function(result){document.getElementById('message').innerHTML = result;},
+                    fail : function(result){document.getElementById('message').innerHTML = result;},
+                    progress : function(result){document.getElementById('message').innerHTML = result;},
+                }
+            });
+        }
+        
+        function jumpSessionDetail() {
+            window.JXBJSBridge.Call({
+                                         target : "IM",
+                                         action : "detail",
+                                         data : {"id":"100"}
+                                         });
+        }
+        </script>
+    </body>
+</html>
