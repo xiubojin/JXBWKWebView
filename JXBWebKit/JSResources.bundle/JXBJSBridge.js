@@ -2,7 +2,7 @@
 window.JXBCallBackList = {};
 
 window.JXBJSBridge = {
-Call:Call,
+call:call,
 };
 
 String.prototype.hashCode = function() {
@@ -44,7 +44,7 @@ window.Callback = function(identifier, resultStatus, resultData) {
 }
 
 
-function Call(bridgeObjc) {
+function call(bridgeObjc) {
     var dataString = encodeURIComponent(JSON.stringify(bridgeObjc.data));
     var timestamp = Date.parse(new Date());
     var identifier = (bridgeObjc.target + bridgeObjc.action + dataString + timestamp).hashCode().toString();

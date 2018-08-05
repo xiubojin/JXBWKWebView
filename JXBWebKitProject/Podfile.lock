@@ -1,0 +1,23 @@
+PODS:
+  - JXBWebKit (1.0.0)
+  - SSZipArchive (2.1.3)
+
+DEPENDENCIES:
+  - JXBWebKit (from `../`)
+  - SSZipArchive
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  JXBWebKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JXBWebKit: ed01dee323897c8b75d56136a53dab111fa361f9
+  SSZipArchive: 51a800ebb77f95a8329b6ced1faaff394b47f509
+
+PODFILE CHECKSUM: fcbb726c6de7dfed205927febb92ef46440782a5
+
+COCOAPODS: 1.5.3
