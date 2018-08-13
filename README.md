@@ -1,9 +1,3 @@
-# JXBWebKit
-
-
-
-
-
 ##使用CocoaPods安装
 ```
 pod 'JXBWebKit', '~> 1.0.1'
@@ -113,3 +107,6 @@ export PATH=$PATH:$GOBIN
 
 
 
+## 整体架构
+
+![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png)
