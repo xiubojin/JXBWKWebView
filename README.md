@@ -41,7 +41,7 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 5.对子类提供`WebView`父类的`hook`操作.
 
-6.支持`WKWebView`的复用.
+6.支持`WKWebView`的复用，通过复用优化启动性能以及内存占用.
 
 7.支持各种自定义浏览器的`UserAgent`.
 
