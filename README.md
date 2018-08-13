@@ -2,6 +2,8 @@
 
 
 
+
+
 ##使用CocoaPods安装
 ```
 pod 'JXBWebKit', '~> 1.0.1'
@@ -54,6 +56,54 @@ pod 'JXBWebKit', '~> 1.0.1'
 9.支持操作`Cookie`.
 
 10.`demo`中提供了让业务`H5`页面秒开的方案（`HTML`模板渲染 & 静态资源离线包）.
+
+
+
+## 注意
+
+关于上述第10条中提到的H5秒开方案需要`server`进行配合，因此在这里我使用`Go`语言进行后台开发，`server`提供了两个`API`：
+
+1.一个普通的`get`请求，`client`通过获取响应数据中的`html`渲染模板进行渲染。
+
+2.一个下载服务器离线包资源的接口。
+
+当然，要想看这个功能的具体实现效果，需要在本地配置`Go`的开发环境，详见如下步骤：
+
+1.安装golang
+
+```
+brew install go
+```
+
+2.环境配置
+
+（1）使用`cd ~`切换到根目录.
+
+（2）使用`ls -all`查看所有文件，看有没有`.bash_profile`文件.
+
+（3）没有就创建一个`touch .bash_profile`
+
+使用`vim`打开`.bash_profile`进行编辑，`i`进行编辑，编辑完成后`:wq`退出，编辑内容如下：
+
+````
+export GOPATH=/Users/<your name>/Document/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+````
+
+（4）切换到`Documents`文件夹，创建`go`文件夹，再在`go`文件夹下分别创建`bin`、`src`文件夹，`src`就是以后存放项目的文件夹.
+
+（5）在终端输入`go env`命令查看配置是否正确，`GOBIN`有值表示配置没问题.
+
+（6）在本工程内搜索文件夹`GoProject > src > OfflineServer`，将`OfflineServer`文件夹拷贝至`Doument > go > src`目录下.
+
+（7）切换至`Document > go > src`
+
+（8）`go build`编译项目.
+
+（9）`go run`运行项目.
+
+（10）`control+c`退出.
 
 
 
