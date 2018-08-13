@@ -97,7 +97,7 @@ export PATH=$PATH:$GOBIN
 
 （9）`go run`运行项目.
 
-（10）`control+c`退出.
+（10）不再需要开启`server`服务可以`control+c`退出.
 
 
 
