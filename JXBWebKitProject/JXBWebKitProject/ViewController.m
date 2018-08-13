@@ -91,7 +91,7 @@
     H5EnterModel *model = self.models[indexPath.row];
     
     if (indexPath.row == 0) {
-        JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURLString:model.url];
+        JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURLString:@"https://x.eqxiu.com/s/4c0LGRFY?eqrcode=1&share_level=1&from_user=c34f130b-534e-46c3-a05d-70b145ba801c&from_id=576b1714-b7d7-4aec-9880-6b1370f84466&share_time=1533551229785&from=singlemessage&isappinstalled=0"];
         [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 1) {
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:model.url]];
