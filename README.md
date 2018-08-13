@@ -59,5 +59,7 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 ## 关于JSBridge的实现原理图解
 
-![](https://github.com/xiubojin/JXBWebKit/tree/master/doc_imgs/share01.png)
+![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share01.png)
+
+
 
