@@ -66,11 +66,7 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 当然，要想看这个功能的具体实现效果，需要在本地配置`Go`的开发环境，详见如下步骤：
 
-1.安装golang
-
-```
-brew install go
-```
+1.使用`brew install go`安装golang.
 
 2.环境配置
 
