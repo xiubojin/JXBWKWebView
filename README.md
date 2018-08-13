@@ -1,5 +1,7 @@
 # JXBWebKit
 
+
+
 ##使用CocoaPods安装
 ```
 pod 'JXBWebKit', '~> 1.0.1'
@@ -57,5 +59,5 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 ## 关于JSBridge的实现原理图解
 
-![share01](/Users/jinxiubo/Documents/cocoapodLib/doc_imgs/share01.png)
+![share01](https://github.com/xiuboji/JXBWebKit/raw/master/doc_imgs/share01.png)
 
