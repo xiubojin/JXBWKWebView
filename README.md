@@ -106,12 +106,12 @@ export PATH=$PATH:$GOBIN
 
 
 
-## 关于JSBridge的实现原理图解
+## 整体架构
 
 ![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share01.png)
 
 
 
-## 整体架构
+## 关于JSBridge的实现原理图解
 
 ![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png)
