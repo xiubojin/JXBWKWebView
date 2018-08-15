@@ -15,7 +15,7 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 ## 示例
 
-打开`JXBWebKitProject`执行运行。
+打开`JXBWebKitProject`执行项目。
 
 
 
@@ -23,7 +23,7 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 1.可以直接使用`JXBWebViewController`实例对象打开远程和本地的`HTML`.
 
-2.可以从`JXBWebViewController`派生出一个子类，使用该子类实例对象打开远程和本地的`HTML`.
+2.可以从`JXBWebViewController`派生出一个子类，使用该子类实例打开远程和本地的`HTML`.
 
 3.还可以从`JXBWKWebViewPool`获取一个可复用的`WebView`，使用该`WebView`打开远程和本地的`HTML`.
 
@@ -37,7 +37,13 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 3.支持拦截URL.
 
-4.通过`JSBridge`和`Web`进行交互,实测任何场景的交互操作都可满足!
+4.通过`JSBridge`和`Web`进行交互,实测任何场景的交互操作都可满足!比如
+
+- 打开`naive`任意页面.
+- 获取`native`定位、推送、相册、相机等权限.
+- 获取`native`数据。
+- 调用`native`的任意`API`。
+- 其他
 
 5.对子类提供`WebView`父类的`hook`操作.
 
@@ -51,8 +57,8 @@ pod 'JXBWebKit', '~> 1.0.1'
 
 10.`demo`中提供了让业务`H5`页面秒开的方案（`HTML`模板渲染 & 静态资源离线包）.
 
-- 现在市面上绝大部分新闻类APP使用的都是HTML模板渲染方案。
-- 除了资讯类页面外其他业务场景的H5都可使用离线包方案。
+- 现在市面上绝大部分新闻类APP使用的都是HTML模板渲染方案.
+- 除了资讯类页面外其他业务场景的H5都可使用离线包方案.
 
 
 
