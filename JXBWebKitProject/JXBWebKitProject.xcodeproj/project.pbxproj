@@ -26,6 +26,7 @@
 		2F5C9C3A2115EF5000DD0328 /* Service_Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C392115EF5000DD0328 /* Service_Good.m */; };
 		2F5C9C3D2115EF6100DD0328 /* GoodListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C3C2115EF6100DD0328 /* GoodListController.m */; };
 		2F5C9C402115EF6C00DD0328 /* GoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C3F2115EF6C00DD0328 /* GoodDetailController.m */; };
+		2FDD43D4213E5F5C00F207CE /* TestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */; };
 		7EBDD8166B8D82D44C00071B /* libPods-JXBWebKitProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EBD43AFCB5CA608316C /* libPods-JXBWebKitProject.a */; };
 		88D2D7D00AE0ECF8692DEECB /* libPods-JXBWebKitProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AAC278F6DEEE1A531950BC /* libPods-JXBWebKitProjectUITests.a */; };
 		9745666CAB3D86273D62AB61 /* libPods-JXBWebKitProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEDFF89F5A5A1D3D978B87D3 /* libPods-JXBWebKitProjectTests.a */; };
@@ -88,6 +89,8 @@
 		2F5C9C3C2115EF6100DD0328 /* GoodListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodListController.m; sourceTree = "<group>"; };
 		2F5C9C3E2115EF6C00DD0328 /* GoodDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodDetailController.h; sourceTree = "<group>"; };
 		2F5C9C3F2115EF6C00DD0328 /* GoodDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodDetailController.m; sourceTree = "<group>"; };
+		2FDD43D2213E5F5C00F207CE /* TestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWebViewController.h; sourceTree = "<group>"; };
+		2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWebViewController.m; sourceTree = "<group>"; };
 		30AAC278F6DEEE1A531950BC /* libPods-JXBWebKitProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3284DACB4234BE7CD71A85 /* Pods-JXBWebKitProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXBWebKitProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXBWebKitProject/Pods-JXBWebKitProject.release.xcconfig"; sourceTree = "<group>"; };
 		9C9FC21B95ADFD58A8AD2E67 /* Pods-JXBWebKitProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXBWebKitProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXBWebKitProjectTests/Pods-JXBWebKitProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				2F5C9C112114653500DD0328 /* JXBNavigationController.m */,
 				2F5C9C132114656F00DD0328 /* H5EnterModel.h */,
 				2F5C9C142114656F00DD0328 /* H5EnterModel.m */,
+				2FDD43D2213E5F5C00F207CE /* TestWebViewController.h */,
+				2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */,
 			);
 			path = JXBWebKitProject;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				2F5C9C312114736600DD0328 /* Service_setting.m in Sources */,
 				2F5C9C192114668700DD0328 /* User.m in Sources */,
 				2F5C9C1C2114669300DD0328 /* HybridViewController.m in Sources */,
+				2FDD43D4213E5F5C00F207CE /* TestWebViewController.m in Sources */,
 				2F5C9BEE211463C500DD0328 /* main.m in Sources */,
 				2F5C9C152114656F00DD0328 /* H5EnterModel.m in Sources */,
 				2F5C9C3D2115EF6100DD0328 /* GoodListController.m in Sources */,
@@ -666,7 +672,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UN2J29G6P5;
 				INFOPLIST_FILE = JXBWebKitProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -683,7 +691,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UN2J29G6P5;
 				INFOPLIST_FILE = JXBWebKitProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

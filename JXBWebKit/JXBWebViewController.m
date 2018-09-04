@@ -60,12 +60,9 @@ static NSString *POSTRequest = @"POST";
 }
 
 - (instancetype)initWithURLRequest:(NSURLRequest *)requst {
-    if (self = [super init]) {
-        _request = requst.mutableCopy;
-        [self initData];
-    }
+    _request = requst.mutableCopy;
     
-    return self;
+    return [self init];
 }
 
 - (instancetype)init {
