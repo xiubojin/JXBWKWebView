@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JXBWebKit"
-  s.version      = "1.0.1"
-  s.summary      = "JXBWebKit based on WKWebView"
+  s.version      = "1.0.2"
+  s.summary      = "JXBWKWebView based on WKWebView"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = "based on WKWebView"
 
-  s.homepage     = "https://github.com/xiubojin/JXBWebKit"
+  s.homepage     = "https://github.com/xiubojin/JXBWKWebView"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/xiubojin/JXBWebKit.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/xiubojin/JXBWKWebView.git", :tag => s.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
