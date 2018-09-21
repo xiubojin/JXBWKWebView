@@ -114,6 +114,74 @@ export PATH=$PATH:$GOBIN
 
 
 
-## 关于JSBridge的实现原理图解
+## 关于JSBridge的实现原理
+
+### 图解
 
 ![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png)
+
+
+
+### JS调用Native
+
+示例代码大家可以通过两种方式获取到，如下：
+
+（1）找到当前工程目录，再找到`GoProject -> src -> OfflineServer -> source`，在`source`文件下有个压缩文件`offline_pkg.zip`，将该文件拷贝至别处解压，找到`resource`目录下的`offline.js`文件，里面就有示例代码，比如：
+
+获取`native`的推送权限状态
+
+```objective-c
+function getPushAuthState() {
+    window.JXBJSBridge.call({
+           target : "push",
+           action : "getAuthorityState",
+           data : {},
+           callback : {
+           success : function(result){document.getElementById('message').innerHTML = result;},
+           fail : function(result){document.getElementById('message').innerHTML = result;},
+           progress : function(result){document.getElementById('message').innerHTML = result;},
+           }
+	});
+}
+```
+
+（2）在当前工程目录下有个`JSResources.bundle`文件，显示包内容，里面有个`index.html`，同样也有示例代码。
+
+
+
+### Object-C代码如何写？
+
+与`JS`约定好参数，`target、action、data、callback`等。
+
+`target`：对应原生的目标类，格式为`Service_target`。
+
+`action`：对应目标类的目标方法，格式为`func_action:`。
+
+`data`：`JS`传给`Native`的数据。
+
+`callback`：`Native`处理完业务后回调给`JS`的结果。
+
+示例：
+
+```objective-c
+//获取推送权限状态
+- (void)func_getAuthorityState:(NSDictionary *)param {
+    BOOL isOpen = NO;
+    
+    //iOS8.0以上
+    UIUserNotificationSettings *setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
+    if (setting.types != UIUserNotificationTypeNone) {
+        isOpen = YES;
+    }
+    
+    void(^successCallback)(NSDictionary *result) = param[@"success"];
+    
+    NSDictionary *resultDict = @{@"isOpen":@(isOpen)};
+    
+    successCallback(resultDict);
+}
+```
+
+### 如何与Android统一调用方式
+
+当前库加载的注入脚本是`JXBJSBridge.js`，当`WebView`加载`HTML`时会在`window`上挂一个`call`方法，此时`call`方法相当于一个全局方法，供`JS`调用，这个脚本文件同样可以提供给`Android`使用。
