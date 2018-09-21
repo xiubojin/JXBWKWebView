@@ -1,3 +1,8 @@
+如果你有好的想法，欢迎`Issue`或贡献代码！
+
+如果你在使用该库的过程中遇到任何问题，可以通过我的邮箱或`Issue`联系到我。
+
+
 
 ## 使用CocoaPods安装
 
@@ -184,4 +189,4 @@ function getPushAuthState() {
 
 ### 如何与Android统一调用方式
 
-当前库加载的注入脚本是`JXBJSBridge.js`，当`WebView`加载`HTML`时会在`window`上挂一个`call`方法，此时`call`方法相当于一个全局方法，供`JS`调用，这个脚本文件同样可以提供给`Android`使用。
+当前库加载的注入脚本是`JXBJSBridge.js`，当`WebView`加载`HTML`时会在`window`上挂一个`call`方法，此时`call`方法相当于一个全局方法，供`JS`调用，这个脚本文件同样可以提供给`Android`使用，达到调用方式统一的目的。
