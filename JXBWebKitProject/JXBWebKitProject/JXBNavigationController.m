@@ -7,6 +7,7 @@
 //
 
 #import "JXBNavigationController.h"
+#import <WebKit/WebKit.h>
 
 @interface JXBNavigationController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
@@ -56,13 +57,5 @@
     }
 }
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    if ( gestureRecognizer == self.interactivePopGestureRecognizer ) {
-        if ( self.viewControllers.count < 2 || self.visibleViewController == [self.viewControllers objectAtIndex:0] ) {
-            return NO;
-        }
-    }
-    return YES;
-}
 
 @end

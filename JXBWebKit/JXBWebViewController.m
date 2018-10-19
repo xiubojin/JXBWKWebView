@@ -99,6 +99,11 @@ static NSString *POSTRequest = @"POST";
     [self registerSupportProtocolWithHTTP:NO schemes:@[@"post", kWKWebViewReuseScheme] protocolClass:[JXBWKCustomProtocol class]];
 }
 
+- (void)setAllowsBFNavigationGesture:(BOOL)allowsBFNavigationGesture {
+    _allowsBFNavigationGesture = allowsBFNavigationGesture;
+    _webView.allowsBackForwardNavigationGestures = allowsBFNavigationGesture;
+}
+
 #pragma mark - View Life Cycle
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -207,16 +212,20 @@ static NSString *POSTRequest = @"POST";
     
     if (!_useCookieStorage) {
         if ([request.HTTPMethod isEqualToString:POSTRequest]) {
+            [_webView clearBrowseHistory];
             [self loadPostRequest:request];
         }else{
+            [_webView clearBrowseHistory];
             [_webView jxb_loadRequest:request.copy];
         }
     }else{
         NSString *validDomain = request.URL.host;
         
         if (validDomain.length <= 0) {
+            [_webView clearBrowseHistory];
             [_webView jxb_loadRequest:request.copy];
         }else{
+            [_webView clearBrowseHistory];
             NSString *cookie = [_webView cookieStringWithValidDomain:validDomain];
             [request addValue:cookie forHTTPHeaderField:@"Cookie"];
             [_webView jxb_loadRequest:request.copy];

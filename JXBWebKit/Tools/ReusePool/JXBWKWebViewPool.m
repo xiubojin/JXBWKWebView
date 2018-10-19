@@ -47,7 +47,9 @@
 #pragma mark - Public Method
 - (__kindof JXBWKWebView *)getReusedWebViewForHolder:(id)holder{
     if (!holder) {
+        #if DEBUG
         NSLog(@"MSWKWebViewPool must have a holder");
+        #endif
         return nil;
     }
     
@@ -90,7 +92,9 @@
         
     } else {
         if (![_reusableWebViewSet containsObject:webView]) {
+            #if DEBUG
             NSLog(@"MSWKWebViewPool没有在任何地方使用这个webView");
+            #endif
         }
     }
     dispatch_semaphore_signal(_lock);
@@ -128,10 +132,8 @@
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
     [_reusableWebViewSet removeAllObjects];
     dispatch_semaphore_signal(_lock);
-    NSLog(@"MSWKWebViewPool remove all reusable webViews");
     
     [JXBWKWebView clearAllWebCache];
-    NSLog(@"MSWKWebViewPool clean all cache");
 }
 
 #pragma mark - Other

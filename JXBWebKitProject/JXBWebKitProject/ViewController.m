@@ -32,7 +32,7 @@
     self.models = @[].mutableCopy;
     
     H5EnterModel *model1 = [[H5EnterModel alloc] init];
-    model1.title = @"通用测试连接";
+    model1.title = @"百度";
     model1.detailTitle = @"https://www.baidu.com";
     model1.url = @"https://www.baidu.com";
     [self.models addObject:model1];
@@ -65,6 +65,25 @@
     model6.title = @"H5秒开优化方案2 - 离线包";
     model6.detailTitle = @"将html、css、js等静态资源分离，资源可以做到增量更新，适合所有业务场景";
     [self.models addObject:model6];
+    
+    H5EnterModel *model7 = [[H5EnterModel alloc] init];
+    model7.title = @"新浪网";
+    model7.detailTitle = @"https://www.sina.com.cn";
+    model7.url = @"https://www.sina.com.cn";
+    [self.models addObject:model7];
+    
+    H5EnterModel *model8 = [[H5EnterModel alloc] init];
+    model8.title = @"搜狐网";
+    model8.detailTitle = @"http://www.sohu.com";
+    model8.url = @"http://www.sohu.com";
+    [self.models addObject:model8];
+    
+    H5EnterModel *model9 = [[H5EnterModel alloc] init];
+    model9.title = @"爱奇艺";
+    model9.detailTitle = @"https://www.iqiyi.com";
+    model9.url = @"https://www.iqiyi.com";
+    [self.models addObject:model9];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -91,8 +110,8 @@
     
     H5EnterModel *model = self.models[indexPath.row];
     
-    if (indexPath.row == 0) {
-        TestWebViewController *webVC = [[TestWebViewController alloc] initWithURLString:@"https://www.baidu.com"];
+    if (indexPath.row == 0 || indexPath.row == 6 || indexPath.row == 7 || indexPath.row == 8) {
+        TestWebViewController *webVC = [[TestWebViewController alloc] initWithURLString:model.url];
         [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 1) {
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:model.url]];
