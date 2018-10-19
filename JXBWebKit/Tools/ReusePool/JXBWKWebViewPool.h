@@ -19,6 +19,13 @@
 
 @interface JXBWKWebViewPool : NSObject
 
+/**
+ 是否需要在App启动时提前准备好一个可复用的WebView,默认为YES.
+ prepare=YES时,可显著优化WKWebView首次启动时间.
+ prepare=NO时,不会提前初始化一个可复用的WebView.
+ */
+@property(nonatomic, assign) BOOL prepare;
+
 + (instancetype)sharedInstance;
 
 - (__kindof JXBWKWebView *)getReusedWebViewForHolder:(id)holder;

@@ -19,6 +19,17 @@
 
 @implementation JXBWKWebViewPool
 
++ (void)load {
+    __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        [self prepareWebView];
+        [[NSNotificationCenter defaultCenter] removeObserver:observer];
+    }];
+}
+
++ (void)prepareWebView {
+    [[JXBWKWebViewPool sharedInstance] _prepareReuseWebView];
+}
+
 + (instancetype)sharedInstance {
     static dispatch_once_t once;
     static JXBWKWebViewPool *webViewPool = nil;
@@ -31,15 +42,14 @@
 - (instancetype)init{
     self = [super init];
     if(self){
+        _prepare = YES;
         _visiableWebViewSet = [NSSet set].mutableCopy;
         _reusableWebViewSet = [NSSet set].mutableCopy;
         
         _lock = dispatch_semaphore_create(1);
         
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(_clearReusableWebViews)
-                                                     name:UIApplicationDidReceiveMemoryWarningNotification
-                                                   object:nil];
+                                                 selector:@selector(_clearReusableWebViews) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
     }
     return self;
 }
@@ -134,6 +144,15 @@
     dispatch_semaphore_signal(_lock);
     
     [JXBWKWebView clearAllWebCache];
+}
+
+- (void)_prepareReuseWebView {
+    if (!_prepare) return;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        JXBWKWebView *webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero];
+        [self->_reusableWebViewSet addObject:webView];
+    });
 }
 
 #pragma mark - Other
