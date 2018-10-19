@@ -2,12 +2,16 @@
 
 如果你在使用该库的过程中遇到任何问题，可以通过我的邮箱或`Issue`联系到我。
 
+## 版本更新
+- 1.0.2 解决自`JXBWebViewController`派生出的子类`init`方法操作父类属性无效的问题
+- 1.0.3 可复用的`WebView`支持侧滑手势返回到上一页面
+
 
 
 ## 使用CocoaPods安装
 
 ```
-pod 'JXBWebKit', '~> 1.0.2'
+pod 'JXBWebKit', '~> 1.0.3'
 ```
 
 
@@ -22,7 +26,7 @@ pod 'JXBWebKit', '~> 1.0.2'
 
 ## 示例
 
-打开`JXBWebKitProject`执行项目。
+打开`JXBWebKitProject`直接执行项目。
 
 
 
