@@ -272,7 +272,11 @@ static NSString *POSTRequest = @"POST";
     
     title = title.length > 0 ? title: _webView.title;
     
-    self.navigationItem.title = title.length > 0 ? title : @"未经开发的星球~";
+    if (self.loading) {
+        self.navigationItem.title = title.length > 0 ? title : @"loading...";
+    }else{
+        self.navigationItem.title = title.length > 0 ? title : @"未经开发的星球~";
+    }
 }
 
 - (void)updateNavigationItems {
