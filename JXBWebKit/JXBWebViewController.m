@@ -8,7 +8,6 @@
 
 #import <objc/runtime.h>
 #import "JXBWebViewController.h"
-#import "UINavigationController+AOP.h"
 #import "UIProgressView+WKWebView.h"
 #import "InterceptURLHandler.h"
 #import "JXBWKCustomProtocol.h"
@@ -24,7 +23,7 @@ static NSString *POSTRequest = @"POST";
 
 #pragma mark - MSWebViewController
 
-@interface JXBWebViewController ()<WKNavigationDelegate, WKUIDelegate, NavigationBackItemProtocol>
+@interface JXBWebViewController ()<WKNavigationDelegate, WKUIDelegate>
 @property(nonatomic, strong) UIView                 *containerView;             //容器
 @property(nonatomic, strong) UIProgressView         *progressView;              //进度条
 @property(nonatomic, strong) UIBarButtonItem        *doneItem;                  //modal关闭item
