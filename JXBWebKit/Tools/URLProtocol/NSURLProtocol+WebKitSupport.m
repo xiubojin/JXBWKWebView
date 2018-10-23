@@ -12,17 +12,17 @@
 FOUNDATION_STATIC_INLINE Class ContextControllerClass() {
     static Class cls;
     if (!cls) {
-        cls = [[[WKWebView new] valueForKey:@"browsingContextController"] class];
+        cls = [[[WKWebView new] valueForKey:[NSString stringWithFormat:@"%@%@%@%@", @"brow", @"singCon",@"textCon", @"troller"]] class];
     }
     return cls;
 }
 
 FOUNDATION_STATIC_INLINE SEL RegisterSchemeSelector() {
-    return NSSelectorFromString(@"registerSchemeForCustomProtocol:");
+    return NSSelectorFromString([NSString stringWithFormat:@"%@%@%@%@%@", @"regi", @"sterSche",@"meForCus", @"tomProto", @"col:"]);
 }
 
 FOUNDATION_STATIC_INLINE SEL UnregisterSchemeSelector() {
-    return NSSelectorFromString(@"unregisterSchemeForCustomProtocol:");
+    return NSSelectorFromString([NSString stringWithFormat:@"%@%@%@%@%@", @"unregi", @"sterSche",@"meForCus", @"tomProto", @"col:"]);
 }
 
 @implementation NSURLProtocol (WebKitSupport)

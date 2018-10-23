@@ -10,7 +10,7 @@
 #import "WKWebViewExtension.h"
 #import "JXBWKWebViewPool.h"
 
-@interface JXBWKWebView : WKWebView<MSWKWebViewReuseProtocol>
+@interface JXBWKWebView : WKWebView<JXBWKWebViewReuseProtocol>
 
 @property(nonatomic, weak, readwrite) id holderObject;
 

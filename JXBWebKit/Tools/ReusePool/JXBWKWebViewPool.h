@@ -12,7 +12,7 @@
 #define kWKWebViewReuseUrlString @"kwebkit://reuse-webView"
 #define kWKWebViewReuseScheme    @"kwebkit"
 
-@protocol MSWKWebViewReuseProtocol
+@protocol JXBWKWebViewReuseProtocol
 - (void)webViewWillReuse;
 - (void)webViewEndReuse;
 @end
