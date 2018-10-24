@@ -13,7 +13,7 @@
 ## 使用CocoaPods安装
 
 ```
-pod 'JXBWebKit', '~> 1.0.5'
+pod 'JXBWebKit', '~> 1.0.6'
 ```
 
 
