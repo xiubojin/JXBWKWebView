@@ -98,7 +98,7 @@ pod 'JXBWebKit', '~> 1.0.6'
 使用`vim`打开`.bash_profile`进行编辑，`i`进行编辑，编辑完成后`:wq`退出，编辑内容如下：
 
 ````
-export GOPATH=/Users/<your name>/Document/go
+export GOPATH=/Users/<your name>/Documents/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 ````
@@ -107,13 +107,13 @@ export PATH=$PATH:$GOBIN
 
 （5）在终端输入`go env`命令查看配置是否正确，`GOBIN`有值表示配置没问题.
 
-（6）在本工程内搜索文件夹`GoProject > src > OfflineServer`，将`OfflineServer`文件夹拷贝至`Doument > go > src`目录下.
+（6）在本工程内搜索文件夹`GoProject > src > OfflineServer`，将`OfflineServer`文件夹拷贝至`Documents > go > src`目录下.
 
-（7）切换至`Document > go > src`
+（7）切换至`Documents > go > src`
 
 （8）`go build`编译项目.
 
-（9）`go run`运行项目.
+（9）`go run main.go`运行项目.
 
 （10）不再需要开启`server`服务可以`control+c`退出.
 
