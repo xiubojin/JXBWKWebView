@@ -11,87 +11,28 @@
 
 @implementation WKWebView (CookiesManager)
 
-+ (NSString *)cookieStringWithParam:(NSDictionary *)params {
-    __block NSMutableString *cookieStr = [NSMutableString string];
-    
-    if (params) {
-        [params enumerateKeysAndObjectsUsingBlock:^(NSString* _Nonnull key, NSString* _Nonnull value, BOOL * _Nonnull stop) {
-            [cookieStr appendString:[NSString stringWithFormat:@"%@=%@;", key, value]];
+- (void)writeCookie:(NSArray<NSHTTPCookie *> *)cookies completion:(dispatch_block_t)completion{
+    if (cookies.count == 0) {
+        completion();
+        return;
+    }
+    if (@available(iOS 11.0, *)) {
+        WKHTTPCookieStore *cookieStore = self.configuration.websiteDataStore.httpCookieStore;
+        //添加新的cookie
+        [cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [cookieStore setCookie:obj completionHandler:^{
+                if (idx == cookies.count - 1) {
+                    completion();
+                }
+            }];
         }];
+    }else{
+        [cookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookie:obj];
+        }];
+        [self reload];
+        completion();
     }
-    
-    if (cookieStr.length > 1)[cookieStr deleteCharactersInRange:NSMakeRange(cookieStr.length - 1, 1)];
-    
-    return cookieStr.copy;
-}
-
-- (NSString *)jsCookieStringWithValidDomain:(NSString *)validDomain {
-    NSString *cookieStr = [self cookieStringWithValidDomain:validDomain];
-    
-    NSString *jsCookieStr = [NSString stringWithFormat:@"document.cookie = '%@';",cookieStr];
-    
-    return jsCookieStr;
-}
-
-- (NSString *)cookieStringWithValidDomain:(NSString *)validDomain {
-    @autoreleasepool {
-        NSArray *cookieArr = [self sharedHTTPCookieStorage];
-        
-        NSMutableArray *marr = @[].mutableCopy;
-        
-        for (NSHTTPCookie *cookie in cookieArr) {
-            if ([cookie.name rangeOfString:@"'"].location != NSNotFound) {
-                continue;
-            }
-            
-            if (![validDomain hasSuffix:cookie.domain] && ![cookie.domain hasSuffix:validDomain]) {
-                continue;
-            }
-            
-            NSString *value = [NSString stringWithFormat:@"%@=%@", cookie.name, cookie.value];
-            [marr addObject:value];
-        }
-        
-        NSString *cookie = [marr componentsJoinedByString:@";"];
-        
-        return cookie;
-    }
-}
-
-- (NSArray *)sharedHTTPCookieStorage {
-    @autoreleasepool {
-        NSMutableArray *cookieMarr = [NSMutableArray array];
-        
-        NSHTTPCookieStorage *sharedCookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-        
-        for (NSHTTPCookie *cookie in sharedCookies.cookies){
-            [cookieMarr addObject:cookie];
-        }
-        
-        //删除过期的cookie
-        for (int i = 0; i < cookieMarr.count; i++) {
-            NSHTTPCookie *cookie = [cookieMarr objectAtIndex:i];
-            
-            if (!cookie.expiresDate) {
-                continue;
-            }
-            
-            if ([cookie.expiresDate compare:self.currentTime]) {
-                [cookieMarr removeObject:cookie];
-                i--;
-            }
-        }
-        
-        return cookieMarr.copy;
-    }
-}
-
-- (NSDate *)currentTime {
-    NSDate *date = [NSDate date];
-    NSTimeZone *zone = [NSTimeZone systemTimeZone];
-    NSInteger interval = [zone secondsFromGMTForDate:date];
-    NSDate *localDate = [date  dateByAddingTimeInterval:interval];
-    return localDate;
 }
 
 @end

@@ -10,10 +10,6 @@
 
 @interface WKWebView (CookiesManager)
 
-+ (NSString *)cookieStringWithParam:(NSDictionary *)params;
-
-- (NSString *)cookieStringWithValidDomain:(NSString *)validDomain;
-
-- (NSString *)jsCookieStringWithValidDomain:(NSString *)validDomain;
+- (void)writeCookie:(NSArray<NSHTTPCookie *> *)cookies completion:(dispatch_block_t)completion;
 
 @end

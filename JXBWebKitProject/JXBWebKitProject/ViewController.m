@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    
     self.navigationController.navigationBar.translucent = NO;
     self.tableView.estimatedRowHeight = 80;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -80,8 +82,8 @@
     
     H5EnterModel *model9 = [[H5EnterModel alloc] init];
     model9.title = @"爱奇艺";
-    model9.detailTitle = @"https://www.iqiyi.com";
-    model9.url = @"https://www.iqiyi.com";
+    model9.detailTitle = @"https://v.qq.com";
+    model9.url = @"https://v.qq.com";
     [self.models addObject:model9];
     
 }
@@ -125,8 +127,8 @@
         JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURLString:model.url];
         [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 3) {
-        JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURL:[NSURL URLWithString:model.url] cookie:model.cookie];
-        [self.navigationController pushViewController:webVC animated:YES];
+//        JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURL:[NSURL URLWithString:model.url] cookie:model.cookie];
+//        [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 4) {
         HybridViewController *webVC = [[HybridViewController alloc] init];
         [self.navigationController pushViewController:webVC animated:YES];

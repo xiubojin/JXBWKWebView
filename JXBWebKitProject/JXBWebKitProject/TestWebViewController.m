@@ -16,10 +16,19 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        //允许侧滑返回
         self.allowsBFNavigationGesture = YES;
+        //进度条颜色
         self.progressTintColor = [UIColor blackColor];
+        //拦截每次请求的url
+        self.needInterceptRequest = YES;
     }
     return self;
+}
+
+- (void)interceptRequestWithNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSLog(@"当前加载的url:%@", navigationAction.request.URL);
+    decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 - (void)viewDidLoad {

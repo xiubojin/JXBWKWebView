@@ -10,6 +10,7 @@
 #import "JXBWKWebView.h"
 #import "WKWebViewExtension.h"
 #import "JXBWKCustomProtocol.h"
+#import "WKCallNativeMethodMessageHandler.h"
 
 @interface JXBWKWebViewPool()
 @property(nonatomic, strong, readwrite) dispatch_semaphore_t lock;
@@ -76,7 +77,7 @@
         
         [webView webViewWillReuse];
     } else {
-        webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero];
+        webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero configuration:[self webViewConfiguration]];
         [_visiableWebViewSet addObject:webView];
     }
     webView.holderObject = holder;
@@ -150,9 +151,51 @@
     if (!_prepare) return;
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        JXBWKWebView *webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero];
+        JXBWKWebView *webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero configuration:[self webViewConfiguration]];
         [self->_reusableWebViewSet addObject:webView];
     });
+}
+
+- (WKWebViewConfiguration *)webViewConfiguration {
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    
+    NSString *bundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"JSResources" ofType:@"bundle"];
+    
+    NSString *scriptPath = [NSString stringWithFormat:@"%@/%@",bundlePath, @"JXBJSBridge.js"];
+    
+    NSString *bridgeJSString = [[NSString alloc] initWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:bridgeJSString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+    
+    [configuration.userContentController addUserScript:userScript];
+    
+    
+    
+    [configuration.userContentController addScriptMessageHandler:[[WKCallNativeMethodMessageHandler alloc] init] name:@"WKNativeMethodMessage"];
+    
+    
+    //3.视频播放相关
+    
+    if ([configuration respondsToSelector:@selector(setAllowsInlineMediaPlayback:)]) {
+        [configuration setAllowsInlineMediaPlayback:YES];
+    }
+    
+    //视频播放
+    if (@available(iOS 10.0, *)) {
+        if ([configuration respondsToSelector:@selector(setMediaTypesRequiringUserActionForPlayback:)]){
+            [configuration setMediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypeNone];
+        }
+    } else if (@available(iOS 9.0, *)) {
+        if ([configuration respondsToSelector:@selector(setRequiresUserActionForMediaPlayback:)]) {
+            [configuration setRequiresUserActionForMediaPlayback:NO];
+        }
+    } else {
+        if ([configuration respondsToSelector:@selector(setMediaPlaybackRequiresUserAction:)]) {
+            [configuration setMediaPlaybackRequiresUserAction:NO];
+        }
+    }
+    
+    return configuration;
 }
 
 #pragma mark - Other

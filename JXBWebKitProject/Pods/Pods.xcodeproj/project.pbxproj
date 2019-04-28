@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00546CD5605A589D011668DDF3054293 /* InterceptURLHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 250FC9059D56A06DF63D8E947653707F /* InterceptURLHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		00FE6A73B3616778CC8F2E18095B4EBB /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 71E885D7ED7B9B4CBD94B5076856F94B /* ioapi_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		04B1E31C32CF55F8C8FD18B4B5AA5618 /* WKWebView+AOP.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA9C693F2EEB119DCFF4A5ADE729E4C /* WKWebView+AOP.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		058BE90D9A811E360FF246866C6393C6 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 88D6C1DD4BF1176EFD13EC18042A5744 /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -77,7 +76,6 @@
 		B3EEF89AF43C0330D198AFEAC69709E0 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9AA8A5A34BDA1AA6764A13803C5547 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B50A5B2AB132ED12BC5416CEA1A6BFF7 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 15545E3B90231CBBD9920969ABB4399C /* minishared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		B622E9CF19F571C85637043B652A2E12 /* WKWebView+SupportProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E1B1373DB8F0A7887C0FF3474BF27271 /* WKWebView+SupportProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B780C081085319C82F1913C95D987407 /* InterceptURLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A06474F70FAF3093EADBF0D7120E3968 /* InterceptURLHandler.m */; };
 		BA52559929FA201539EAF7A5C4789F36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		BF107F89C1CC7BDAAE014EE0F28540F2 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A112FC88E46ECAD9EE88383AF604B0 /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		CD0B7014DA61E23D006ADED9D0412522 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB4D5E1C65279F3FFAC171BC3EBCEA /* ioapi_buf.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
@@ -144,7 +142,6 @@
 		1E5B7E98F3104E7795ED5595409EF5F5 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22C43EF762895CA2FC41D79F40075E6F /* WKAppManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKAppManager.m; sourceTree = "<group>"; };
 		24A4F358F78C16A8839F02E99CDAA015 /* JXBWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKWebView.m; sourceTree = "<group>"; };
-		250FC9059D56A06DF63D8E947653707F /* InterceptURLHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = InterceptURLHandler.h; sourceTree = "<group>"; };
 		265709394B9CF70830C041220163A925 /* WKMessageHandlerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerProtocol.h; sourceTree = "<group>"; };
 		29032A9BCAA0DD91FB6DBA4D4E14768E /* WKMessageHandlerDispatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKMessageHandlerDispatch.m; sourceTree = "<group>"; };
 		2C9D73D62A07F9801B917531BD0B3754 /* libPods-JXBWebKitProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +194,6 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E0994F0AEAA7621CB78285287BE60C6 /* JXBWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = JXBWebKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F5535060F0C726BA955768B469CB083 /* Pods-JXBWebKitProjectTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectTests-resources.sh"; sourceTree = "<group>"; };
-		A06474F70FAF3093EADBF0D7120E3968 /* InterceptURLHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = InterceptURLHandler.m; sourceTree = "<group>"; };
 		A22B24A5B0789844CB6FF58B3AA807FB /* JXBWebKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JXBWebKit-dummy.m"; sourceTree = "<group>"; };
 		A36FD888EF14486F8A9FD5139F7EC29D /* Pods-JXBWebKitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProject.debug.xcconfig"; sourceTree = "<group>"; };
 		A508C38014E0FF5E29E2C3F9315C0203 /* Pods-JXBWebKitProjectUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectUITests-resources.sh"; sourceTree = "<group>"; };
@@ -289,7 +285,6 @@
 				3D240594B26FC342C605663E4D5146E7 /* CustomUI */,
 				25561EA0E718F4A3B6E17009956A971D /* Dispatch */,
 				698F681F2A7153334D5C806ACFDAD766 /* Helper */,
-				EEE84449EAC69D4686A396760B02C5BC /* InterceptURL */,
 				ABC062599D37638B6179AB1F8F7C1592 /* MessageHandler */,
 				C08A38D24298633E2169AFA8DF00227D /* ReusePool */,
 				73B7A74305C0FFAD669E55673D746676 /* URLProtocol */,
@@ -583,15 +578,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EEE84449EAC69D4686A396760B02C5BC /* InterceptURL */ = {
-			isa = PBXGroup;
-			children = (
-				250FC9059D56A06DF63D8E947653707F /* InterceptURLHandler.h */,
-				A06474F70FAF3093EADBF0D7120E3968 /* InterceptURLHandler.m */,
-			);
-			path = InterceptURL;
-			sourceTree = "<group>";
-		};
 		F57B6A3E41F6744EEB44073AEACA11C0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,7 +593,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00546CD5605A589D011668DDF3054293 /* InterceptURLHandler.h in Headers */,
 				EE858102F7AB511FC433FF10C2B90747 /* JXBWebViewController.h in Headers */,
 				89A40E962D948DFB773188B95231FD68 /* JXBWKCustomProtocol.h in Headers */,
 				20E2E374E5376ACCD5C598EF11CEDD39 /* JXBWKWebView.h in Headers */,
@@ -789,7 +774,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B780C081085319C82F1913C95D987407 /* InterceptURLHandler.m in Sources */,
 				1C9E62EDA934A276DED0BCC6957A34AA /* JXBWebKit-dummy.m in Sources */,
 				A3A799CAE558F58E4FED9D4BE1BC9812 /* JXBWebViewController.m in Sources */,
 				3FBD3BAC4A3824791B195C4FA3792557 /* JXBWKCustomProtocol.m in Sources */,

@@ -7,61 +7,43 @@
 //
 
 #import "WKAppManager.h"
-#import <objc/runtime.h>
 
-static void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
-    Method originalMethod = class_getInstanceMethod(class, originalSelector);
-    Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+FOUNDATION_STATIC_INLINE UIViewController * WKCurrentViewController() {
+    UIViewController *viewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     
-    BOOL didAddMethod = class_addMethod(class,
-                                        originalSelector,
-                                        method_getImplementation(swizzledMethod),
-                                        method_getTypeEncoding(swizzledMethod));
-    
-    if (didAddMethod) {
-        class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-    }else{
-        method_exchangeImplementations(originalMethod, swizzledMethod);
+    while (viewController) {
+        if ([viewController isKindOfClass:[UITabBarController class]]) {
+            UITabBarController *tbvc = (UITabBarController*)viewController;
+            viewController = tbvc.selectedViewController;
+        } else if ([viewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *nvc = (UINavigationController*)viewController;
+            viewController = nvc.topViewController;
+        } else if (viewController.presentedViewController) {
+            viewController = viewController.presentedViewController;
+        } else if ([viewController isKindOfClass:[UISplitViewController class]] &&
+                   ((UISplitViewController *)viewController).viewControllers.count > 0) {
+            UISplitViewController *svc = (UISplitViewController *)viewController;
+            viewController = svc.viewControllers.lastObject;
+        } else  {
+            return viewController;
+        }
     }
+    return viewController;
 }
-
-#pragma mark - UINavigationController Category
-
-@interface UINavigationController (Magical)
-
-@end
-
-@implementation UINavigationController (Magical)
-
-+ (void)load {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        Class class = [self class];
-        swizzleMethod(class, @selector(viewWillAppear:), @selector(aop_NavigationViewWillAppear:));
-    });
-}
-
-- (void)aop_NavigationViewWillAppear:(BOOL)animation {
-    [self aop_NavigationViewWillAppear:animation];
-    
-    [WKAppManager sharedInstance].currentNavigationController = self;
-}
-
-@end
-
-#pragma mark - AppManager implementation
 
 @implementation WKAppManager
 
 + (instancetype)sharedInstance {
     static WKAppManager *appManager = nil;
     static dispatch_once_t onceToken;
-    
     dispatch_once(&onceToken, ^{
         appManager = [[WKAppManager alloc] init];
     });
-    
     return appManager;
+}
+
+- (UINavigationController *)currentNavigationController {
+    return WKCurrentViewController().navigationController;
 }
 
 @end
