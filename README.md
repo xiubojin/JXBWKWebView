@@ -8,12 +8,18 @@
 - 1.0.4 `App`启动时会在复用池中初始化一个可复用的`WebView`（开发者可控）
 - 1.0.5 删除无用的类文件 & 优化页面`loading`时的`title`显示问题
 - 1.0.6 混淆无法描述的`api` & 修改`WebView`复用协议名称
+- 1.1.0
+  - 更换导航栏返回、关闭按钮图片
+  - 与H5的交互方式只保留桥接一种
+  - 修改WebView布局方式
+  - 修改Cookie同步方式
+  - 修改H5传给native参数的数据格式
 
 
 ## 使用CocoaPods安装
 
 ```
-pod 'JXBWebKit', '~> 1.0.6'
+pod 'JXBWebKit', '~> 1.1.0'
 ```
 
 
@@ -146,7 +152,10 @@ function getPushAuthState() {
     window.JXBJSBridge.call({
            target : "push",
            action : "getAuthorityState",
-           data : {},
+           data : { 
+             "id" : "123456789",
+             "name" : "zhangsan"
+           },
            callback : {
            success : function(result){document.getElementById('message').innerHTML = result;},
            fail : function(result){document.getElementById('message').innerHTML = result;},
@@ -178,6 +187,12 @@ function getPushAuthState() {
 //获取推送权限状态
 - (void)func_getAuthorityState:(NSDictionary *)param {
     BOOL isOpen = NO;
+  
+  	//获取id
+  	NSString *ID = param[@"id"];
+  
+  	//获取name
+  	NSString *name = param[@"name"];
     
     //iOS8.0以上
     UIUserNotificationSettings *setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
