@@ -42,7 +42,7 @@ FOUNDATION_STATIC_INLINE UIViewController * WKCurrentViewController() {
     return appManager;
 }
 
-- (UINavigationController *)currentNavigationController {
++ (__kindof UINavigationController *)currentNavigationController {
     return WKCurrentViewController().navigationController;
 }
 

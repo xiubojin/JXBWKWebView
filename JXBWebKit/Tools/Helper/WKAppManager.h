@@ -13,6 +13,6 @@
 
 + (instancetype)sharedInstance;
 
-@property(nonatomic, weak) UINavigationController *currentNavigationController;
++ (__kindof UINavigationController *)currentNavigationController;
 
 @end
