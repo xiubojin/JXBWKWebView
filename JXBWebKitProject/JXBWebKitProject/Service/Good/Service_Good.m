@@ -19,12 +19,12 @@
     vc.successCallback = params[@"success"];
     vc.failCallback = params[@"fail"];
     vc.progressCallback = params[@"progress"];
-    [[WKAppManager sharedInstance].currentNavigationController pushViewController:vc animated:YES];
+    [WKAppManager.currentNavigationController pushViewController:vc animated:YES];
 }
 
 - (void)func_detail:(NSDictionary *)params {
     GoodDetailController *vc = [[GoodDetailController alloc] init];
-    [[WKAppManager sharedInstance].currentNavigationController pushViewController:vc animated:YES];
+    [WKAppManager.currentNavigationController pushViewController:vc animated:YES];
 }
 
 @end

@@ -200,7 +200,7 @@ static NSString *POSTRequest = @"POST";
         }
     } else {
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-        [self.navigationItem setLeftBarButtonItems:@[self.backNavLeftItem] animated:NO];
+        [self.navigationItem setLeftBarButtonItems:nil animated:NO];
     }
 }
 
@@ -213,7 +213,7 @@ static NSString *POSTRequest = @"POST";
         NSString *bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JSResources.bundle"];
         imagePath = [bundlePath stringByAppendingPathComponent:@"webView_back"];
     }
-    UIImage *backImage = [UIImage imageNamed:imagePath];
+    UIImage *backImage = [[UIImage imageNamed:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     _backNavLeftItem = [[UIBarButtonItem alloc] initWithImage:backImage style:UIBarButtonItemStylePlain target:self action:@selector(navigationItemHandleBack:)];
     return _backNavLeftItem;
 }
@@ -240,7 +240,7 @@ static NSString *POSTRequest = @"POST";
         NSString *bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JSResources.bundle"];
         imagePath = [bundlePath stringByAppendingPathComponent:@"webView_close"];
     }
-    UIImage *closeItemImage = [[UIImage imageNamed:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    UIImage *closeItemImage = [[UIImage imageNamed:imagePath] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     if (self.navigationItem.rightBarButtonItem == _doneItem && self.navigationItem.rightBarButtonItem != nil) {
         _closeNavLeftItem = [[UIBarButtonItem alloc] initWithImage:closeItemImage style:0 target:self action:@selector(doneButtonClicked:)];
     } else {

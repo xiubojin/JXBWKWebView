@@ -85,7 +85,6 @@
     model9.detailTitle = @"https://v.qq.com";
     model9.url = @"https://v.qq.com";
     [self.models addObject:model9];
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
