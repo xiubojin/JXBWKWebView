@@ -15,7 +15,7 @@
 
 - (void)func_list:(NSDictionary *)params {
     GoodListController *vc = [[GoodListController alloc] init];
-    vc.params = params[@"data"];
+    vc.params = params;
     vc.successCallback = params[@"success"];
     vc.failCallback = params[@"fail"];
     vc.progressCallback = params[@"progress"];
