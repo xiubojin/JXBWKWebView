@@ -42,7 +42,7 @@
             window.JXBJSBridge.call({
                 target : "Good",
                 action : "list",
-                data : {"unreadCount":"20"},
+                data : {"unreadCount":"20", "content":"这里是内容~"},
                 callback : {
                     success : function(result){document.getElementById('message').innerHTML = result;},
                     fail : function(result){document.getElementById('message').innerHTML = result;},

@@ -25,6 +25,8 @@
     
     NSLog(@"param = %@",self.params);
     
+    NSString *content = [self.params[@"content"]  stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
     self.btnFail = [UIButton buttonWithType:UIButtonTypeSystem];
     self.btnFail.frame = CGRectMake(0, 0, 100, 50);
     self.btnFail.center = self.view.center;
