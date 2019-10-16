@@ -8,7 +8,7 @@ target 'JXBWebKitProject' do
   # Pods for JXBWebKitProject
   pod 'JXBWebKit', :path => '../'
   pod 'SSZipArchive'
-
+  
   target 'JXBWebKitProjectTests' do
     inherit! :search_paths
     # Pods for testing

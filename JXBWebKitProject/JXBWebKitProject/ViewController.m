@@ -26,6 +26,8 @@
     
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Warning" style:0 target:self action:@selector(warningAcition)];
+    
     self.navigationController.navigationBar.translucent = NO;
     self.tableView.estimatedRowHeight = 80;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -196,6 +198,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)warningAcition {
+    [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:nil];
 }
 
 

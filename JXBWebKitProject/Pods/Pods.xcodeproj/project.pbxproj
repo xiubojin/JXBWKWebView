@@ -3,655 +3,690 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00FE6A73B3616778CC8F2E18095B4EBB /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 71E885D7ED7B9B4CBD94B5076856F94B /* ioapi_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		04B1E31C32CF55F8C8FD18B4B5AA5618 /* WKWebView+AOP.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EA9C693F2EEB119DCFF4A5ADE729E4C /* WKWebView+AOP.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		058BE90D9A811E360FF246866C6393C6 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 88D6C1DD4BF1176EFD13EC18042A5744 /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		05A1FBFE7B4E86A94B4511BEA8F2A339 /* WKCallNativeMethodMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 50CAEBAA2D09B8939A0EDBB13E8409A3 /* WKCallNativeMethodMessageHandler.m */; };
-		06D6EDC96E80E92847F1A1BF71B6B207 /* WKMessageHandlerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B775CB81856A804B4FB27AE3571DF5 /* WKMessageHandlerHelper.m */; };
-		076F179818280B8E2F8C1B0AC38D81EC /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 7371F2B4EF450925E121E273E754813F /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0880340AE64925C6566EA29F99A668F1 /* Pods-JXBWebKitProjectUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A4850D32287729CB6A5348A0DECDB0 /* Pods-JXBWebKitProjectUITests-dummy.m */; };
-		095A624208AFD2A38DC53518077A7025 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 348BE635F295D4AF8A133F0F36461E71 /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		09FA572FED77061F38FCB7156158E886 /* Pods-JXBWebKitProjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A93BE19AE68FC40328E19ED456A0AF5 /* Pods-JXBWebKitProjectTests-dummy.m */; };
-		0DB20FCE759EF5FF20C1BEEC5F04824D /* WKWebView+ClearWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA11EF993FF7A92CBE21FD73391EE3B /* WKWebView+ClearWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0EA2DE8C0BEF25911693BDF969A3755F /* JXBWKWebViewPool.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CB9F5EDCDDFDCDC285DAE6B809810A /* JXBWKWebViewPool.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0EDB7D7A7E52865A3DFACB3F99F8B827 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1059D8EF789BED03054C809DB389BA8F /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = C492A7A03656586D7348F64ED74BB0E9 /* NSURLProtocol+WebKitSupport.m */; };
-		12A7039CE12E3638535F5F93C87DCF3B /* UIProgressView+WKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E7F299EB5772CE3654CDE9E5FEDD5D0 /* UIProgressView+WKWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		12F43428EC10ED073BDC5F0B35C3F50B /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 5C22F8305B3989DFDFDFF1E7FA614D3F /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		150C9F065017FBEBFB02C487F805DDBF /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = BE96187190255C7E87A7DF1276D98117 /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		19DB3DD8AEB6E1EB8ACD20BE8CE1BA58 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDF26BF186F28DBA507188D13F6F473 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1C9E62EDA934A276DED0BCC6957A34AA /* JXBWebKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A22B24A5B0789844CB6FF58B3AA807FB /* JXBWebKit-dummy.m */; };
-		1F2C8BAD3E16F7A1E53486558247EBA1 /* UIProgressView+WKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = E69113D68D5DDFA9CD1376E916651C70 /* UIProgressView+WKWebView.m */; };
-		1F5FB8609E6F8EF6A2C8C1AE39A2F81B /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = E3F14585E8779C8C099B3587460A35F1 /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		20E2E374E5376ACCD5C598EF11CEDD39 /* JXBWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F22B178E2439B36A07346CE505681FB /* JXBWKWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		21B237BC1BD11C3952161A139C1DB990 /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FDB3AC283060CC7C827B5A067CC7A1D /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		23A63EE2D8E47E1DCD111CA45FE3CBE4 /* Pods-JXBWebKitProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D2EF367AFDAD7B3D6479352B868DEEB /* Pods-JXBWebKitProject-dummy.m */; };
-		283A1EE3038478E7CC8AD9C5D866539B /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 46BB2628C3AE5EF5CCC14BB4AB489991 /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2C107FA9CF3D058FBF915070A15288A9 /* JXBWKWebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A454DAFE689FA787820A92AA7271707 /* JXBWKWebViewPool.m */; };
-		2FFCCFCF2C36CC301EBD7D26D6AE6B14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		35B4207CFE6D1329712FC3183C7143EF /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = F823BCB6AE08732BC9E6C9361E0AF506 /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		39F654804DA87FFC3F15189EEADF4127 /* NSURLProtocol+WebKitSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = FD87EAC783BE163B2669CC6019E4D45E /* NSURLProtocol+WebKitSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3FBD3BAC4A3824791B195C4FA3792557 /* JXBWKCustomProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662E1379D51F88E3E23EB89B0C385F /* JXBWKCustomProtocol.m */; };
-		444094F186E373223769C38E62A207D6 /* WKMessageHandlerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 345787B4995CE3F6B1C36F4CBC65E85A /* WKMessageHandlerHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4951D558C47BBC04437E63D81BEE6CBD /* WKCallNativeMethodMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 6613450D56D90FF3106BB2FF77784823 /* WKCallNativeMethodMessageHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4EE0AB98214C818CBFA37713FA6EAEDB /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = C5FE60CD8B4D1F54D4F78C77F35B220C /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5BE845AC3CD74401197BD6FCA6F36B6B /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = D015138308023DA017EA033DBC285CD6 /* ioapi_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		60AB57DBD22ED5358BF7A7E573878283 /* WKWebView+SyncUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = FB36087C90AFC3C6FC35B79F0449359D /* WKWebView+SyncUserAgent.m */; };
-		641AD411F967FD2078F36A406B06B5A6 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 56AB3F6C959E878C82F21F2C7C4E80C1 /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		677B6501662BE8255C50C1F5F59A108F /* WKWebView+ExternalNavigationDelegates.h in Headers */ = {isa = PBXBuildFile; fileRef = E9E1C752FF12835F2180CA5B37C51443 /* WKWebView+ExternalNavigationDelegates.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		67CB1B891F9FB7B897E5A7CD1E419CF5 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 055E024311660239F093628AC46CF643 /* ioapi_mem.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		715EFB819D4224AA777512B27F83C7ED /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 30DC1C81F8782291809A6BD7D8F5D9B6 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		74DC49C8432B8B2BAFEACF593F16202A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 79F9F663415DCDB5DA1C9564955EE430 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		760E86D7ABD8C0793371BAABFD75A49F /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F4888BF1DF1DF39AAE96C5F3555381 /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		79EDC0E5E1A915E5181C52285961C192 /* WKWebView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 9355DE8E73654F354F6BE148B82E83C6 /* WKWebView+AOP.m */; };
-		79F59432735B9F5CD9FA05AB418A296F /* WKMessageHandlerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 265709394B9CF70830C041220163A925 /* WKMessageHandlerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7C3B4C7FC344027BE269D687062038C5 /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = BBAB18E154017A1F55646DBD3E84D264 /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7CDD824A22764FF3F9943C1706C3DDE0 /* WKWebView+ClearWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDF23DAB5198DF934E0D3165F101CF9 /* WKWebView+ClearWebCache.m */; };
-		7D8253164EC94470FCEB10BC400542C0 /* WKMessageHandlerDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 556586145FF37F5B3C15B5303A2EC28F /* WKMessageHandlerDispatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8649CA71AD3645E02BB59D40B5B6C674 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E4C678FECFDE081B9448E7C9C64D5CE /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		868965A6E5B3E4C28C287838833736DF /* WKAppManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F0EA390CD272AF0D45CC3884CFDC251E /* WKAppManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		887BD17E2274FDA36DBE9D59154CD178 /* JXBWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A4F358F78C16A8839F02E99CDAA015 /* JXBWKWebView.m */; };
-		89A40E962D948DFB773188B95231FD68 /* JXBWKCustomProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FE3BE8E4A777095E3B4FF67120E2B9F5 /* JXBWKCustomProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8AA375A4B26B4309704821E604D4DD38 /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B20A285F8194712B4E58A75FB771F2A /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8AAA86C5B8428938396A2C8D2C5D3CCF /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A0696C8BB69DE594895C9159279E159 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8BF7E6D8B68E431F91BFD90A102EE6E5 /* WKWebView+SupportProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E047832A2A134AF5214445CA92EC50AC /* WKWebView+SupportProtocol.m */; };
-		8C75BFB0C68A87FA62D8496E7DFE08DD /* WKWebViewExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F7647D0B4ACAECF20949F8EEC8B6AC2C /* WKWebViewExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		92AF8BA50D09F9248AEDA76DB3159920 /* WKWebView+CookiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1976B2C0A7AADEBD8F738A8185A52099 /* WKWebView+CookiesManager.m */; };
-		92C1AD8B7ADE6E6D6EFF044E0C9A8CCC /* WKWebView+SyncUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 458EDBE42FEE5DA4A165B06FB59C0AE8 /* WKWebView+SyncUserAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		940CF8E347493F4C6DF4D03AF1D978D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		966A9CCB298EED5A08D6C62769B81C53 /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BEA8A374666215372B09898C07FD8 /* aes_ni.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		979EAFE30E476697AC29B701533AEE66 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 37AB0B636CCF416B65D145AC1E378C12 /* SSZipCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9AD8A5EBA824859C316B771B7C4BA2B3 /* WKMessageHandlerDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 29032A9BCAA0DD91FB6DBA4D4E14768E /* WKMessageHandlerDispatch.m */; };
-		9BF476159775B675BF304D22025481B9 /* WKWebView+ExternalNavigationDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0AE420545203E4FE13D403492D3391 /* WKWebView+ExternalNavigationDelegates.m */; };
-		9CFECF547C4BDD55B035163868A9B386 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9E9429483DE90E0B1C4EC8F6FDDBB4E4 /* minishared.h in Headers */ = {isa = PBXBuildFile; fileRef = 767C3F3EF40F3135904402787B22812C /* minishared.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A082FCF95B43088C5FCCC1F9642C6A5F /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D9EA527F60E231822332D8199C9B268 /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A3A799CAE558F58E4FED9D4BE1BC9812 /* JXBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D9C0C0AEAD60103D210EE6CCD0A49B /* JXBWebViewController.m */; };
-		A8B901C62BD89AA3EAED106C34E3D66A /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = F488B4BD20DB7A44555967A75858786F /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		ADD824F98B228B84B0081A7F89B3BC64 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7283EC4E7BEE6759410A5DE4130119E4 /* SSZipArchive-dummy.m */; };
-		B3EEF89AF43C0330D198AFEAC69709E0 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9AA8A5A34BDA1AA6764A13803C5547 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B50A5B2AB132ED12BC5416CEA1A6BFF7 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 15545E3B90231CBBD9920969ABB4399C /* minishared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		B622E9CF19F571C85637043B652A2E12 /* WKWebView+SupportProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = E1B1373DB8F0A7887C0FF3474BF27271 /* WKWebView+SupportProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BA52559929FA201539EAF7A5C4789F36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		BF107F89C1CC7BDAAE014EE0F28540F2 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 10A112FC88E46ECAD9EE88383AF604B0 /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CD0B7014DA61E23D006ADED9D0412522 /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB4D5E1C65279F3FFAC171BC3EBCEA /* ioapi_buf.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D9767978520CEC7200ADCE819E405877 /* WKWebView+CookiesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 80F9209C10CD0AD8F5539559AF7E83B3 /* WKWebView+CookiesManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DECD1C06B1848253CBE3B38D3A1617CF /* aes_ni.h in Headers */ = {isa = PBXBuildFile; fileRef = B3CC2E197075E9ADFA6F8767EB434642 /* aes_ni.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E37CDB44C338F6364F0EE117F0DF0105 /* WKAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C43EF762895CA2FC41D79F40075E6F /* WKAppManager.m */; };
-		E73A2591E83B03B53EE44B838F24DDB8 /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1807CF76BACFF3D3352F68856EEE63 /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EAB8EB3D98340B4302B8D2330E053D86 /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = DC69476EC4B1A28301CF6403FE14DEBB /* crypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EE858102F7AB511FC433FF10C2B90747 /* JXBWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 7658D0177A0307BFA81DAC4A4B861318 /* JXBWebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EF4668CE246413E36076600428B17797 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 1794EEFF96258D765220020C3F91EC58 /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F93A940499706BA44A3C3A565B64A962 /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 094D75FA95F4B268DBDEEEDDDAF1E1D0 /* SSZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FEF933CCD5446CB74071DDF143A74FD6 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 7F5D6BD2C6AA29217D69A404804E5883 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FF2F5E479ED79E454B6E5FDDA4094833 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B1E67E0DC559D21D31FC27FDB315BD /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0596CACC29ACB0F866ADA307D759D279 /* aes_ni.h in Headers */ = {isa = PBXBuildFile; fileRef = 9226C67A833DC0FBC23DB04DAE3F7F1B /* aes_ni.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0724FF0729497D17D69CCDE1BFC08F65 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = ACB730167C4FC40F7CEFA0C5F9ADCF30 /* aes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0852DEEAB0F9EC28D0FCE4FCD0A1BC2A /* WKWebView+AOP.h in Headers */ = {isa = PBXBuildFile; fileRef = CC59C8D2F98AACCC4401AE6575DD7908 /* WKWebView+AOP.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		094C42A62BAE892C164F1D47E16269F1 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 132B185EFE9971D4935622AA659FA7C3 /* unzip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A46A7BC0E28A8A83FE28060D6ACCC9F /* WKWebViewExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 07ECE300C71DBC40D5EB29106479F3C8 /* WKWebViewExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0DCBC4541F7C5E2EF000353F0A4FFB9E /* JXBWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB3A2BBE932BCD272D32972695CD876A /* JXBWebViewController.m */; };
+		1179F9D6BECDDB583A84210DA900DB22 /* UIProgressView+WKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDDB3CA0F08D6B8B887BACD7B88A1DC /* UIProgressView+WKWebView.m */; };
+		11A9E3F9964CDFE1A6318622EB4FA1CC /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A306ACD03ED9F7459823D7605A8A6F5 /* SSZipArchive.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		144D98B812E0B414B7235CCDA9A1EC6E /* crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F2513377C0526AD3A97699EA639FCD0 /* crypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		15ADC5551B159155BEADD77F6B0FDDC9 /* WKWebView+CookiesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DE88A3237C59841DA86FDBB831723F59 /* WKWebView+CookiesManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		165FEA998E479EC8169E8ABA81B47D90 /* Pods-JXBWebKitProjectTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA6A3F07B8A15EC271DA065EAC7B460 /* Pods-JXBWebKitProjectTests-dummy.m */; };
+		1860D6514A1E90F35CAE5D82CA57C875 /* NSURLProtocol+WebKitSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A9B8CCE671207782F01F6A4965DDCD0 /* NSURLProtocol+WebKitSupport.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2035DB9BBDC2C4BC0E3D89D4CEF9BF52 /* WKWebView+ExternalNavigationDelegates.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A5B2759716FC9F1AABFCA353DAA7EE2 /* WKWebView+ExternalNavigationDelegates.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21055EB9D138E0CE2799D02531DAFDD3 /* WKMessageHandlerDispatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 134FB05CC8B0BFA23A5CA5F889C19A85 /* WKMessageHandlerDispatch.m */; };
+		2974716EF9BE87471C4FF47625D59949 /* WKWebView+SyncUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAB86A0F2885CA22D24AB3CE254B4C8 /* WKWebView+SyncUserAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		29D966D03F32F444B14F5F1CFC28EF3D /* Pods-JXBWebKitProject-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A29E036536C0530B448AE101C07E51 /* Pods-JXBWebKitProject-dummy.m */; };
+		2B9A15E34F053A8F79DB8CF312F20042 /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = A672801CAFB57B68740DE84BFEB888F8 /* fileenc.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		2F4CA06AC26DA6AB795B2FB8FEF7C4DA /* JXBWebKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9197E60B03017F3EC7B44577FFB6E5EB /* JXBWebKit-dummy.m */; };
+		31D218B3ECE67C8735E06A90D814A7A1 /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B8EAD496E314034CA360E1C3309D751 /* fileenc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		327847CC13A7C19DCE3BD822601B9A8E /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = B698257C803C4602D8605D1A16DB5498 /* hmac.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34B885B04B29009C8C66D073C67EAA72 /* WKCallNativeMethodMessageHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 8410BD3F65C757489A9659463FC57958 /* WKCallNativeMethodMessageHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		36DFF47CDFD3D2F8518F19967EE64CA5 /* WKMessageHandlerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EA6EFDB21B84EFA484CABFEA0AC041C /* WKMessageHandlerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39CAF066367B6C306BBCB39F0F163A60 /* ioapi_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = 391047A35174940DC5BE7C3BF6188AEF /* ioapi_mem.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3B46B4BD17BAFBE137C18263CE0D59CD /* WKWebView+CookiesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F55455CB883704E56FEA080FCF2E58 /* WKWebView+CookiesManager.m */; };
+		3D600F21204AA8F1438326D16FF45440 /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = B42D1A3939A87547A64EF2598856877D /* sha1.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3DD54AE15C90AE75DF50DB1408B91F91 /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 41AC07B310E07B09F0B10CE13D9986EA /* aestab.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40C06AAFE581E3D2053CE9688D8860BB /* JXBWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EC2B7E10D941E6537F41E1A86E7580D /* JXBWKWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40EFB1EA9A9E395E17A41FE139D30D6D /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = A205EEE4495545780E2416EF98055D49 /* aescrypt.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4335A23E61D073D97B3A2BADE3F16E57 /* minishared.c in Sources */ = {isa = PBXBuildFile; fileRef = 66C85097D0577069F35A666D86BA4971 /* minishared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		44A0A6B8039BAC0256491A087B5D11B4 /* NSURLProtocol+WebKitSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C9A6568C3D58E1FE9AE0F92C4125DCD /* NSURLProtocol+WebKitSupport.m */; };
+		4734BFAF0C09277F941EE0D6F19D4F11 /* ioapi_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = B3F9F07A5CCBE347283C61C2C728276E /* ioapi_mem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		47B7CA7BDB5D00921025FCD724FB7AC0 /* WKAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACCEFFD93B8F43063B700B723AF5E2D /* WKAppManager.m */; };
+		487CFF358601A277AD926FC91D06A05A /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 3076CA1BBC3A0CCECCBAB73E7B1E9D63 /* aesopt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		498ED18C883C5C5A6C12A52435E78CA7 /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 4967AA21EFDD8F28550B281B6DF882FC /* hmac.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5363229F7CF25275D7FE45500EDAF9FD /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 994975DFFF7B9A2BF44E35F68F92E860 /* brg_endian.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5A6D646D1955C191BEFA004C188B3DAE /* WKAppManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A828EE2A77E981EA3BA0B9217F4D4E7 /* WKAppManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		622ECA075BC34C25AC842A9ED3F0C95D /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = B8BAAFE464ACAF33B9F197DAA669A2E6 /* zip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		641BDC52A0853C856BEFD8A0AC093142 /* SSZipArchive-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D629F7ADFD5F16173EAC304B0F8E22CF /* SSZipArchive-dummy.m */; };
+		646C84EB701DF1812393997C3190AE0B /* WKMessageHandlerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 15CD486EBD89B7961C5EFB4623CAB02F /* WKMessageHandlerHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		69AE0D5E864992EC5772D5C9AF2E171F /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = FDF91D7897F6E674093DABD0CBB9EB04 /* unzip.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6ECF6B7D8F4B246A8955B6F986D31EF2 /* minishared.h in Headers */ = {isa = PBXBuildFile; fileRef = 08F9C33C69E4A1C606F961047C513966 /* minishared.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		71A37C1ABA7A2B185400E57F1A7F7E16 /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = AA5DD6B1DAE90E3C98B985DCDE14E42C /* pwd2key.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		747BA674C45457D2F4C5BFB6195F450F /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 093B156F2564B11AC92DE265B87A7E23 /* sha1.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7C3AE07377DD63A49C3D6BCEBCAEA472 /* WKWebView+SupportProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3165B6FA545E54F23F4EB94D584083 /* WKWebView+SupportProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7CFBED7BA4743A4991D22F9CABD931AF /* ioapi_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = 27C0F72FF42FDFAECE2AF606263FBB82 /* ioapi_buf.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7DF5217F6BFE4AAD652473571C677800 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F50462AEFDD61CFAB448099645CB5B0 /* ioapi.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		803464A0E366B64440FC5C35FFB5CD59 /* WKMessageHandlerDispatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 69E7DFDD18547EA40D8D21924868AA55 /* WKMessageHandlerDispatch.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		83AAFF50BC1547E1E0CD9F5965745FE4 /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 518DB0D49EC03EA5DF44925D71FA5BC3 /* aestab.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		850AC293A73F6E537F659098E186AFB3 /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = B934283B993281AA6EE36A57AC3AD8E8 /* ioapi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86301A8360277A5666C0BEFDFD219FE0 /* ZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 78987BB7BD0CB6486192A726D46F08C3 /* ZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86C1DF22D8DE5F61C24C858850131A9C /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D4D0CEFB388B16C2E0E77AD5F435B /* prng.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		89B8892550DB04F37C38EA5502C412AC /* WKWebView+ClearWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F138FA1DDC4E148B30BC32289C32882 /* WKWebView+ClearWebCache.m */; };
+		8E84EA0C7D146CD68A4080FD8B09E690 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = F289F9E9E6AF4139C626FD95F7060ED9 /* zip.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8EF7B24AE739941EDDC62A44D165BDD5 /* JXBWKCustomProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 009E5432B45265EDE41F5670737838CC /* JXBWKCustomProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		97A7B6E77D6BBAB1D835AB79EB20111C /* JXBWKCustomProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 80D82135417787C1A540C2F7686A1AEF /* JXBWKCustomProtocol.m */; };
+		9A57F511FE43CF3E0D8C360291C698BF /* JXBWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1781C3C3DCFDF55E7C91DC03B0A115 /* JXBWKWebView.m */; };
+		A08F856A4B5380F122D9162971C08F82 /* JXBWKWebViewPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DE6B0F262B6D85F07E4A6C073552F /* JXBWKWebViewPool.m */; };
+		AA544F7FA3F8F0D69A7A364D40C3DE36 /* WKWebView+SupportProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = E797A56D40A9D909CEDD983521B98B7D /* WKWebView+SupportProtocol.m */; };
+		ACEC55FA2F0C9D098DFB97FB6FCCBD50 /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = D695FA6A0B714226CCEC8C2860D80ED0 /* crypt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B9A5626A87128B5F730A48003FCA408C /* JXBWKWebViewPool.h in Headers */ = {isa = PBXBuildFile; fileRef = FB08B181F6E336451B1AFD4E33F4C4B4 /* JXBWKWebViewPool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C0BE1C7B33256B799AC09CB4E2A6452A /* Pods-JXBWebKitProjectUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C530B0E3CBEA5B7B6AE902B6388F22F3 /* Pods-JXBWebKitProjectUITests-dummy.m */; };
+		C441FC1AFC11CC7740FA9810F6BB3159 /* WKWebView+SyncUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = D85B1C63BC37849B4A1D0947A9CAC783 /* WKWebView+SyncUserAgent.m */; };
+		C559EEE75517E7A62369E15802D436F1 /* SSZipCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 1423D907E07D0F9931815DC630F195C5 /* SSZipCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C6E2699B59FEC4774DDEDB32E28DE109 /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CBFD459E40B7C055B15855F54811A44 /* pwd2key.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C94C56D384FC60A341CE9AC6CC4FEAF9 /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 49F0C085970548514E8848841A819919 /* aeskey.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CE0D0EBF1D6A859F9B4B57B622D10410 /* WKWebView+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF6354989197EABEC15CE129875C69D /* WKWebView+AOP.m */; };
+		D24F5F0231477FB23E7E14C3E22A89FB /* WKWebView+ClearWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 522342E57295AC610FB67063771ED5E0 /* WKWebView+ClearWebCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2A9125ACEA9E82B683D11B06E5F7B0B /* aes_ni.c in Sources */ = {isa = PBXBuildFile; fileRef = 35391F32952B82E17BF93A18723C5084 /* aes_ni.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D8A86D6082654B60CF3AACE1D849B2CE /* WKMessageHandlerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 86722B4A4DE8B468DCC877B171274E97 /* WKMessageHandlerHelper.m */; };
+		DDBAF8F6F6B863AB152F47DA5A93388E /* JXBWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DE71D07D38A1614E3985E5AFCFDE2DC /* JXBWebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE43044FFF1E5511A20AE0A7CDF27D37 /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6C19C5AE8FFCB6B049E02564F4E7BA /* brg_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E4D81E933A267627F9BFE7B0E3184A97 /* WKWebView+ExternalNavigationDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E13351A87AEB15B1F25D04C51A3910 /* WKWebView+ExternalNavigationDelegates.m */; };
+		E57464DE04DF28D08A389CEB48B8767D /* WKCallNativeMethodMessageHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D32D57DC9FF83F1E9C5C87D0557897CA /* WKCallNativeMethodMessageHandler.m */; };
+		E90DAF68F001E728704C42302D4813FE /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 93CCD65AC86632F149E325B42CB89545 /* prng.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E9EE6962014958668D52B6795B46486D /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 97BC9FECA2E09E0FC4CF519DBF11B76E /* SSZipArchive.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EBCECEEE2D05DDBDA21925E89A461741 /* UIProgressView+WKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A0499AAE24D16A6C8F94274F0C97589 /* UIProgressView+WKWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F0E5DC2E793E5023B60336CED873C20C /* ioapi_buf.h in Headers */ = {isa = PBXBuildFile; fileRef = 832BBA01FB91F1306A81FE93D3016CD3 /* ioapi_buf.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1E1461F40778775D77D8B3137EEAEE23 /* PBXContainerItemProxy */ = {
+		2D6B92E5DB5E0AFF33B70E574A56B425 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 636B5C4CB66B42DE8BA41C381EB999A5;
-			remoteInfo = "Pods-JXBWebKitProject";
-		};
-		A4963D16A0EAAB9A045771333B1B52A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 220FC00F69972F601FBF73A9E3AF597E;
-			remoteInfo = SSZipArchive;
-		};
-		AE6A746A34254A5A7A2841AD938DA25A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 072613623859A9602C4F9496F06C47AF;
+			remoteGlobalIDString = 9830B2A3922329143C1D3B56345C80E1;
 			remoteInfo = JXBWebKit;
 		};
-		C8C5168E23FB52A883F91DA93946C48F /* PBXContainerItemProxy */ = {
+		459D6F14C190E78854172E99B2599FA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 636B5C4CB66B42DE8BA41C381EB999A5;
+			remoteGlobalIDString = F60E38364AFF5E1349FF07415B944396;
+			remoteInfo = SSZipArchive;
+		};
+		A95336111FEE3CE912FC0885637FFAF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8A032A9E0E98BC94650742CD8581209;
+			remoteInfo = "Pods-JXBWebKitProject";
+		};
+		BE4E649C28988F2B8C19DB37193C04D2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8A032A9E0E98BC94650742CD8581209;
 			remoteInfo = "Pods-JXBWebKitProject";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		055E024311660239F093628AC46CF643 /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
-		08662E1379D51F88E3E23EB89B0C385F /* JXBWKCustomProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKCustomProtocol.m; sourceTree = "<group>"; };
-		094D75FA95F4B268DBDEEEDDDAF1E1D0 /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
-		0D2EF367AFDAD7B3D6479352B868DEEB /* Pods-JXBWebKitProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProject-dummy.m"; sourceTree = "<group>"; };
-		0D6C269ACEB2FC5D735C37F4E5FC6111 /* Pods-JXBWebKitProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProject-acknowledgements.plist"; sourceTree = "<group>"; };
-		0E4C678FECFDE081B9448E7C9C64D5CE /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
-		0F22B178E2439B36A07346CE505681FB /* JXBWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKWebView.h; sourceTree = "<group>"; };
-		10A112FC88E46ECAD9EE88383AF604B0 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/minizip/aes/aes.h; sourceTree = "<group>"; };
-		144D5259C002FC953649B89354BBE5B1 /* JXBWebKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXBWebKit-prefix.pch"; sourceTree = "<group>"; };
-		15545E3B90231CBBD9920969ABB4399C /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
-		15B1E67E0DC559D21D31FC27FDB315BD /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
-		1794EEFF96258D765220020C3F91EC58 /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
-		18DC0786219DFFB0BBC367E3AE7044A5 /* libSSZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1976B2C0A7AADEBD8F738A8185A52099 /* WKWebView+CookiesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+CookiesManager.m"; sourceTree = "<group>"; };
-		1A93BE19AE68FC40328E19ED456A0AF5 /* Pods-JXBWebKitProjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProjectTests-dummy.m"; sourceTree = "<group>"; };
-		1B20A285F8194712B4E58A75FB771F2A /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/minizip/aes/prng.h; sourceTree = "<group>"; };
-		1E5B7E98F3104E7795ED5595409EF5F5 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		22C43EF762895CA2FC41D79F40075E6F /* WKAppManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKAppManager.m; sourceTree = "<group>"; };
-		24A4F358F78C16A8839F02E99CDAA015 /* JXBWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKWebView.m; sourceTree = "<group>"; };
-		265709394B9CF70830C041220163A925 /* WKMessageHandlerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerProtocol.h; sourceTree = "<group>"; };
-		29032A9BCAA0DD91FB6DBA4D4E14768E /* WKMessageHandlerDispatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKMessageHandlerDispatch.m; sourceTree = "<group>"; };
-		2C9D73D62A07F9801B917531BD0B3754 /* libPods-JXBWebKitProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CC577546B471738A20E5A397023BF0A /* libPods-JXBWebKitProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D9EA527F60E231822332D8199C9B268 /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
-		2E7F299EB5772CE3654CDE9E5FEDD5D0 /* UIProgressView+WKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+WKWebView.h"; sourceTree = "<group>"; };
-		2F1947F70DB3C2312497BC29663C7BBE /* Pods-JXBWebKitProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		2FA5CC81F18CE3FBC878EE9929F3F999 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		30DC1C81F8782291809A6BD7D8F5D9B6 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
-		345787B4995CE3F6B1C36F4CBC65E85A /* WKMessageHandlerHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerHelper.h; sourceTree = "<group>"; };
-		348BE635F295D4AF8A133F0F36461E71 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/minizip/aes/hmac.h; sourceTree = "<group>"; };
-		37AB0B636CCF416B65D145AC1E378C12 /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
-		3EA9C693F2EEB119DCFF4A5ADE729E4C /* WKWebView+AOP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+AOP.h"; sourceTree = "<group>"; };
-		3FDB3AC283060CC7C827B5A067CC7A1D /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
-		3FFB4D5E1C65279F3FFAC171BC3EBCEA /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
-		4274DC56D38D732FD9EB668E3A30D6FA /* JXBWebKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXBWebKit.xcconfig; sourceTree = "<group>"; };
-		458EDBE42FEE5DA4A165B06FB59C0AE8 /* WKWebView+SyncUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SyncUserAgent.h"; sourceTree = "<group>"; };
-		45A4850D32287729CB6A5348A0DECDB0 /* Pods-JXBWebKitProjectUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProjectUITests-dummy.m"; sourceTree = "<group>"; };
-		46BB2628C3AE5EF5CCC14BB4AB489991 /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
-		4B9AA8A5A34BDA1AA6764A13803C5547 /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
-		4B9BEA8A374666215372B09898C07FD8 /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
-		50CAEBAA2D09B8939A0EDBB13E8409A3 /* WKCallNativeMethodMessageHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKCallNativeMethodMessageHandler.m; sourceTree = "<group>"; };
-		51D9C0C0AEAD60103D210EE6CCD0A49B /* JXBWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXBWebViewController.m; path = JXBWebKit/JXBWebViewController.m; sourceTree = "<group>"; };
-		54944DA62C46E5EC33DA8F9A3A1CDF8C /* Pods-JXBWebKitProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProject-resources.sh"; sourceTree = "<group>"; };
-		556586145FF37F5B3C15B5303A2EC28F /* WKMessageHandlerDispatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerDispatch.h; sourceTree = "<group>"; };
-		56AB3F6C959E878C82F21F2C7C4E80C1 /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
-		59B775CB81856A804B4FB27AE3571DF5 /* WKMessageHandlerHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKMessageHandlerHelper.m; sourceTree = "<group>"; };
-		5C22F8305B3989DFDFDFF1E7FA614D3F /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
-		5DD20F83CAC17132C7D92B6D0A87929A /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
-		5E6BD9861B1753FC4B3B9A48D0F0315C /* Pods-JXBWebKitProjectUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProjectUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6613450D56D90FF3106BB2FF77784823 /* WKCallNativeMethodMessageHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKCallNativeMethodMessageHandler.h; sourceTree = "<group>"; };
-		6B362A5CC817E3EF1E0F06422836E3BF /* Pods-JXBWebKitProjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		71E885D7ED7B9B4CBD94B5076856F94B /* ioapi_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_buf.h; path = SSZipArchive/minizip/ioapi_buf.h; sourceTree = "<group>"; };
-		7283EC4E7BEE6759410A5DE4130119E4 /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
-		7371F2B4EF450925E121E273E754813F /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/minizip/aes/aestab.h; sourceTree = "<group>"; };
-		74C68DA1B5A78A401AE160966ABA0100 /* Pods-JXBWebKitProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProject.release.xcconfig"; sourceTree = "<group>"; };
-		7658D0177A0307BFA81DAC4A4B861318 /* JXBWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXBWebViewController.h; path = JXBWebKit/JXBWebViewController.h; sourceTree = "<group>"; };
-		767C3F3EF40F3135904402787B22812C /* minishared.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = minishared.h; path = SSZipArchive/minizip/minishared.h; sourceTree = "<group>"; };
-		774110F9BE56653457D5F6CA52AE4BDF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		79F9F663415DCDB5DA1C9564955EE430 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
-		7A454DAFE689FA787820A92AA7271707 /* JXBWKWebViewPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKWebViewPool.m; sourceTree = "<group>"; };
-		7BDF23DAB5198DF934E0D3165F101CF9 /* WKWebView+ClearWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ClearWebCache.m"; sourceTree = "<group>"; };
-		7D1807CF76BACFF3D3352F68856EEE63 /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/minizip/aes/brg_endian.h; sourceTree = "<group>"; };
-		7F5D6BD2C6AA29217D69A404804E5883 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
-		80F9209C10CD0AD8F5539559AF7E83B3 /* WKWebView+CookiesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+CookiesManager.h"; sourceTree = "<group>"; };
-		88D6C1DD4BF1176EFD13EC18042A5744 /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/minizip/aes/brg_types.h; sourceTree = "<group>"; };
-		8A0696C8BB69DE594895C9159279E159 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
-		9355DE8E73654F354F6BE148B82E83C6 /* WKWebView+AOP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+AOP.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E0994F0AEAA7621CB78285287BE60C6 /* JXBWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = JXBWebKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F5535060F0C726BA955768B469CB083 /* Pods-JXBWebKitProjectTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectTests-resources.sh"; sourceTree = "<group>"; };
-		A22B24A5B0789844CB6FF58B3AA807FB /* JXBWebKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JXBWebKit-dummy.m"; sourceTree = "<group>"; };
-		A36FD888EF14486F8A9FD5139F7EC29D /* Pods-JXBWebKitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProject.debug.xcconfig"; sourceTree = "<group>"; };
-		A508C38014E0FF5E29E2C3F9315C0203 /* Pods-JXBWebKitProjectUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectUITests-resources.sh"; sourceTree = "<group>"; };
-		A91979B50BAC7601FA7A7228F7CBF9AD /* Pods-JXBWebKitProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AF07E117F3975B90B1C9EA79ED0335B5 /* Pods-JXBWebKitProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProject-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B320DB9C467B33D55075082511E46BEB /* Pods-JXBWebKitProject-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProject-frameworks.sh"; sourceTree = "<group>"; };
-		B3CC2E197075E9ADFA6F8767EB434642 /* aes_ni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ni.h; path = SSZipArchive/minizip/aes/aes_ni.h; sourceTree = "<group>"; };
-		BBAB18E154017A1F55646DBD3E84D264 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
-		BE96187190255C7E87A7DF1276D98117 /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
-		C0BD50446911289D868191B186E0B756 /* Pods-JXBWebKitProjectUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectUITests-frameworks.sh"; sourceTree = "<group>"; };
-		C3EF2FB15F6B558E4778EB98E107D646 /* Pods-JXBWebKitProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C492A7A03656586D7348F64ED74BB0E9 /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
-		C5FE60CD8B4D1F54D4F78C77F35B220C /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
-		C6108501716E20EB572097B0B41F08E3 /* Pods-JXBWebKitProjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C9CB9F5EDCDDFDCDC285DAE6B809810A /* JXBWKWebViewPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKWebViewPool.h; sourceTree = "<group>"; };
-		CE92F58E89DBAE209389A4E46DFDC530 /* libJXBWebKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJXBWebKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA11EF993FF7A92CBE21FD73391EE3B /* WKWebView+ClearWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ClearWebCache.h"; sourceTree = "<group>"; };
-		D015138308023DA017EA033DBC285CD6 /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
-		DC69476EC4B1A28301CF6403FE14DEBB /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
-		DCDF26BF186F28DBA507188D13F6F473 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
-		DF54B13294512C58C9852C2EA532880F /* Pods-JXBWebKitProjectTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProjectTests-frameworks.sh"; sourceTree = "<group>"; };
-		E047832A2A134AF5214445CA92EC50AC /* WKWebView+SupportProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SupportProtocol.m"; sourceTree = "<group>"; };
-		E1B1373DB8F0A7887C0FF3474BF27271 /* WKWebView+SupportProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SupportProtocol.h"; sourceTree = "<group>"; };
-		E2F4888BF1DF1DF39AAE96C5F3555381 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/minizip/aes/pwd2key.h; sourceTree = "<group>"; };
-		E3092613C72BA39B251E802B978F1600 /* libPods-JXBWebKitProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3F14585E8779C8C099B3587460A35F1 /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
-		E69113D68D5DDFA9CD1376E916651C70 /* UIProgressView+WKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+WKWebView.m"; sourceTree = "<group>"; };
-		E7466FC55E5A7D1BFE126BE22B87D8AF /* JSResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JSResources.bundle; path = JXBWebKit/JSResources.bundle; sourceTree = "<group>"; };
-		E9E1C752FF12835F2180CA5B37C51443 /* WKWebView+ExternalNavigationDelegates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ExternalNavigationDelegates.h"; sourceTree = "<group>"; };
-		EA0AE420545203E4FE13D403492D3391 /* WKWebView+ExternalNavigationDelegates.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ExternalNavigationDelegates.m"; sourceTree = "<group>"; };
-		F0EA390CD272AF0D45CC3884CFDC251E /* WKAppManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKAppManager.h; sourceTree = "<group>"; };
-		F488B4BD20DB7A44555967A75858786F /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
-		F53AB630A59F83A300078E1C1125B463 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
-		F7647D0B4ACAECF20949F8EEC8B6AC2C /* WKWebViewExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKWebViewExtension.h; sourceTree = "<group>"; };
-		F823BCB6AE08732BC9E6C9361E0AF506 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
-		FB36087C90AFC3C6FC35B79F0449359D /* WKWebView+SyncUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SyncUserAgent.m"; sourceTree = "<group>"; };
-		FD87EAC783BE163B2669CC6019E4D45E /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
-		FE3BE8E4A777095E3B4FF67120E2B9F5 /* JXBWKCustomProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKCustomProtocol.h; sourceTree = "<group>"; };
-		FE504E6D41BA2425B135979B6310146B /* Pods-JXBWebKitProjectUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProjectUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		009E5432B45265EDE41F5670737838CC /* JXBWKCustomProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKCustomProtocol.h; sourceTree = "<group>"; };
+		027BA5D38487AE28D819E1714A8B8426 /* Pods-JXBWebKitProjectUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProjectUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		07ECE300C71DBC40D5EB29106479F3C8 /* WKWebViewExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKWebViewExtension.h; sourceTree = "<group>"; };
+		08F9C33C69E4A1C606F961047C513966 /* minishared.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = minishared.h; path = SSZipArchive/minizip/minishared.h; sourceTree = "<group>"; };
+		093B156F2564B11AC92DE265B87A7E23 /* sha1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha1.h; path = SSZipArchive/minizip/aes/sha1.h; sourceTree = "<group>"; };
+		0E1E75C20E15434E871D3496CEA70690 /* Pods-JXBWebKitProjectUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProjectUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		10B0D9B61A04B40FFE80CD8DCE668DCD /* Pods-JXBWebKitProject-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProject-acknowledgements.plist"; sourceTree = "<group>"; };
+		132B185EFE9971D4935622AA659FA7C3 /* unzip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = unzip.c; path = SSZipArchive/minizip/unzip.c; sourceTree = "<group>"; };
+		134FB05CC8B0BFA23A5CA5F889C19A85 /* WKMessageHandlerDispatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKMessageHandlerDispatch.m; sourceTree = "<group>"; };
+		1423D907E07D0F9931815DC630F195C5 /* SSZipCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipCommon.h; path = SSZipArchive/SSZipCommon.h; sourceTree = "<group>"; };
+		15CD486EBD89B7961C5EFB4623CAB02F /* WKMessageHandlerHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerHelper.h; sourceTree = "<group>"; };
+		1BAB86A0F2885CA22D24AB3CE254B4C8 /* WKWebView+SyncUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SyncUserAgent.h"; sourceTree = "<group>"; };
+		1E7C32AE544A5224A396335639CF2EF9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		27C0F72FF42FDFAECE2AF606263FBB82 /* ioapi_buf.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_buf.c; path = SSZipArchive/minizip/ioapi_buf.c; sourceTree = "<group>"; };
+		2ACCEFFD93B8F43063B700B723AF5E2D /* WKAppManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKAppManager.m; sourceTree = "<group>"; };
+		2E51FF63592431419FC180D364A2664A /* JSResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = JSResources.bundle; path = JXBWebKit/JSResources.bundle; sourceTree = "<group>"; };
+		2EA6EFDB21B84EFA484CABFEA0AC041C /* WKMessageHandlerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerProtocol.h; sourceTree = "<group>"; };
+		3076CA1BBC3A0CCECCBAB73E7B1E9D63 /* aesopt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aesopt.h; path = SSZipArchive/minizip/aes/aesopt.h; sourceTree = "<group>"; };
+		32E13351A87AEB15B1F25D04C51A3910 /* WKWebView+ExternalNavigationDelegates.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ExternalNavigationDelegates.m"; sourceTree = "<group>"; };
+		35391F32952B82E17BF93A18723C5084 /* aes_ni.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aes_ni.c; path = SSZipArchive/minizip/aes/aes_ni.c; sourceTree = "<group>"; };
+		391047A35174940DC5BE7C3BF6188AEF /* ioapi_mem.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi_mem.c; path = SSZipArchive/minizip/ioapi_mem.c; sourceTree = "<group>"; };
+		3C9A6568C3D58E1FE9AE0F92C4125DCD /* NSURLProtocol+WebKitSupport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURLProtocol+WebKitSupport.m"; sourceTree = "<group>"; };
+		3F2513377C0526AD3A97699EA639FCD0 /* crypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = crypt.c; path = SSZipArchive/minizip/crypt.c; sourceTree = "<group>"; };
+		41AC07B310E07B09F0B10CE13D9986EA /* aestab.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aestab.h; path = SSZipArchive/minizip/aes/aestab.h; sourceTree = "<group>"; };
+		4967AA21EFDD8F28550B281B6DF882FC /* hmac.c */ = {isa = PBXFileReference; includeInIndex = 1; name = hmac.c; path = SSZipArchive/minizip/aes/hmac.c; sourceTree = "<group>"; };
+		49766F37D59922BC7A94E8EC4B6D1C7E /* libPods-JXBWebKitProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-JXBWebKitProjectUITests.a"; path = "libPods-JXBWebKitProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F0C085970548514E8848841A819919 /* aeskey.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aeskey.c; path = SSZipArchive/minizip/aes/aeskey.c; sourceTree = "<group>"; };
+		4D32BB64F453ED1DC3E7DF911D776887 /* JXBWebKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JXBWebKit-prefix.pch"; sourceTree = "<group>"; };
+		4F3165B6FA545E54F23F4EB94D584083 /* WKWebView+SupportProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SupportProtocol.h"; sourceTree = "<group>"; };
+		518DB0D49EC03EA5DF44925D71FA5BC3 /* aestab.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aestab.c; path = SSZipArchive/minizip/aes/aestab.c; sourceTree = "<group>"; };
+		522342E57295AC610FB67063771ED5E0 /* WKWebView+ClearWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ClearWebCache.h"; sourceTree = "<group>"; };
+		52A29E036536C0530B448AE101C07E51 /* Pods-JXBWebKitProject-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProject-dummy.m"; sourceTree = "<group>"; };
+		57F1A588469A07839E8492AEB5F1EDDC /* JXBWebKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = JXBWebKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		59679162E1C7F756C1E5018605E55C76 /* Pods-JXBWebKitProjectTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProjectTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A0499AAE24D16A6C8F94274F0C97589 /* UIProgressView+WKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIProgressView+WKWebView.h"; sourceTree = "<group>"; };
+		5A9B8CCE671207782F01F6A4965DDCD0 /* NSURLProtocol+WebKitSupport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURLProtocol+WebKitSupport.h"; sourceTree = "<group>"; };
+		5DF6354989197EABEC15CE129875C69D /* WKWebView+AOP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+AOP.m"; sourceTree = "<group>"; };
+		5EC2B7E10D941E6537F41E1A86E7580D /* JXBWKWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKWebView.h; sourceTree = "<group>"; };
+		5F138FA1DDC4E148B30BC32289C32882 /* WKWebView+ClearWebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+ClearWebCache.m"; sourceTree = "<group>"; };
+		658E160AEAAFD37A5C8F42AFB9154F27 /* libPods-JXBWebKitProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-JXBWebKitProjectTests.a"; path = "libPods-JXBWebKitProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C85097D0577069F35A666D86BA4971 /* minishared.c */ = {isa = PBXFileReference; includeInIndex = 1; name = minishared.c; path = SSZipArchive/minizip/minishared.c; sourceTree = "<group>"; };
+		67F55455CB883704E56FEA080FCF2E58 /* WKWebView+CookiesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+CookiesManager.m"; sourceTree = "<group>"; };
+		69E7DFDD18547EA40D8D21924868AA55 /* WKMessageHandlerDispatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKMessageHandlerDispatch.h; sourceTree = "<group>"; };
+		6C4D4D0CEFB388B16C2E0E77AD5F435B /* prng.c */ = {isa = PBXFileReference; includeInIndex = 1; name = prng.c; path = SSZipArchive/minizip/aes/prng.c; sourceTree = "<group>"; };
+		6F50462AEFDD61CFAB448099645CB5B0 /* ioapi.c */ = {isa = PBXFileReference; includeInIndex = 1; name = ioapi.c; path = SSZipArchive/minizip/ioapi.c; sourceTree = "<group>"; };
+		709291B7FBDF400C29ED45DF7F8DE3ED /* SSZipArchive.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSZipArchive.xcconfig; sourceTree = "<group>"; };
+		78987BB7BD0CB6486192A726D46F08C3 /* ZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZipArchive.h; path = SSZipArchive/ZipArchive.h; sourceTree = "<group>"; };
+		7A5B2759716FC9F1AABFCA353DAA7EE2 /* WKWebView+ExternalNavigationDelegates.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+ExternalNavigationDelegates.h"; sourceTree = "<group>"; };
+		7A828EE2A77E981EA3BA0B9217F4D4E7 /* WKAppManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKAppManager.h; sourceTree = "<group>"; };
+		7C3AEF9D6A94B3437795509C8BD905AD /* Pods-JXBWebKitProject-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JXBWebKitProject-resources.sh"; sourceTree = "<group>"; };
+		7D6EF70296B77C89429FA397DB98558E /* Pods-JXBWebKitProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		80D82135417787C1A540C2F7686A1AEF /* JXBWKCustomProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKCustomProtocol.m; sourceTree = "<group>"; };
+		832BBA01FB91F1306A81FE93D3016CD3 /* ioapi_buf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_buf.h; path = SSZipArchive/minizip/ioapi_buf.h; sourceTree = "<group>"; };
+		8410BD3F65C757489A9659463FC57958 /* WKCallNativeMethodMessageHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WKCallNativeMethodMessageHandler.h; sourceTree = "<group>"; };
+		86722B4A4DE8B468DCC877B171274E97 /* WKMessageHandlerHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKMessageHandlerHelper.m; sourceTree = "<group>"; };
+		8DE71D07D38A1614E3985E5AFCFDE2DC /* JXBWebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JXBWebViewController.h; path = JXBWebKit/JXBWebViewController.h; sourceTree = "<group>"; };
+		90B727C5BED9F67D73D2C33C2A9AFC6F /* Pods-JXBWebKitProject-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JXBWebKitProject-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9197E60B03017F3EC7B44577FFB6E5EB /* JXBWebKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JXBWebKit-dummy.m"; sourceTree = "<group>"; };
+		91B23470DEB9A986332BEB5034234BC7 /* libSSZipArchive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSSZipArchive.a; path = libSSZipArchive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9226C67A833DC0FBC23DB04DAE3F7F1B /* aes_ni.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes_ni.h; path = SSZipArchive/minizip/aes/aes_ni.h; sourceTree = "<group>"; };
+		93CCD65AC86632F149E325B42CB89545 /* prng.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = prng.h; path = SSZipArchive/minizip/aes/prng.h; sourceTree = "<group>"; };
+		97BC9FECA2E09E0FC4CF519DBF11B76E /* SSZipArchive.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSZipArchive.h; path = SSZipArchive/SSZipArchive.h; sourceTree = "<group>"; };
+		994975DFFF7B9A2BF44E35F68F92E860 /* brg_endian.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_endian.h; path = SSZipArchive/minizip/aes/brg_endian.h; sourceTree = "<group>"; };
+		9A306ACD03ED9F7459823D7605A8A6F5 /* SSZipArchive.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSZipArchive.m; path = SSZipArchive/SSZipArchive.m; sourceTree = "<group>"; };
+		9B8EAD496E314034CA360E1C3309D751 /* fileenc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fileenc.h; path = SSZipArchive/minizip/aes/fileenc.h; sourceTree = "<group>"; };
+		9C1DE6B0F262B6D85F07E4A6C073552F /* JXBWKWebViewPool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKWebViewPool.m; sourceTree = "<group>"; };
+		9C800959F7C2B72B2536DB1333952AF9 /* Pods-JXBWebKitProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9CBFD459E40B7C055B15855F54811A44 /* pwd2key.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pwd2key.h; path = SSZipArchive/minizip/aes/pwd2key.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A205EEE4495545780E2416EF98055D49 /* aescrypt.c */ = {isa = PBXFileReference; includeInIndex = 1; name = aescrypt.c; path = SSZipArchive/minizip/aes/aescrypt.c; sourceTree = "<group>"; };
+		A672801CAFB57B68740DE84BFEB888F8 /* fileenc.c */ = {isa = PBXFileReference; includeInIndex = 1; name = fileenc.c; path = SSZipArchive/minizip/aes/fileenc.c; sourceTree = "<group>"; };
+		A9CB9F4FDC4145624A3AB1E4C3CADDEE /* JXBWebKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JXBWebKit.xcconfig; sourceTree = "<group>"; };
+		AA5DD6B1DAE90E3C98B985DCDE14E42C /* pwd2key.c */ = {isa = PBXFileReference; includeInIndex = 1; name = pwd2key.c; path = SSZipArchive/minizip/aes/pwd2key.c; sourceTree = "<group>"; };
+		ACB730167C4FC40F7CEFA0C5F9ADCF30 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = SSZipArchive/minizip/aes/aes.h; sourceTree = "<group>"; };
+		AEA6A3F07B8A15EC271DA065EAC7B460 /* Pods-JXBWebKitProjectTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProjectTests-dummy.m"; sourceTree = "<group>"; };
+		B3F9F07A5CCBE347283C61C2C728276E /* ioapi_mem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi_mem.h; path = SSZipArchive/minizip/ioapi_mem.h; sourceTree = "<group>"; };
+		B42D1A3939A87547A64EF2598856877D /* sha1.c */ = {isa = PBXFileReference; includeInIndex = 1; name = sha1.c; path = SSZipArchive/minizip/aes/sha1.c; sourceTree = "<group>"; };
+		B698257C803C4602D8605D1A16DB5498 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = SSZipArchive/minizip/aes/hmac.h; sourceTree = "<group>"; };
+		B8BAAFE464ACAF33B9F197DAA669A2E6 /* zip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = zip.h; path = SSZipArchive/minizip/zip.h; sourceTree = "<group>"; };
+		B934283B993281AA6EE36A57AC3AD8E8 /* ioapi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = SSZipArchive/minizip/ioapi.h; sourceTree = "<group>"; };
+		BAAACD32B08088014449E22E306FF7AA /* libPods-JXBWebKitProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-JXBWebKitProject.a"; path = "libPods-JXBWebKitProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDDB3CA0F08D6B8B887BACD7B88A1DC /* UIProgressView+WKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+WKWebView.m"; sourceTree = "<group>"; };
+		C0BCAE63DBE9E9FF97F1D7C917964268 /* SSZipArchive-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSZipArchive-prefix.pch"; sourceTree = "<group>"; };
+		C3B938D1A87EFDCB6A7CE3ED14459CF7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C530B0E3CBEA5B7B6AE902B6388F22F3 /* Pods-JXBWebKitProjectUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JXBWebKitProjectUITests-dummy.m"; sourceTree = "<group>"; };
+		CB3A2BBE932BCD272D32972695CD876A /* JXBWebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JXBWebViewController.m; path = JXBWebKit/JXBWebViewController.m; sourceTree = "<group>"; };
+		CC59C8D2F98AACCC4401AE6575DD7908 /* WKWebView+AOP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+AOP.h"; sourceTree = "<group>"; };
+		CE504D85F200D552DFCD7301D00AB907 /* Pods-JXBWebKitProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		CFB6D457E4CCD15290FA19EEB95E7345 /* Pods-JXBWebKitProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProject.release.xcconfig"; sourceTree = "<group>"; };
+		CFFDD73B4216B7595756F44A174B676B /* Pods-JXBWebKitProjectTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JXBWebKitProjectTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D32D57DC9FF83F1E9C5C87D0557897CA /* WKCallNativeMethodMessageHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WKCallNativeMethodMessageHandler.m; sourceTree = "<group>"; };
+		D57B3B48E2CCEC86DF908FB12070C713 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D629F7ADFD5F16173EAC304B0F8E22CF /* SSZipArchive-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSZipArchive-dummy.m"; sourceTree = "<group>"; };
+		D695FA6A0B714226CCEC8C2860D80ED0 /* crypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = SSZipArchive/minizip/crypt.h; sourceTree = "<group>"; };
+		D85B1C63BC37849B4A1D0947A9CAC783 /* WKWebView+SyncUserAgent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SyncUserAgent.m"; sourceTree = "<group>"; };
+		DE88A3237C59841DA86FDBB831723F59 /* WKWebView+CookiesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+CookiesManager.h"; sourceTree = "<group>"; };
+		E47B239AC15481DF88321696955ABF45 /* libJXBWebKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJXBWebKit.a; path = libJXBWebKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E797A56D40A9D909CEDD983521B98B7D /* WKWebView+SupportProtocol.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SupportProtocol.m"; sourceTree = "<group>"; };
+		EB6C19C5AE8FFCB6B049E02564F4E7BA /* brg_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = brg_types.h; path = SSZipArchive/minizip/aes/brg_types.h; sourceTree = "<group>"; };
+		EC1781C3C3DCFDF55E7C91DC03B0A115 /* JXBWKWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JXBWKWebView.m; sourceTree = "<group>"; };
+		ED7002F7A1D99466B080E2FCAF639B2E /* Pods-JXBWebKitProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JXBWebKitProject.debug.xcconfig"; sourceTree = "<group>"; };
+		F289F9E9E6AF4139C626FD95F7060ED9 /* zip.c */ = {isa = PBXFileReference; includeInIndex = 1; name = zip.c; path = SSZipArchive/minizip/zip.c; sourceTree = "<group>"; };
+		FB08B181F6E336451B1AFD4E33F4C4B4 /* JXBWKWebViewPool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JXBWKWebViewPool.h; sourceTree = "<group>"; };
+		FDF91D7897F6E674093DABD0CBB9EB04 /* unzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = SSZipArchive/minizip/unzip.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2B2575E57C86DA45D5F76AE475DD241D /* Frameworks */ = {
+		03416F0B0863F1B0B25DFD4A01A289C7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				940CF8E347493F4C6DF4D03AF1D978D4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		652B31CE657434B5AABA807D20FFD2D1 /* Frameworks */ = {
+		20874D6E491B119DED7642B7DE67432D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EDB7D7A7E52865A3DFACB3F99F8B827 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A456583218C93E4A7C41902DA38522E2 /* Frameworks */ = {
+		3C9916207953AE734905C04E424A638E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FFCCFCF2C36CC301EBD7D26D6AE6B14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0542B01909AA6F63CC9D65F6C406CE1 /* Frameworks */ = {
+		45F9F792A7ABA1F9DFEE5E4FD0C59789 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CFECF547C4BDD55B035163868A9B386 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA7821ED52F23BADE1F1D303415FFF34 /* Frameworks */ = {
+		49AD43C34D172253ADFB9FB031B238A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA52559929FA201539EAF7A5C4789F36 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		15934EE126F7FA60F3B0532FB8E5F00D /* Tools */ = {
+		11FFADFDF7DE592AB228039F207D91A3 /* WebViewExtension */ = {
 			isa = PBXGroup;
 			children = (
-				3D240594B26FC342C605663E4D5146E7 /* CustomUI */,
-				25561EA0E718F4A3B6E17009956A971D /* Dispatch */,
-				698F681F2A7153334D5C806ACFDAD766 /* Helper */,
-				ABC062599D37638B6179AB1F8F7C1592 /* MessageHandler */,
-				C08A38D24298633E2169AFA8DF00227D /* ReusePool */,
-				73B7A74305C0FFAD669E55673D746676 /* URLProtocol */,
-				A7CA008C883C9E6E50B732EE12C21931 /* WebViewExtension */,
+				522342E57295AC610FB67063771ED5E0 /* WKWebView+ClearWebCache.h */,
+				5F138FA1DDC4E148B30BC32289C32882 /* WKWebView+ClearWebCache.m */,
+				DE88A3237C59841DA86FDBB831723F59 /* WKWebView+CookiesManager.h */,
+				67F55455CB883704E56FEA080FCF2E58 /* WKWebView+CookiesManager.m */,
+				7A5B2759716FC9F1AABFCA353DAA7EE2 /* WKWebView+ExternalNavigationDelegates.h */,
+				32E13351A87AEB15B1F25D04C51A3910 /* WKWebView+ExternalNavigationDelegates.m */,
+				4F3165B6FA545E54F23F4EB94D584083 /* WKWebView+SupportProtocol.h */,
+				E797A56D40A9D909CEDD983521B98B7D /* WKWebView+SupportProtocol.m */,
+				1BAB86A0F2885CA22D24AB3CE254B4C8 /* WKWebView+SyncUserAgent.h */,
+				D85B1C63BC37849B4A1D0947A9CAC783 /* WKWebView+SyncUserAgent.m */,
+				07ECE300C71DBC40D5EB29106479F3C8 /* WKWebViewExtension.h */,
 			);
-			name = Tools;
-			path = JXBWebKit/Tools;
+			name = WebViewExtension;
+			path = WebViewExtension;
 			sourceTree = "<group>";
 		};
-		25561EA0E718F4A3B6E17009956A971D /* Dispatch */ = {
+		13D6635DBEA1248CAB51BF1E1DC8740E /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
-				556586145FF37F5B3C15B5303A2EC28F /* WKMessageHandlerDispatch.h */,
-				29032A9BCAA0DD91FB6DBA4D4E14768E /* WKMessageHandlerDispatch.m */,
+				5A0499AAE24D16A6C8F94274F0C97589 /* UIProgressView+WKWebView.h */,
+				BBDDB3CA0F08D6B8B887BACD7B88A1DC /* UIProgressView+WKWebView.m */,
+				CC59C8D2F98AACCC4401AE6575DD7908 /* WKWebView+AOP.h */,
+				5DF6354989197EABEC15CE129875C69D /* WKWebView+AOP.m */,
 			);
-			path = Dispatch;
-			sourceTree = "<group>";
-		};
-		3D240594B26FC342C605663E4D5146E7 /* CustomUI */ = {
-			isa = PBXGroup;
-			children = (
-				2E7F299EB5772CE3654CDE9E5FEDD5D0 /* UIProgressView+WKWebView.h */,
-				E69113D68D5DDFA9CD1376E916651C70 /* UIProgressView+WKWebView.m */,
-				3EA9C693F2EEB119DCFF4A5ADE729E4C /* WKWebView+AOP.h */,
-				9355DE8E73654F354F6BE148B82E83C6 /* WKWebView+AOP.m */,
-			);
+			name = CustomUI;
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		4F145446B1368F3E3D7B8B3E2EE155E1 /* Pods */ = {
+		13EACF1347BF6994F7134B311C3A951D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B08A75118D1D43D0C155A614C1294474 /* SSZipArchive */,
+				E47B239AC15481DF88321696955ABF45 /* libJXBWebKit.a */,
+				BAAACD32B08088014449E22E306FF7AA /* libPods-JXBWebKitProject.a */,
+				658E160AEAAFD37A5C8F42AFB9154F27 /* libPods-JXBWebKitProjectTests.a */,
+				49766F37D59922BC7A94E8EC4B6D1C7E /* libPods-JXBWebKitProjectUITests.a */,
+				91B23470DEB9A986332BEB5034234BC7 /* libSSZipArchive.a */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		5F6AB0908CBBC81F41BD262C23FB3112 /* Support Files */ = {
+		42724EE974DFB03B672E17C2AD283CB2 /* Pods-JXBWebKitProject */ = {
 			isa = PBXGroup;
 			children = (
-				5DD20F83CAC17132C7D92B6D0A87929A /* SSZipArchive.xcconfig */,
-				7283EC4E7BEE6759410A5DE4130119E4 /* SSZipArchive-dummy.m */,
-				F53AB630A59F83A300078E1C1125B463 /* SSZipArchive-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SSZipArchive";
-			sourceTree = "<group>";
-		};
-		66D03BAA431487B1CBDB9D870499230D /* JXBWebKit */ = {
-			isa = PBXGroup;
-			children = (
-				7658D0177A0307BFA81DAC4A4B861318 /* JXBWebViewController.h */,
-				51D9C0C0AEAD60103D210EE6CCD0A49B /* JXBWebViewController.m */,
-				98862A54C21C83650DB2BDAFD248E3B9 /* Pod */,
-				F57B6A3E41F6744EEB44073AEACA11C0 /* Resources */,
-				A81C77C0C196A26363F35263112CB692 /* Support Files */,
-				15934EE126F7FA60F3B0532FB8E5F00D /* Tools */,
-			);
-			name = JXBWebKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		698F681F2A7153334D5C806ACFDAD766 /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				F0EA390CD272AF0D45CC3884CFDC251E /* WKAppManager.h */,
-				22C43EF762895CA2FC41D79F40075E6F /* WKAppManager.m */,
-				345787B4995CE3F6B1C36F4CBC65E85A /* WKMessageHandlerHelper.h */,
-				59B775CB81856A804B4FB27AE3571DF5 /* WKMessageHandlerHelper.m */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		6F4DD0FF554C272458D9926123DA19ED /* Pods-JXBWebKitProject */ = {
-			isa = PBXGroup;
-			children = (
-				AF07E117F3975B90B1C9EA79ED0335B5 /* Pods-JXBWebKitProject-acknowledgements.markdown */,
-				0D6C269ACEB2FC5D735C37F4E5FC6111 /* Pods-JXBWebKitProject-acknowledgements.plist */,
-				0D2EF367AFDAD7B3D6479352B868DEEB /* Pods-JXBWebKitProject-dummy.m */,
-				B320DB9C467B33D55075082511E46BEB /* Pods-JXBWebKitProject-frameworks.sh */,
-				54944DA62C46E5EC33DA8F9A3A1CDF8C /* Pods-JXBWebKitProject-resources.sh */,
-				A36FD888EF14486F8A9FD5139F7EC29D /* Pods-JXBWebKitProject.debug.xcconfig */,
-				74C68DA1B5A78A401AE160966ABA0100 /* Pods-JXBWebKitProject.release.xcconfig */,
+				90B727C5BED9F67D73D2C33C2A9AFC6F /* Pods-JXBWebKitProject-acknowledgements.markdown */,
+				10B0D9B61A04B40FFE80CD8DCE668DCD /* Pods-JXBWebKitProject-acknowledgements.plist */,
+				52A29E036536C0530B448AE101C07E51 /* Pods-JXBWebKitProject-dummy.m */,
+				7C3AEF9D6A94B3437795509C8BD905AD /* Pods-JXBWebKitProject-resources.sh */,
+				ED7002F7A1D99466B080E2FCAF639B2E /* Pods-JXBWebKitProject.debug.xcconfig */,
+				CFB6D457E4CCD15290FA19EEB95E7345 /* Pods-JXBWebKitProject.release.xcconfig */,
 			);
 			name = "Pods-JXBWebKitProject";
 			path = "Target Support Files/Pods-JXBWebKitProject";
 			sourceTree = "<group>";
 		};
-		73B7A74305C0FFAD669E55673D746676 /* URLProtocol */ = {
+		4C9A9F2528A5DBB1515C3D34247EFF0F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				FE3BE8E4A777095E3B4FF67120E2B9F5 /* JXBWKCustomProtocol.h */,
-				08662E1379D51F88E3E23EB89B0C385F /* JXBWKCustomProtocol.m */,
-				FD87EAC783BE163B2669CC6019E4D45E /* NSURLProtocol+WebKitSupport.h */,
-				C492A7A03656586D7348F64ED74BB0E9 /* NSURLProtocol+WebKitSupport.m */,
-			);
-			path = URLProtocol;
-			sourceTree = "<group>";
-		};
-		770FBF92634A8B3733CDAEB67507C710 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6F4DD0FF554C272458D9926123DA19ED /* Pods-JXBWebKitProject */,
-				C085036BAA8D121BF33768F0CB02C887 /* Pods-JXBWebKitProjectTests */,
-				949C3B10DB63B4F3B7D52076AA849C1C /* Pods-JXBWebKitProjectUITests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				DD313D7122778A8D8524B6CA5759EEB7 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4F145446B1368F3E3D7B8B3E2EE155E1 /* Pods */,
-				EEC730E14702B59F7AA228188873866F /* Products */,
-				770FBF92634A8B3733CDAEB67507C710 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		949C3B10DB63B4F3B7D52076AA849C1C /* Pods-JXBWebKitProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5E6BD9861B1753FC4B3B9A48D0F0315C /* Pods-JXBWebKitProjectUITests-acknowledgements.markdown */,
-				FE504E6D41BA2425B135979B6310146B /* Pods-JXBWebKitProjectUITests-acknowledgements.plist */,
-				45A4850D32287729CB6A5348A0DECDB0 /* Pods-JXBWebKitProjectUITests-dummy.m */,
-				C0BD50446911289D868191B186E0B756 /* Pods-JXBWebKitProjectUITests-frameworks.sh */,
-				A508C38014E0FF5E29E2C3F9315C0203 /* Pods-JXBWebKitProjectUITests-resources.sh */,
-				1E5B7E98F3104E7795ED5595409EF5F5 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */,
-				C3EF2FB15F6B558E4778EB98E107D646 /* Pods-JXBWebKitProjectUITests.release.xcconfig */,
-			);
-			name = "Pods-JXBWebKitProjectUITests";
-			path = "Target Support Files/Pods-JXBWebKitProjectUITests";
-			sourceTree = "<group>";
-		};
-		98862A54C21C83650DB2BDAFD248E3B9 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				9E0994F0AEAA7621CB78285287BE60C6 /* JXBWebKit.podspec */,
-				2FA5CC81F18CE3FBC878EE9929F3F999 /* LICENSE */,
-				774110F9BE56653457D5F6CA52AE4BDF /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		A7CA008C883C9E6E50B732EE12C21931 /* WebViewExtension */ = {
-			isa = PBXGroup;
-			children = (
-				CEA11EF993FF7A92CBE21FD73391EE3B /* WKWebView+ClearWebCache.h */,
-				7BDF23DAB5198DF934E0D3165F101CF9 /* WKWebView+ClearWebCache.m */,
-				80F9209C10CD0AD8F5539559AF7E83B3 /* WKWebView+CookiesManager.h */,
-				1976B2C0A7AADEBD8F738A8185A52099 /* WKWebView+CookiesManager.m */,
-				E9E1C752FF12835F2180CA5B37C51443 /* WKWebView+ExternalNavigationDelegates.h */,
-				EA0AE420545203E4FE13D403492D3391 /* WKWebView+ExternalNavigationDelegates.m */,
-				E1B1373DB8F0A7887C0FF3474BF27271 /* WKWebView+SupportProtocol.h */,
-				E047832A2A134AF5214445CA92EC50AC /* WKWebView+SupportProtocol.m */,
-				458EDBE42FEE5DA4A165B06FB59C0AE8 /* WKWebView+SyncUserAgent.h */,
-				FB36087C90AFC3C6FC35B79F0449359D /* WKWebView+SyncUserAgent.m */,
-				F7647D0B4ACAECF20949F8EEC8B6AC2C /* WKWebViewExtension.h */,
-			);
-			path = WebViewExtension;
-			sourceTree = "<group>";
-		};
-		A81C77C0C196A26363F35263112CB692 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4274DC56D38D732FD9EB668E3A30D6FA /* JXBWebKit.xcconfig */,
-				A22B24A5B0789844CB6FF58B3AA807FB /* JXBWebKit-dummy.m */,
-				144D5259C002FC953649B89354BBE5B1 /* JXBWebKit-prefix.pch */,
+				A9CB9F4FDC4145624A3AB1E4C3CADDEE /* JXBWebKit.xcconfig */,
+				9197E60B03017F3EC7B44577FFB6E5EB /* JXBWebKit-dummy.m */,
+				4D32BB64F453ED1DC3E7DF911D776887 /* JXBWebKit-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "JXBWebKitProject/Pods/Target Support Files/JXBWebKit";
 			sourceTree = "<group>";
 		};
-		ABC062599D37638B6179AB1F8F7C1592 /* MessageHandler */ = {
+		4EEF38465C5E2B014DBFA37AF04A4060 /* Pods-JXBWebKitProjectUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6613450D56D90FF3106BB2FF77784823 /* WKCallNativeMethodMessageHandler.h */,
-				50CAEBAA2D09B8939A0EDBB13E8409A3 /* WKCallNativeMethodMessageHandler.m */,
-				265709394B9CF70830C041220163A925 /* WKMessageHandlerProtocol.h */,
+				027BA5D38487AE28D819E1714A8B8426 /* Pods-JXBWebKitProjectUITests-acknowledgements.markdown */,
+				0E1E75C20E15434E871D3496CEA70690 /* Pods-JXBWebKitProjectUITests-acknowledgements.plist */,
+				C530B0E3CBEA5B7B6AE902B6388F22F3 /* Pods-JXBWebKitProjectUITests-dummy.m */,
+				D57B3B48E2CCEC86DF908FB12070C713 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */,
+				9C800959F7C2B72B2536DB1333952AF9 /* Pods-JXBWebKitProjectUITests.release.xcconfig */,
 			);
+			name = "Pods-JXBWebKitProjectUITests";
+			path = "Target Support Files/Pods-JXBWebKitProjectUITests";
+			sourceTree = "<group>";
+		};
+		71632BAD89B767629EAAE22B044B0774 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				42724EE974DFB03B672E17C2AD283CB2 /* Pods-JXBWebKitProject */,
+				8EFD44C5E405E47D63C0BF51E3A4503E /* Pods-JXBWebKitProjectTests */,
+				4EEF38465C5E2B014DBFA37AF04A4060 /* Pods-JXBWebKitProjectUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		74FDA47FD2E26CE1BAC2AF274A459DA9 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				57F1A588469A07839E8492AEB5F1EDDC /* JXBWebKit.podspec */,
+				C3B938D1A87EFDCB6A7CE3ED14459CF7 /* LICENSE */,
+				1E7C32AE544A5224A396335639CF2EF9 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		76A0CEE743AB4593985E25D1D05775F6 /* MessageHandler */ = {
+			isa = PBXGroup;
+			children = (
+				8410BD3F65C757489A9659463FC57958 /* WKCallNativeMethodMessageHandler.h */,
+				D32D57DC9FF83F1E9C5C87D0557897CA /* WKCallNativeMethodMessageHandler.m */,
+				2EA6EFDB21B84EFA484CABFEA0AC041C /* WKMessageHandlerProtocol.h */,
+			);
+			name = MessageHandler;
 			path = MessageHandler;
 			sourceTree = "<group>";
 		};
-		B08A75118D1D43D0C155A614C1294474 /* SSZipArchive */ = {
+		851E0E218C3A7B3AD9B3C4779079ED0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				10A112FC88E46ECAD9EE88383AF604B0 /* aes.h */,
-				4B9BEA8A374666215372B09898C07FD8 /* aes_ni.c */,
-				B3CC2E197075E9ADFA6F8767EB434642 /* aes_ni.h */,
-				BE96187190255C7E87A7DF1276D98117 /* aescrypt.c */,
-				F823BCB6AE08732BC9E6C9361E0AF506 /* aeskey.c */,
-				BBAB18E154017A1F55646DBD3E84D264 /* aesopt.h */,
-				C5FE60CD8B4D1F54D4F78C77F35B220C /* aestab.c */,
-				7371F2B4EF450925E121E273E754813F /* aestab.h */,
-				7D1807CF76BACFF3D3352F68856EEE63 /* brg_endian.h */,
-				88D6C1DD4BF1176EFD13EC18042A5744 /* brg_types.h */,
-				DC69476EC4B1A28301CF6403FE14DEBB /* crypt.c */,
-				8A0696C8BB69DE594895C9159279E159 /* crypt.h */,
-				F488B4BD20DB7A44555967A75858786F /* fileenc.c */,
-				4B9AA8A5A34BDA1AA6764A13803C5547 /* fileenc.h */,
-				56AB3F6C959E878C82F21F2C7C4E80C1 /* hmac.c */,
-				348BE635F295D4AF8A133F0F36461E71 /* hmac.h */,
-				79F9F663415DCDB5DA1C9564955EE430 /* ioapi.c */,
-				DCDF26BF186F28DBA507188D13F6F473 /* ioapi.h */,
-				3FFB4D5E1C65279F3FFAC171BC3EBCEA /* ioapi_buf.c */,
-				71E885D7ED7B9B4CBD94B5076856F94B /* ioapi_buf.h */,
-				055E024311660239F093628AC46CF643 /* ioapi_mem.c */,
-				D015138308023DA017EA033DBC285CD6 /* ioapi_mem.h */,
-				15545E3B90231CBBD9920969ABB4399C /* minishared.c */,
-				767C3F3EF40F3135904402787B22812C /* minishared.h */,
-				1794EEFF96258D765220020C3F91EC58 /* prng.c */,
-				1B20A285F8194712B4E58A75FB771F2A /* prng.h */,
-				46BB2628C3AE5EF5CCC14BB4AB489991 /* pwd2key.c */,
-				E2F4888BF1DF1DF39AAE96C5F3555381 /* pwd2key.h */,
-				E3F14585E8779C8C099B3587460A35F1 /* sha1.c */,
-				2D9EA527F60E231822332D8199C9B268 /* sha1.h */,
-				094D75FA95F4B268DBDEEEDDDAF1E1D0 /* SSZipArchive.h */,
-				15B1E67E0DC559D21D31FC27FDB315BD /* SSZipArchive.m */,
-				37AB0B636CCF416B65D145AC1E378C12 /* SSZipCommon.h */,
-				5C22F8305B3989DFDFDFF1E7FA614D3F /* unzip.c */,
-				30DC1C81F8782291809A6BD7D8F5D9B6 /* unzip.h */,
-				7F5D6BD2C6AA29217D69A404804E5883 /* zip.c */,
-				3FDB3AC283060CC7C827B5A067CC7A1D /* zip.h */,
-				0E4C678FECFDE081B9448E7C9C64D5CE /* ZipArchive.h */,
-				5F6AB0908CBBC81F41BD262C23FB3112 /* Support Files */,
+				B5D6A1C6379A26F0AE6D9407D3543225 /* SSZipArchive */,
 			);
-			path = SSZipArchive;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		8EFD44C5E405E47D63C0BF51E3A4503E /* Pods-JXBWebKitProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C085036BAA8D121BF33768F0CB02C887 /* Pods-JXBWebKitProjectTests */ = {
-			isa = PBXGroup;
-			children = (
-				6B362A5CC817E3EF1E0F06422836E3BF /* Pods-JXBWebKitProjectTests-acknowledgements.markdown */,
-				C6108501716E20EB572097B0B41F08E3 /* Pods-JXBWebKitProjectTests-acknowledgements.plist */,
-				1A93BE19AE68FC40328E19ED456A0AF5 /* Pods-JXBWebKitProjectTests-dummy.m */,
-				DF54B13294512C58C9852C2EA532880F /* Pods-JXBWebKitProjectTests-frameworks.sh */,
-				9F5535060F0C726BA955768B469CB083 /* Pods-JXBWebKitProjectTests-resources.sh */,
-				A91979B50BAC7601FA7A7228F7CBF9AD /* Pods-JXBWebKitProjectTests.debug.xcconfig */,
-				2F1947F70DB3C2312497BC29663C7BBE /* Pods-JXBWebKitProjectTests.release.xcconfig */,
+				59679162E1C7F756C1E5018605E55C76 /* Pods-JXBWebKitProjectTests-acknowledgements.markdown */,
+				CFFDD73B4216B7595756F44A174B676B /* Pods-JXBWebKitProjectTests-acknowledgements.plist */,
+				AEA6A3F07B8A15EC271DA065EAC7B460 /* Pods-JXBWebKitProjectTests-dummy.m */,
+				7D6EF70296B77C89429FA397DB98558E /* Pods-JXBWebKitProjectTests.debug.xcconfig */,
+				CE504D85F200D552DFCD7301D00AB907 /* Pods-JXBWebKitProjectTests.release.xcconfig */,
 			);
 			name = "Pods-JXBWebKitProjectTests";
 			path = "Target Support Files/Pods-JXBWebKitProjectTests";
 			sourceTree = "<group>";
 		};
-		C08A38D24298633E2169AFA8DF00227D /* ReusePool */ = {
+		9D9833C047872F53AF14FC0742D8297A /* Dispatch */ = {
 			isa = PBXGroup;
 			children = (
-				0F22B178E2439B36A07346CE505681FB /* JXBWKWebView.h */,
-				24A4F358F78C16A8839F02E99CDAA015 /* JXBWKWebView.m */,
-				C9CB9F5EDCDDFDCDC285DAE6B809810A /* JXBWKWebViewPool.h */,
-				7A454DAFE689FA787820A92AA7271707 /* JXBWKWebViewPool.m */,
+				69E7DFDD18547EA40D8D21924868AA55 /* WKMessageHandlerDispatch.h */,
+				134FB05CC8B0BFA23A5CA5F889C19A85 /* WKMessageHandlerDispatch.m */,
 			);
+			name = Dispatch;
+			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		A0D5FE2CF176643189EA054FD2CE12EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2E51FF63592431419FC180D364A2664A /* JSResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B5D6A1C6379A26F0AE6D9407D3543225 /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				ACB730167C4FC40F7CEFA0C5F9ADCF30 /* aes.h */,
+				35391F32952B82E17BF93A18723C5084 /* aes_ni.c */,
+				9226C67A833DC0FBC23DB04DAE3F7F1B /* aes_ni.h */,
+				A205EEE4495545780E2416EF98055D49 /* aescrypt.c */,
+				49F0C085970548514E8848841A819919 /* aeskey.c */,
+				3076CA1BBC3A0CCECCBAB73E7B1E9D63 /* aesopt.h */,
+				518DB0D49EC03EA5DF44925D71FA5BC3 /* aestab.c */,
+				41AC07B310E07B09F0B10CE13D9986EA /* aestab.h */,
+				994975DFFF7B9A2BF44E35F68F92E860 /* brg_endian.h */,
+				EB6C19C5AE8FFCB6B049E02564F4E7BA /* brg_types.h */,
+				3F2513377C0526AD3A97699EA639FCD0 /* crypt.c */,
+				D695FA6A0B714226CCEC8C2860D80ED0 /* crypt.h */,
+				A672801CAFB57B68740DE84BFEB888F8 /* fileenc.c */,
+				9B8EAD496E314034CA360E1C3309D751 /* fileenc.h */,
+				4967AA21EFDD8F28550B281B6DF882FC /* hmac.c */,
+				B698257C803C4602D8605D1A16DB5498 /* hmac.h */,
+				6F50462AEFDD61CFAB448099645CB5B0 /* ioapi.c */,
+				B934283B993281AA6EE36A57AC3AD8E8 /* ioapi.h */,
+				27C0F72FF42FDFAECE2AF606263FBB82 /* ioapi_buf.c */,
+				832BBA01FB91F1306A81FE93D3016CD3 /* ioapi_buf.h */,
+				391047A35174940DC5BE7C3BF6188AEF /* ioapi_mem.c */,
+				B3F9F07A5CCBE347283C61C2C728276E /* ioapi_mem.h */,
+				66C85097D0577069F35A666D86BA4971 /* minishared.c */,
+				08F9C33C69E4A1C606F961047C513966 /* minishared.h */,
+				6C4D4D0CEFB388B16C2E0E77AD5F435B /* prng.c */,
+				93CCD65AC86632F149E325B42CB89545 /* prng.h */,
+				AA5DD6B1DAE90E3C98B985DCDE14E42C /* pwd2key.c */,
+				9CBFD459E40B7C055B15855F54811A44 /* pwd2key.h */,
+				B42D1A3939A87547A64EF2598856877D /* sha1.c */,
+				093B156F2564B11AC92DE265B87A7E23 /* sha1.h */,
+				97BC9FECA2E09E0FC4CF519DBF11B76E /* SSZipArchive.h */,
+				9A306ACD03ED9F7459823D7605A8A6F5 /* SSZipArchive.m */,
+				1423D907E07D0F9931815DC630F195C5 /* SSZipCommon.h */,
+				132B185EFE9971D4935622AA659FA7C3 /* unzip.c */,
+				FDF91D7897F6E674093DABD0CBB9EB04 /* unzip.h */,
+				F289F9E9E6AF4139C626FD95F7060ED9 /* zip.c */,
+				B8BAAFE464ACAF33B9F197DAA669A2E6 /* zip.h */,
+				78987BB7BD0CB6486192A726D46F08C3 /* ZipArchive.h */,
+				B7EA1ED4D40907BFBA580093D6F84CDC /* Support Files */,
+			);
+			name = SSZipArchive;
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		B7EA1ED4D40907BFBA580093D6F84CDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				709291B7FBDF400C29ED45DF7F8DE3ED /* SSZipArchive.xcconfig */,
+				D629F7ADFD5F16173EAC304B0F8E22CF /* SSZipArchive-dummy.m */,
+				C0BCAE63DBE9E9FF97F1D7C917964268 /* SSZipArchive-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSZipArchive";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F32DA3F2BC1DCCE1ACF5807D5991C5BA /* Development Pods */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				851E0E218C3A7B3AD9B3C4779079ED0F /* Pods */,
+				13EACF1347BF6994F7134B311C3A951D /* Products */,
+				71632BAD89B767629EAAE22B044B0774 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D747FD676BD89902C8DD96868100E285 /* URLProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				009E5432B45265EDE41F5670737838CC /* JXBWKCustomProtocol.h */,
+				80D82135417787C1A540C2F7686A1AEF /* JXBWKCustomProtocol.m */,
+				5A9B8CCE671207782F01F6A4965DDCD0 /* NSURLProtocol+WebKitSupport.h */,
+				3C9A6568C3D58E1FE9AE0F92C4125DCD /* NSURLProtocol+WebKitSupport.m */,
+			);
+			name = URLProtocol;
+			path = URLProtocol;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0416643D424199A3E9A6F1B0D0C101C /* JXBWebKit */ = {
+			isa = PBXGroup;
+			children = (
+				8DE71D07D38A1614E3985E5AFCFDE2DC /* JXBWebViewController.h */,
+				CB3A2BBE932BCD272D32972695CD876A /* JXBWebViewController.m */,
+				74FDA47FD2E26CE1BAC2AF274A459DA9 /* Pod */,
+				A0D5FE2CF176643189EA054FD2CE12EE /* Resources */,
+				4C9A9F2528A5DBB1515C3D34247EFF0F /* Support Files */,
+				E84B3222C8694B888C201338E1E006B0 /* Tools */,
+			);
+			name = JXBWebKit;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		E3A0D7E5476194F98BF7D17DF1A0B02B /* ReusePool */ = {
+			isa = PBXGroup;
+			children = (
+				5EC2B7E10D941E6537F41E1A86E7580D /* JXBWKWebView.h */,
+				EC1781C3C3DCFDF55E7C91DC03B0A115 /* JXBWKWebView.m */,
+				FB08B181F6E336451B1AFD4E33F4C4B4 /* JXBWKWebViewPool.h */,
+				9C1DE6B0F262B6D85F07E4A6C073552F /* JXBWKWebViewPool.m */,
+			);
+			name = ReusePool;
 			path = ReusePool;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		E84B3222C8694B888C201338E1E006B0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				13D6635DBEA1248CAB51BF1E1DC8740E /* CustomUI */,
+				9D9833C047872F53AF14FC0742D8297A /* Dispatch */,
+				EDA86DB64D113863221D0227B6F16DDD /* Helper */,
+				76A0CEE743AB4593985E25D1D05775F6 /* MessageHandler */,
+				E3A0D7E5476194F98BF7D17DF1A0B02B /* ReusePool */,
+				D747FD676BD89902C8DD96868100E285 /* URLProtocol */,
+				11FFADFDF7DE592AB228039F207D91A3 /* WebViewExtension */,
 			);
-			name = iOS;
+			name = Tools;
+			path = JXBWebKit/Tools;
 			sourceTree = "<group>";
 		};
-		DD313D7122778A8D8524B6CA5759EEB7 /* Development Pods */ = {
+		EDA86DB64D113863221D0227B6F16DDD /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				66D03BAA431487B1CBDB9D870499230D /* JXBWebKit */,
+				7A828EE2A77E981EA3BA0B9217F4D4E7 /* WKAppManager.h */,
+				2ACCEFFD93B8F43063B700B723AF5E2D /* WKAppManager.m */,
+				15CD486EBD89B7961C5EFB4623CAB02F /* WKMessageHandlerHelper.h */,
+				86722B4A4DE8B468DCC877B171274E97 /* WKMessageHandlerHelper.m */,
+			);
+			name = Helper;
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F32DA3F2BC1DCCE1ACF5807D5991C5BA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0416643D424199A3E9A6F1B0D0C101C /* JXBWebKit */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		EEC730E14702B59F7AA228188873866F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CE92F58E89DBAE209389A4E46DFDC530 /* libJXBWebKit.a */,
-				E3092613C72BA39B251E802B978F1600 /* libPods-JXBWebKitProject.a */,
-				2CC577546B471738A20E5A397023BF0A /* libPods-JXBWebKitProjectTests.a */,
-				2C9D73D62A07F9801B917531BD0B3754 /* libPods-JXBWebKitProjectUITests.a */,
-				18DC0786219DFFB0BBC367E3AE7044A5 /* libSSZipArchive.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F57B6A3E41F6744EEB44073AEACA11C0 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E7466FC55E5A7D1BFE126BE22B87D8AF /* JSResources.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		33804060771667968BB924A4D149A9BA /* Headers */ = {
+		4A0CB5077F7F84B19118FD1E93D06C33 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE858102F7AB511FC433FF10C2B90747 /* JXBWebViewController.h in Headers */,
-				89A40E962D948DFB773188B95231FD68 /* JXBWKCustomProtocol.h in Headers */,
-				20E2E374E5376ACCD5C598EF11CEDD39 /* JXBWKWebView.h in Headers */,
-				0EA2DE8C0BEF25911693BDF969A3755F /* JXBWKWebViewPool.h in Headers */,
-				39F654804DA87FFC3F15189EEADF4127 /* NSURLProtocol+WebKitSupport.h in Headers */,
-				12A7039CE12E3638535F5F93C87DCF3B /* UIProgressView+WKWebView.h in Headers */,
-				868965A6E5B3E4C28C287838833736DF /* WKAppManager.h in Headers */,
-				4951D558C47BBC04437E63D81BEE6CBD /* WKCallNativeMethodMessageHandler.h in Headers */,
-				7D8253164EC94470FCEB10BC400542C0 /* WKMessageHandlerDispatch.h in Headers */,
-				444094F186E373223769C38E62A207D6 /* WKMessageHandlerHelper.h in Headers */,
-				79F59432735B9F5CD9FA05AB418A296F /* WKMessageHandlerProtocol.h in Headers */,
-				04B1E31C32CF55F8C8FD18B4B5AA5618 /* WKWebView+AOP.h in Headers */,
-				0DB20FCE759EF5FF20C1BEEC5F04824D /* WKWebView+ClearWebCache.h in Headers */,
-				D9767978520CEC7200ADCE819E405877 /* WKWebView+CookiesManager.h in Headers */,
-				677B6501662BE8255C50C1F5F59A108F /* WKWebView+ExternalNavigationDelegates.h in Headers */,
-				B622E9CF19F571C85637043B652A2E12 /* WKWebView+SupportProtocol.h in Headers */,
-				92C1AD8B7ADE6E6D6EFF044E0C9A8CCC /* WKWebView+SyncUserAgent.h in Headers */,
-				8C75BFB0C68A87FA62D8496E7DFE08DD /* WKWebViewExtension.h in Headers */,
+				DDBAF8F6F6B863AB152F47DA5A93388E /* JXBWebViewController.h in Headers */,
+				8EF7B24AE739941EDDC62A44D165BDD5 /* JXBWKCustomProtocol.h in Headers */,
+				40C06AAFE581E3D2053CE9688D8860BB /* JXBWKWebView.h in Headers */,
+				B9A5626A87128B5F730A48003FCA408C /* JXBWKWebViewPool.h in Headers */,
+				1860D6514A1E90F35CAE5D82CA57C875 /* NSURLProtocol+WebKitSupport.h in Headers */,
+				EBCECEEE2D05DDBDA21925E89A461741 /* UIProgressView+WKWebView.h in Headers */,
+				5A6D646D1955C191BEFA004C188B3DAE /* WKAppManager.h in Headers */,
+				34B885B04B29009C8C66D073C67EAA72 /* WKCallNativeMethodMessageHandler.h in Headers */,
+				803464A0E366B64440FC5C35FFB5CD59 /* WKMessageHandlerDispatch.h in Headers */,
+				646C84EB701DF1812393997C3190AE0B /* WKMessageHandlerHelper.h in Headers */,
+				36DFF47CDFD3D2F8518F19967EE64CA5 /* WKMessageHandlerProtocol.h in Headers */,
+				0852DEEAB0F9EC28D0FCE4FCD0A1BC2A /* WKWebView+AOP.h in Headers */,
+				D24F5F0231477FB23E7E14C3E22A89FB /* WKWebView+ClearWebCache.h in Headers */,
+				15ADC5551B159155BEADD77F6B0FDDC9 /* WKWebView+CookiesManager.h in Headers */,
+				2035DB9BBDC2C4BC0E3D89D4CEF9BF52 /* WKWebView+ExternalNavigationDelegates.h in Headers */,
+				7C3AE07377DD63A49C3D6BCEBCAEA472 /* WKWebView+SupportProtocol.h in Headers */,
+				2974716EF9BE87471C4FF47625D59949 /* WKWebView+SyncUserAgent.h in Headers */,
+				0A46A7BC0E28A8A83FE28060D6ACCC9F /* WKWebViewExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F1A3450A71CAD71F4DC83A7F6BF347CB /* Headers */ = {
+		60B05B263A6B06F87039BAC7B58823FA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF107F89C1CC7BDAAE014EE0F28540F2 /* aes.h in Headers */,
-				DECD1C06B1848253CBE3B38D3A1617CF /* aes_ni.h in Headers */,
-				7C3B4C7FC344027BE269D687062038C5 /* aesopt.h in Headers */,
-				076F179818280B8E2F8C1B0AC38D81EC /* aestab.h in Headers */,
-				E73A2591E83B03B53EE44B838F24DDB8 /* brg_endian.h in Headers */,
-				058BE90D9A811E360FF246866C6393C6 /* brg_types.h in Headers */,
-				8AAA86C5B8428938396A2C8D2C5D3CCF /* crypt.h in Headers */,
-				B3EEF89AF43C0330D198AFEAC69709E0 /* fileenc.h in Headers */,
-				095A624208AFD2A38DC53518077A7025 /* hmac.h in Headers */,
-				19DB3DD8AEB6E1EB8ACD20BE8CE1BA58 /* ioapi.h in Headers */,
-				00FE6A73B3616778CC8F2E18095B4EBB /* ioapi_buf.h in Headers */,
-				5BE845AC3CD74401197BD6FCA6F36B6B /* ioapi_mem.h in Headers */,
-				9E9429483DE90E0B1C4EC8F6FDDBB4E4 /* minishared.h in Headers */,
-				8AA375A4B26B4309704821E604D4DD38 /* prng.h in Headers */,
-				760E86D7ABD8C0793371BAABFD75A49F /* pwd2key.h in Headers */,
-				A082FCF95B43088C5FCCC1F9642C6A5F /* sha1.h in Headers */,
-				F93A940499706BA44A3C3A565B64A962 /* SSZipArchive.h in Headers */,
-				979EAFE30E476697AC29B701533AEE66 /* SSZipCommon.h in Headers */,
-				715EFB819D4224AA777512B27F83C7ED /* unzip.h in Headers */,
-				21B237BC1BD11C3952161A139C1DB990 /* zip.h in Headers */,
-				8649CA71AD3645E02BB59D40B5B6C674 /* ZipArchive.h in Headers */,
+				0724FF0729497D17D69CCDE1BFC08F65 /* aes.h in Headers */,
+				0596CACC29ACB0F866ADA307D759D279 /* aes_ni.h in Headers */,
+				487CFF358601A277AD926FC91D06A05A /* aesopt.h in Headers */,
+				3DD54AE15C90AE75DF50DB1408B91F91 /* aestab.h in Headers */,
+				5363229F7CF25275D7FE45500EDAF9FD /* brg_endian.h in Headers */,
+				DE43044FFF1E5511A20AE0A7CDF27D37 /* brg_types.h in Headers */,
+				ACEC55FA2F0C9D098DFB97FB6FCCBD50 /* crypt.h in Headers */,
+				31D218B3ECE67C8735E06A90D814A7A1 /* fileenc.h in Headers */,
+				327847CC13A7C19DCE3BD822601B9A8E /* hmac.h in Headers */,
+				850AC293A73F6E537F659098E186AFB3 /* ioapi.h in Headers */,
+				F0E5DC2E793E5023B60336CED873C20C /* ioapi_buf.h in Headers */,
+				4734BFAF0C09277F941EE0D6F19D4F11 /* ioapi_mem.h in Headers */,
+				6ECF6B7D8F4B246A8955B6F986D31EF2 /* minishared.h in Headers */,
+				E90DAF68F001E728704C42302D4813FE /* prng.h in Headers */,
+				C6E2699B59FEC4774DDEDB32E28DE109 /* pwd2key.h in Headers */,
+				747BA674C45457D2F4C5BFB6195F450F /* sha1.h in Headers */,
+				E9EE6962014958668D52B6795B46486D /* SSZipArchive.h in Headers */,
+				C559EEE75517E7A62369E15802D436F1 /* SSZipCommon.h in Headers */,
+				69AE0D5E864992EC5772D5C9AF2E171F /* unzip.h in Headers */,
+				622ECA075BC34C25AC842A9ED3F0C95D /* zip.h in Headers */,
+				86301A8360277A5666C0BEFDFD219FE0 /* ZipArchive.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A09A4BBB097084C079030E69EFA60E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		784764FBEDE56F9D12B0A796BD40ABF9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		859468EF7903B29B12949C77B2DC9D7D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		072613623859A9602C4F9496F06C47AF /* JXBWebKit */ = {
+		39F3A58D53EE83D1152DDDD429081A80 /* Pods-JXBWebKitProjectUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D96DF36667AF9CC3432EB615F0ED4322 /* Build configuration list for PBXNativeTarget "JXBWebKit" */;
+			buildConfigurationList = B48DD908083B7A2E360778623E09246F /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectUITests" */;
 			buildPhases = (
-				4B88655F87BA74087B59E309EF61DF16 /* Sources */,
-				652B31CE657434B5AABA807D20FFD2D1 /* Frameworks */,
-				33804060771667968BB924A4D149A9BA /* Headers */,
+				6A09A4BBB097084C079030E69EFA60E9 /* Headers */,
+				45640435BB588DFB1A38A994D408B929 /* Sources */,
+				3C9916207953AE734905C04E424A638E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09B810A9E8B85C988B65170C8151B3E2 /* PBXTargetDependency */,
+			);
+			name = "Pods-JXBWebKitProjectUITests";
+			productName = "Pods-JXBWebKitProjectUITests";
+			productReference = 49766F37D59922BC7A94E8EC4B6D1C7E /* libPods-JXBWebKitProjectUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		95E906E022B574FCD5A1691E86986C8E /* Pods-JXBWebKitProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C2CFB150BBE246BA86F4AE192C09BB /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectTests" */;
+			buildPhases = (
+				784764FBEDE56F9D12B0A796BD40ABF9 /* Headers */,
+				24189062BE0D364CF32910D1F45A9B95 /* Sources */,
+				03416F0B0863F1B0B25DFD4A01A289C7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74058C9ADDE1438071D571E8FA033BFA /* PBXTargetDependency */,
+			);
+			name = "Pods-JXBWebKitProjectTests";
+			productName = "Pods-JXBWebKitProjectTests";
+			productReference = 658E160AEAAFD37A5C8F42AFB9154F27 /* libPods-JXBWebKitProjectTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9830B2A3922329143C1D3B56345C80E1 /* JXBWebKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E99A76044021B995A0775BF99C064810 /* Build configuration list for PBXNativeTarget "JXBWebKit" */;
+			buildPhases = (
+				4A0CB5077F7F84B19118FD1E93D06C33 /* Headers */,
+				9E5A6AADFA2E860C61C3A15C4FE2F358 /* Sources */,
+				49AD43C34D172253ADFB9FB031B238A4 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -659,16 +694,35 @@
 			);
 			name = JXBWebKit;
 			productName = JXBWebKit;
-			productReference = CE92F58E89DBAE209389A4E46DFDC530 /* libJXBWebKit.a */;
+			productReference = E47B239AC15481DF88321696955ABF45 /* libJXBWebKit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		220FC00F69972F601FBF73A9E3AF597E /* SSZipArchive */ = {
+		D8A032A9E0E98BC94650742CD8581209 /* Pods-JXBWebKitProject */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 85CD2029CE33209C2E11F9F6CFABDDDB /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildConfigurationList = 3A15D348C0AB4A4FCF6F9485CDBEA3C3 /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProject" */;
 			buildPhases = (
-				B692A0A365DCE707389171AEA10B2A71 /* Sources */,
-				C0542B01909AA6F63CC9D65F6C406CE1 /* Frameworks */,
-				F1A3450A71CAD71F4DC83A7F6BF347CB /* Headers */,
+				859468EF7903B29B12949C77B2DC9D7D /* Headers */,
+				FDEA96709BED5717833B4FDE09D88C19 /* Sources */,
+				20874D6E491B119DED7642B7DE67432D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE1F0F641AD8E91024E6E4F5D6E7E1E6 /* PBXTargetDependency */,
+				D42D017C9D4F27BCE1BD07A331FBDC80 /* PBXTargetDependency */,
+			);
+			name = "Pods-JXBWebKitProject";
+			productName = "Pods-JXBWebKitProject";
+			productReference = BAAACD32B08088014449E22E306FF7AA /* libPods-JXBWebKitProject.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45B5E3A809C615BBFBF3B2198D96D593 /* Build configuration list for PBXNativeTarget "SSZipArchive" */;
+			buildPhases = (
+				60B05B263A6B06F87039BAC7B58823FA /* Headers */,
+				29A297CD57B20F74D3DC70E006B3662C /* Sources */,
+				45F9F792A7ABA1F9DFEE5E4FD0C59789 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -676,198 +730,146 @@
 			);
 			name = SSZipArchive;
 			productName = SSZipArchive;
-			productReference = 18DC0786219DFFB0BBC367E3AE7044A5 /* libSSZipArchive.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		636B5C4CB66B42DE8BA41C381EB999A5 /* Pods-JXBWebKitProject */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8AE418E057D0981E0A27BB858AE19B0A /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProject" */;
-			buildPhases = (
-				FFBF25885C5329F24C65042E4592CE6F /* Sources */,
-				A456583218C93E4A7C41902DA38522E2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ADD0C1D30959C7488E3EDAA2A60FC4A0 /* PBXTargetDependency */,
-				59E9EB66DD60DB3E4959F0E0D80C572B /* PBXTargetDependency */,
-			);
-			name = "Pods-JXBWebKitProject";
-			productName = "Pods-JXBWebKitProject";
-			productReference = E3092613C72BA39B251E802B978F1600 /* libPods-JXBWebKitProject.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		890AC46ADA5A1BC67B5EBAD8E5BDC0F6 /* Pods-JXBWebKitProjectTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 925F238A94E67FB800BFD5A25387EC5A /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectTests" */;
-			buildPhases = (
-				0A1E30B7F83271563270107FCF5660DE /* Sources */,
-				2B2575E57C86DA45D5F76AE475DD241D /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ADA0E9F70A79D4076FB87AE91167DCC1 /* PBXTargetDependency */,
-			);
-			name = "Pods-JXBWebKitProjectTests";
-			productName = "Pods-JXBWebKitProjectTests";
-			productReference = 2CC577546B471738A20E5A397023BF0A /* libPods-JXBWebKitProjectTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		C546DBC1FAEEA5136617C9E9F7F42F14 /* Pods-JXBWebKitProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4A76545D8F3B8030A24CD59527A7BA3 /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectUITests" */;
-			buildPhases = (
-				A4AD1B9D274BF3BF6CA139EA8E94F215 /* Sources */,
-				EA7821ED52F23BADE1F1D303415FFF34 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9AD20877E6CA340B973D85DED39709B7 /* PBXTargetDependency */,
-			);
-			name = "Pods-JXBWebKitProjectUITests";
-			productName = "Pods-JXBWebKitProjectUITests";
-			productReference = 2C9D73D62A07F9801B917531BD0B3754 /* libPods-JXBWebKitProjectUITests.a */;
+			productReference = 91B23470DEB9A986332BEB5034234BC7 /* libSSZipArchive.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = EEC730E14702B59F7AA228188873866F /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 13EACF1347BF6994F7134B311C3A951D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				072613623859A9602C4F9496F06C47AF /* JXBWebKit */,
-				636B5C4CB66B42DE8BA41C381EB999A5 /* Pods-JXBWebKitProject */,
-				890AC46ADA5A1BC67B5EBAD8E5BDC0F6 /* Pods-JXBWebKitProjectTests */,
-				C546DBC1FAEEA5136617C9E9F7F42F14 /* Pods-JXBWebKitProjectUITests */,
-				220FC00F69972F601FBF73A9E3AF597E /* SSZipArchive */,
+				9830B2A3922329143C1D3B56345C80E1 /* JXBWebKit */,
+				D8A032A9E0E98BC94650742CD8581209 /* Pods-JXBWebKitProject */,
+				95E906E022B574FCD5A1691E86986C8E /* Pods-JXBWebKitProjectTests */,
+				39F3A58D53EE83D1152DDDD429081A80 /* Pods-JXBWebKitProjectUITests */,
+				F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A1E30B7F83271563270107FCF5660DE /* Sources */ = {
+		24189062BE0D364CF32910D1F45A9B95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09FA572FED77061F38FCB7156158E886 /* Pods-JXBWebKitProjectTests-dummy.m in Sources */,
+				165FEA998E479EC8169E8ABA81B47D90 /* Pods-JXBWebKitProjectTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4B88655F87BA74087B59E309EF61DF16 /* Sources */ = {
+		29A297CD57B20F74D3DC70E006B3662C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9E62EDA934A276DED0BCC6957A34AA /* JXBWebKit-dummy.m in Sources */,
-				A3A799CAE558F58E4FED9D4BE1BC9812 /* JXBWebViewController.m in Sources */,
-				3FBD3BAC4A3824791B195C4FA3792557 /* JXBWKCustomProtocol.m in Sources */,
-				887BD17E2274FDA36DBE9D59154CD178 /* JXBWKWebView.m in Sources */,
-				2C107FA9CF3D058FBF915070A15288A9 /* JXBWKWebViewPool.m in Sources */,
-				1059D8EF789BED03054C809DB389BA8F /* NSURLProtocol+WebKitSupport.m in Sources */,
-				1F2C8BAD3E16F7A1E53486558247EBA1 /* UIProgressView+WKWebView.m in Sources */,
-				E37CDB44C338F6364F0EE117F0DF0105 /* WKAppManager.m in Sources */,
-				05A1FBFE7B4E86A94B4511BEA8F2A339 /* WKCallNativeMethodMessageHandler.m in Sources */,
-				9AD8A5EBA824859C316B771B7C4BA2B3 /* WKMessageHandlerDispatch.m in Sources */,
-				06D6EDC96E80E92847F1A1BF71B6B207 /* WKMessageHandlerHelper.m in Sources */,
-				79EDC0E5E1A915E5181C52285961C192 /* WKWebView+AOP.m in Sources */,
-				7CDD824A22764FF3F9943C1706C3DDE0 /* WKWebView+ClearWebCache.m in Sources */,
-				92AF8BA50D09F9248AEDA76DB3159920 /* WKWebView+CookiesManager.m in Sources */,
-				9BF476159775B675BF304D22025481B9 /* WKWebView+ExternalNavigationDelegates.m in Sources */,
-				8BF7E6D8B68E431F91BFD90A102EE6E5 /* WKWebView+SupportProtocol.m in Sources */,
-				60AB57DBD22ED5358BF7A7E573878283 /* WKWebView+SyncUserAgent.m in Sources */,
+				D2A9125ACEA9E82B683D11B06E5F7B0B /* aes_ni.c in Sources */,
+				40EFB1EA9A9E395E17A41FE139D30D6D /* aescrypt.c in Sources */,
+				C94C56D384FC60A341CE9AC6CC4FEAF9 /* aeskey.c in Sources */,
+				83AAFF50BC1547E1E0CD9F5965745FE4 /* aestab.c in Sources */,
+				144D98B812E0B414B7235CCDA9A1EC6E /* crypt.c in Sources */,
+				2B9A15E34F053A8F79DB8CF312F20042 /* fileenc.c in Sources */,
+				498ED18C883C5C5A6C12A52435E78CA7 /* hmac.c in Sources */,
+				7DF5217F6BFE4AAD652473571C677800 /* ioapi.c in Sources */,
+				7CFBED7BA4743A4991D22F9CABD931AF /* ioapi_buf.c in Sources */,
+				39CAF066367B6C306BBCB39F0F163A60 /* ioapi_mem.c in Sources */,
+				4335A23E61D073D97B3A2BADE3F16E57 /* minishared.c in Sources */,
+				86C1DF22D8DE5F61C24C858850131A9C /* prng.c in Sources */,
+				71A37C1ABA7A2B185400E57F1A7F7E16 /* pwd2key.c in Sources */,
+				3D600F21204AA8F1438326D16FF45440 /* sha1.c in Sources */,
+				641BDC52A0853C856BEFD8A0AC093142 /* SSZipArchive-dummy.m in Sources */,
+				11A9E3F9964CDFE1A6318622EB4FA1CC /* SSZipArchive.m in Sources */,
+				094C42A62BAE892C164F1D47E16269F1 /* unzip.c in Sources */,
+				8E84EA0C7D146CD68A4080FD8B09E690 /* zip.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4AD1B9D274BF3BF6CA139EA8E94F215 /* Sources */ = {
+		45640435BB588DFB1A38A994D408B929 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0880340AE64925C6566EA29F99A668F1 /* Pods-JXBWebKitProjectUITests-dummy.m in Sources */,
+				C0BE1C7B33256B799AC09CB4E2A6452A /* Pods-JXBWebKitProjectUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B692A0A365DCE707389171AEA10B2A71 /* Sources */ = {
+		9E5A6AADFA2E860C61C3A15C4FE2F358 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966A9CCB298EED5A08D6C62769B81C53 /* aes_ni.c in Sources */,
-				150C9F065017FBEBFB02C487F805DDBF /* aescrypt.c in Sources */,
-				35B4207CFE6D1329712FC3183C7143EF /* aeskey.c in Sources */,
-				4EE0AB98214C818CBFA37713FA6EAEDB /* aestab.c in Sources */,
-				EAB8EB3D98340B4302B8D2330E053D86 /* crypt.c in Sources */,
-				A8B901C62BD89AA3EAED106C34E3D66A /* fileenc.c in Sources */,
-				641AD411F967FD2078F36A406B06B5A6 /* hmac.c in Sources */,
-				74DC49C8432B8B2BAFEACF593F16202A /* ioapi.c in Sources */,
-				CD0B7014DA61E23D006ADED9D0412522 /* ioapi_buf.c in Sources */,
-				67CB1B891F9FB7B897E5A7CD1E419CF5 /* ioapi_mem.c in Sources */,
-				B50A5B2AB132ED12BC5416CEA1A6BFF7 /* minishared.c in Sources */,
-				EF4668CE246413E36076600428B17797 /* prng.c in Sources */,
-				283A1EE3038478E7CC8AD9C5D866539B /* pwd2key.c in Sources */,
-				1F5FB8609E6F8EF6A2C8C1AE39A2F81B /* sha1.c in Sources */,
-				ADD824F98B228B84B0081A7F89B3BC64 /* SSZipArchive-dummy.m in Sources */,
-				FF2F5E479ED79E454B6E5FDDA4094833 /* SSZipArchive.m in Sources */,
-				12F43428EC10ED073BDC5F0B35C3F50B /* unzip.c in Sources */,
-				FEF933CCD5446CB74071DDF143A74FD6 /* zip.c in Sources */,
+				2F4CA06AC26DA6AB795B2FB8FEF7C4DA /* JXBWebKit-dummy.m in Sources */,
+				0DCBC4541F7C5E2EF000353F0A4FFB9E /* JXBWebViewController.m in Sources */,
+				97A7B6E77D6BBAB1D835AB79EB20111C /* JXBWKCustomProtocol.m in Sources */,
+				9A57F511FE43CF3E0D8C360291C698BF /* JXBWKWebView.m in Sources */,
+				A08F856A4B5380F122D9162971C08F82 /* JXBWKWebViewPool.m in Sources */,
+				44A0A6B8039BAC0256491A087B5D11B4 /* NSURLProtocol+WebKitSupport.m in Sources */,
+				1179F9D6BECDDB583A84210DA900DB22 /* UIProgressView+WKWebView.m in Sources */,
+				47B7CA7BDB5D00921025FCD724FB7AC0 /* WKAppManager.m in Sources */,
+				E57464DE04DF28D08A389CEB48B8767D /* WKCallNativeMethodMessageHandler.m in Sources */,
+				21055EB9D138E0CE2799D02531DAFDD3 /* WKMessageHandlerDispatch.m in Sources */,
+				D8A86D6082654B60CF3AACE1D849B2CE /* WKMessageHandlerHelper.m in Sources */,
+				CE0D0EBF1D6A859F9B4B57B622D10410 /* WKWebView+AOP.m in Sources */,
+				89B8892550DB04F37C38EA5502C412AC /* WKWebView+ClearWebCache.m in Sources */,
+				3B46B4BD17BAFBE137C18263CE0D59CD /* WKWebView+CookiesManager.m in Sources */,
+				E4D81E933A267627F9BFE7B0E3184A97 /* WKWebView+ExternalNavigationDelegates.m in Sources */,
+				AA544F7FA3F8F0D69A7A364D40C3DE36 /* WKWebView+SupportProtocol.m in Sources */,
+				C441FC1AFC11CC7740FA9810F6BB3159 /* WKWebView+SyncUserAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFBF25885C5329F24C65042E4592CE6F /* Sources */ = {
+		FDEA96709BED5717833B4FDE09D88C19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A63EE2D8E47E1DCD111CA45FE3CBE4 /* Pods-JXBWebKitProject-dummy.m in Sources */,
+				29D966D03F32F444B14F5F1CFC28EF3D /* Pods-JXBWebKitProject-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59E9EB66DD60DB3E4959F0E0D80C572B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SSZipArchive;
-			target = 220FC00F69972F601FBF73A9E3AF597E /* SSZipArchive */;
-			targetProxy = A4963D16A0EAAB9A045771333B1B52A3 /* PBXContainerItemProxy */;
-		};
-		9AD20877E6CA340B973D85DED39709B7 /* PBXTargetDependency */ = {
+		09B810A9E8B85C988B65170C8151B3E2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JXBWebKitProject";
-			target = 636B5C4CB66B42DE8BA41C381EB999A5 /* Pods-JXBWebKitProject */;
-			targetProxy = 1E1461F40778775D77D8B3137EEAEE23 /* PBXContainerItemProxy */;
+			target = D8A032A9E0E98BC94650742CD8581209 /* Pods-JXBWebKitProject */;
+			targetProxy = A95336111FEE3CE912FC0885637FFAF8 /* PBXContainerItemProxy */;
 		};
-		ADA0E9F70A79D4076FB87AE91167DCC1 /* PBXTargetDependency */ = {
+		74058C9ADDE1438071D571E8FA033BFA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-JXBWebKitProject";
-			target = 636B5C4CB66B42DE8BA41C381EB999A5 /* Pods-JXBWebKitProject */;
-			targetProxy = C8C5168E23FB52A883F91DA93946C48F /* PBXContainerItemProxy */;
+			target = D8A032A9E0E98BC94650742CD8581209 /* Pods-JXBWebKitProject */;
+			targetProxy = BE4E649C28988F2B8C19DB37193C04D2 /* PBXContainerItemProxy */;
 		};
-		ADD0C1D30959C7488E3EDAA2A60FC4A0 /* PBXTargetDependency */ = {
+		CE1F0F641AD8E91024E6E4F5D6E7E1E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JXBWebKit;
-			target = 072613623859A9602C4F9496F06C47AF /* JXBWebKit */;
-			targetProxy = AE6A746A34254A5A7A2841AD938DA25A /* PBXContainerItemProxy */;
+			target = 9830B2A3922329143C1D3B56345C80E1 /* JXBWebKit */;
+			targetProxy = 2D6B92E5DB5E0AFF33B70E574A56B425 /* PBXContainerItemProxy */;
+		};
+		D42D017C9D4F27BCE1BD07A331FBDC80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSZipArchive;
+			target = F60E38364AFF5E1349FF07415B944396 /* SSZipArchive */;
+			targetProxy = 459D6F14C190E78854172E99B2599FA8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0EDCE3821E9E205D3EF4B3AFCA07CED2 /* Debug */ = {
+		272848C1E438580779CB099FC1DF1C45 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4274DC56D38D732FD9EB668E3A30D6FA /* JXBWebKit.xcconfig */;
+			baseConfigurationReference = A9CB9F4FDC4145624A3AB1E4C3CADDEE /* JXBWebKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -884,70 +886,42 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B488B8F031F285DD15B5F44CE1E5BDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D6EF70296B77C89429FA397DB98558E /* Pods-JXBWebKitProjectTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		12A41E6F5F22FB193686CF965869F326 /* Release */ = {
+		3C0A421ED5E59AF82FE2A65247141877 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DD20F83CAC17132C7D92B6D0A87929A /* SSZipArchive.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SSZipArchive;
-				PRODUCT_NAME = SSZipArchive;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2EC4F7C2E0D5E51E592213B4B38C7D29 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4274DC56D38D732FD9EB668E3A30D6FA /* JXBWebKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/JXBWebKit/JXBWebKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = JXBWebKit;
-				PRODUCT_NAME = JXBWebKit;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		441C9F565514670B7CEBAD8262E9E7D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3EF2FB15F6B558E4778EB98E107D646 /* Pods-JXBWebKitProjectUITests.release.xcconfig */;
+			baseConfigurationReference = CE504D85F200D552DFCD7301D00AB907 /* Pods-JXBWebKitProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -960,7 +934,72 @@
 			};
 			name = Release;
 		};
-		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
+		3E15FBB16213C6718698399AFF9EA9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB6D457E4CCD15290FA19EEB95E7345 /* Pods-JXBWebKitProject.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CA6DD6475AEF03941D22EC57503B97E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C800959F7C2B72B2536DB1333952AF9 /* Pods-JXBWebKitProjectUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86FBCA9C4296CDF04F3193F61AA30713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7002F7A1D99466B080E2FCAF639B2E /* Pods-JXBWebKitProject.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B68D161A685D0E9906DF2B297857921 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -992,8 +1031,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1013,27 +1050,101 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		6AD8D353435F3FFF7B0F6AC0EC908973 /* Release */ = {
+		B2128AD82E993F6C57135D73BBE3A630 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F1947F70DB3C2312497BC29663C7BBE /* Pods-JXBWebKitProjectTests.release.xcconfig */;
+			baseConfigurationReference = 709291B7FBDF400C29ED45DF7F8DE3ED /* SSZipArchive.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BECD0D7B24A0DE3A6966F8D214E4D93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9CB9F4FDC4145624A3AB1E4C3CADDEE /* JXBWebKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/JXBWebKit/JXBWebKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = JXBWebKit;
+				PRODUCT_NAME = JXBWebKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E698E7723BB59851B994E77B9182CBC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709291B7FBDF400C29ED45DF7F8DE3ED /* SSZipArchive.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = SSZipArchive;
+				PRODUCT_NAME = SSZipArchive;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F18DF0FF6D8B887444E76EE528B09592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D57B3B48E2CCEC86DF908FB12070C713 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1042,11 +1153,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+		F5D3D0BF744B9700EA072D8A99FA80C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1078,8 +1188,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1096,185 +1204,76 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		B442D81E6D5D050B63A16B16D3E0AD07 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A91979B50BAC7601FA7A7228F7CBF9AD /* Pods-JXBWebKitProjectTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C233064D7CCB9ABDA62E616B190F39F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DD20F83CAC17132C7D92B6D0A87929A /* SSZipArchive.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/SSZipArchive/SSZipArchive-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = SSZipArchive;
-				PRODUCT_NAME = SSZipArchive;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C84AC166773FCEA71C2EB956E876BE3C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74C68DA1B5A78A401AE160966ABA0100 /* Pods-JXBWebKitProject.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		D6F23F6DE19E5E514ABB37681C4BAA94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A36FD888EF14486F8A9FD5139F7EC29D /* Pods-JXBWebKitProject.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		ED7DC7037B325E9E93EC93776E4089B9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E5B7E98F3104E7795ED5595409EF5F5 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		3A15D348C0AB4A4FCF6F9485CDBEA3C3 /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
-				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
+				86FBCA9C4296CDF04F3193F61AA30713 /* Debug */,
+				3E15FBB16213C6718698399AFF9EA9A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		85CD2029CE33209C2E11F9F6CFABDDDB /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
+		45B5E3A809C615BBFBF3B2198D96D593 /* Build configuration list for PBXNativeTarget "SSZipArchive" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C233064D7CCB9ABDA62E616B190F39F1 /* Debug */,
-				12A41E6F5F22FB193686CF965869F326 /* Release */,
+				E698E7723BB59851B994E77B9182CBC8 /* Debug */,
+				B2128AD82E993F6C57135D73BBE3A630 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AE418E057D0981E0A27BB858AE19B0A /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProject" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6F23F6DE19E5E514ABB37681C4BAA94 /* Debug */,
-				C84AC166773FCEA71C2EB956E876BE3C /* Release */,
+				8B68D161A685D0E9906DF2B297857921 /* Debug */,
+				F5D3D0BF744B9700EA072D8A99FA80C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		925F238A94E67FB800BFD5A25387EC5A /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectTests" */ = {
+		65C2CFB150BBE246BA86F4AE192C09BB /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B442D81E6D5D050B63A16B16D3E0AD07 /* Debug */,
-				6AD8D353435F3FFF7B0F6AC0EC908973 /* Release */,
+				3B488B8F031F285DD15B5F44CE1E5BDB /* Debug */,
+				3C0A421ED5E59AF82FE2A65247141877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C4A76545D8F3B8030A24CD59527A7BA3 /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectUITests" */ = {
+		B48DD908083B7A2E360778623E09246F /* Build configuration list for PBXNativeTarget "Pods-JXBWebKitProjectUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED7DC7037B325E9E93EC93776E4089B9 /* Debug */,
-				441C9F565514670B7CEBAD8262E9E7D6 /* Release */,
+				F18DF0FF6D8B887444E76EE528B09592 /* Debug */,
+				5CA6DD6475AEF03941D22EC57503B97E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D96DF36667AF9CC3432EB615F0ED4322 /* Build configuration list for PBXNativeTarget "JXBWebKit" */ = {
+		E99A76044021B995A0775BF99C064810 /* Build configuration list for PBXNativeTarget "JXBWebKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EDCE3821E9E205D3EF4B3AFCA07CED2 /* Debug */,
-				2EC4F7C2E0D5E51E592213B4B38C7D29 /* Release */,
+				BECD0D7B24A0DE3A6966F8D214E4D93B /* Debug */,
+				272848C1E438580779CB099FC1DF1C45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
