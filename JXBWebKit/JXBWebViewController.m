@@ -21,6 +21,7 @@
 
 static NSInteger const kContainerViewTag = 1000;
 static NSString *POSTRequest = @"POST";
+typedef void(^alertPannelHandler)(void);
 
 #pragma mark - MSWebViewController
 
@@ -35,6 +36,8 @@ static NSString *POSTRequest = @"POST";
 @property(nonatomic, assign) BOOL                   showBackNavLeftItemTitle;   //是否展示返回item标题
 @property(nonatomic, assign) BOOL                   terminate;                  //WebView是否异常终止
 @property(nonatomic, strong) NSMutableURLRequest    *request;                   //WebView入口请求
+@property (nonatomic, assign) BOOL                  alertPanelExeFlag;          //alert pannel当前生命周期内是否执行函数
+@property (nonatomic, strong) alertPannelHandler    alertAction;                    //alert pannel执行存储
 @end
 
 @implementation JXBWebViewController
@@ -134,6 +137,8 @@ static NSString *POSTRequest = @"POST";
     [self sutupUI];
     
     [self fetchData];
+
+    [self addSusNotification];
 }
 
 - (void)deviceOrientationChanged:(NSNotification *)notification {
@@ -524,8 +529,11 @@ static NSString *POSTRequest = @"POST";
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message ? message : @"" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             completionHandler();
+            self.alertPanelExeFlag = YES;
         }]];
         [vc presentViewController:alert animated:YES completion:NULL];
+        self.alertPanelExeFlag = NO;
+        _alertAction = completionHandler;
     }else{
         completionHandler();
     }
@@ -641,6 +649,10 @@ static NSString *POSTRequest = @"POST";
     [super didReceiveMemoryWarning];
 }
 
+- (void)addSusNotification {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_appDidEnterBackgroundNotification) name:UIApplicationDidEnterBackgroundNotification object:nil];
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
@@ -683,6 +695,13 @@ static NSString *POSTRequest = @"POST";
 
 - (void)loadHTMLTemplate:(NSString *)htmlTemplate {
     [_webView jxb_loadHTMLTemplate:htmlTemplate];
+}
+
+- (void)_appDidEnterBackgroundNotification {
+    if (_alertPanelExeFlag) { return ; }
+    _alertAction();
+    [UIApplication.sharedApplication.keyWindow.rootViewController dismissViewControllerAnimated:true completion:nil];
+
 }
 
 @end
