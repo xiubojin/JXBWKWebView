@@ -57,6 +57,16 @@
 
 #pragma mark - WKNavigationDelegate
 
+
+/**
+ decidepolicy-action for navi
+
+ sometimes release all instance of the navigation-delegate hash-tab, should invoke the dicisionHandler directly
+
+ @param webView webview instance
+ @param navigationAction action
+ @param decisionHandler handler
+ */
 - (void)webView:(WKWebView *)webView
 decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
 decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
@@ -66,6 +76,10 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     if ([mainDelegate respondsToSelector:_cmd]) {
         [mainDelegate webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
     } else {
+        if (self.weakNavigationDelegates.allObjects.count == 0) {
+            decisionHandler(WKNavigationActionPolicyAllow);
+            return;
+        }
         for (id delegate in self.weakNavigationDelegates.allObjects) {
             if ([delegate respondsToSelector:_cmd]) {
                 [delegate webView:webView decidePolicyForNavigationAction:navigationAction decisionHandler:decisionHandler];
@@ -74,6 +88,15 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     }
 }
 
+/**
+ decidepolicy-response for navi
+
+ sometimes release all instance of the navigation-delegate hash-tab, should invoke the dicisionHandler directly
+
+ @param webView webview instance
+ @param navigationResponse action
+ @param decisionHandler handler
+ */
 - (void)webView:(WKWebView *)webView
 decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse
 decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
@@ -82,6 +105,10 @@ decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
     if ([mainDelegate respondsToSelector:_cmd]) {
         [mainDelegate webView:webView decidePolicyForNavigationResponse:navigationResponse decisionHandler:decisionHandler];
     } else {
+        if (self.weakNavigationDelegates.allObjects.count == 0) {
+            decisionHandler(WKNavigationResponsePolicyAllow);
+            return;
+        }
         for (id delegate in self.weakNavigationDelegates.allObjects) {
             if ([delegate respondsToSelector:_cmd]) {
                 [delegate webView:webView decidePolicyForNavigationResponse:navigationResponse decisionHandler:decisionHandler];
