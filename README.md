@@ -14,7 +14,8 @@
   - 修改WebView布局方式
   - 修改Cookie同步方式
   - 修改H5传给native参数的数据格式
-
+- 1.1.2 感谢@[hatjs880328s](https://github.com/hatjs880328s)提出并解决闪退问题。
+  
 
 ## 使用CocoaPods安装
 
