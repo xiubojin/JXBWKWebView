@@ -577,7 +577,7 @@ typedef void(^alertPannelHandler)(void);
 }
 
 - (void)_appDidEnterBackgroundNotification {
-    if (_alertPanelExeFlag) { return ; }
+    if (_alertPanelExeFlag || _alertAction == nil) { return ; }
     _alertAction();
     [UIApplication.sharedApplication.keyWindow.rootViewController dismissViewControllerAnimated:true completion:nil];
 
