@@ -12,7 +12,6 @@
 #import "JXBWKCustomProtocol.h"
 
 static NSString *POSTRequest = @"POST";
-typedef void(^alertPannelHandler)(void);
 
 @interface JXBWebViewController ()<WKNavigationDelegate, WKUIDelegate>
 @property (nonatomic, strong) UIView                 *containerView;             //容器
@@ -24,8 +23,7 @@ typedef void(^alertPannelHandler)(void);
 @property (nonatomic, assign) BOOL                   terminate;                  //WebView是否异常终止
 @property (nonatomic, assign) BOOL                   showCloseNavLeftItem;
 @property (nonatomic, strong) NSMutableURLRequest    *request;                   //WebView入口请求
-@property (nonatomic, assign) BOOL                   alertPanelExeFlag;          //alert pannel当前生命周期内是否执行函数
-@property (nonatomic, strong) alertPannelHandler     alertAction;                //alert pannel执行存储
+@property (nonatomic, strong) dispatch_block_t       alertAction;                //alert pannel执行存储
 @end
 
 @implementation JXBWebViewController
@@ -415,11 +413,10 @@ typedef void(^alertPannelHandler)(void);
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message ? message : @"" preferredStyle:UIAlertControllerStyleAlert];
         [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             completionHandler();
-            self.alertPanelExeFlag = YES;
+            self.alertAction = nil;
         }]];
         [vc presentViewController:alert animated:YES completion:NULL];
-        self.alertPanelExeFlag = NO;
-        _alertAction = completionHandler;
+        self.alertAction = completionHandler;
     }else{
         completionHandler();
     }
@@ -577,10 +574,11 @@ typedef void(^alertPannelHandler)(void);
 }
 
 - (void)_appDidEnterBackgroundNotification {
-    if (_alertPanelExeFlag) { return ; }
-    _alertAction();
-    [UIApplication.sharedApplication.keyWindow.rootViewController dismissViewControllerAnimated:true completion:nil];
-
+    if (self.alertAction) {
+        self.alertAction();
+        self.alertAction = nil;
+        [UIApplication.sharedApplication.keyWindow.rootViewController dismissViewControllerAnimated:true completion:nil];
+    }
 }
 
 @end
