@@ -9,7 +9,6 @@
 #import <WebKit/WebKit.h>
 
 typedef NS_ENUM (NSInteger, CustomUserAgentType){
-    CustomUserAgentTypeDefault,     //使用系统默认的
     CustomUserAgentTypeReplace,     //替换所有UA
     CustomUserAgentTypeAppend,      //在原UA后面追加字符串
 };
@@ -23,6 +22,7 @@ typedef NS_ENUM (NSInteger, CustomUserAgentType){
  *  @param type            replace or append original UA
  *  @param customUserAgent    customUserAgent
  */
-- (void)syncCustomUserAgentWithType:(CustomUserAgentType)type customUserAgent:(NSString *)customUserAgent;
+- (void)syncCustomUserAgentWithType:(CustomUserAgentType)type
+                    customUserAgent:(NSString *)customUserAgent;
 
 @end
