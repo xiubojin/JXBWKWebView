@@ -49,9 +49,6 @@ static NSString* const FilteredNewPostKey = @"FilteredNewPostKey";
         
         [urlString replaceCharactersInRange:schemeRange withString:originScheme];
         
-        //http(s)://www.mocky.io/v2/5adef15a3300002500e4d6bb
-        //NSLog(@"urlString = %@",urlString);
-        
         //根据新的urlString生成新的request
         NSMutableURLRequest *newRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
         

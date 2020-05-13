@@ -14,7 +14,6 @@
                     customUserAgent:(NSString *)customUserAgent {
     
     if (!customUserAgent || customUserAgent.length <= 0) {
-        NSLog(@"WKWebView (SyncConfigUserAgent) config with invalid string");
         return;
     }
     

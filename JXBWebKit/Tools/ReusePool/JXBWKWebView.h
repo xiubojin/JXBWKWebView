@@ -12,7 +12,12 @@
 
 @interface JXBWKWebView : WKWebView<JXBWKWebViewReuseProtocol>
 
-@property(nonatomic, weak, readwrite) id holderObject;
+@property (nonatomic, weak, readwrite) id holderObject;
+@property (nonatomic, strong, readonly) NSDate *recycleDate;
+
++ (instancetype)webView;
+
++ (WKWebViewConfiguration *)defaultConfiguration;
 
 #pragma mark - load request
 - (void)jxb_loadRequestURLString:(NSString *)urlString;

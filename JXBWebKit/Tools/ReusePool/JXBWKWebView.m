@@ -12,9 +12,10 @@
 @implementation JXBWKWebView
 
 #pragma mark - Life Cycle
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
-    if(self){
+- (instancetype)initWithFrame:(CGRect)frame
+                configuration:(WKWebViewConfiguration *)configuration {
+    if (self = [super initWithFrame:frame configuration:configuration]) {
+        _recycleDate = NSDate.new;
         [self config];
     }
     return self;
@@ -65,61 +66,20 @@
 
 #pragma mark - Configuration
 - (void)config {
-    //0.UI
-    {
         self.backgroundColor = [UIColor clearColor];
         self.scrollView.backgroundColor = [UIColor clearColor];
-    }
-    
-    //1.注入脚本
-    {
-        NSString *bundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"JSResources" ofType:@"bundle"];
-        
-        NSString *scriptPath = [NSString stringWithFormat:@"%@/%@",bundlePath, @"JXBJSBridge.js"];
-        
-        NSString *bridgeJSString = [[NSString alloc] initWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:NULL];
-        
-        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:bridgeJSString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
-        
-        [self.configuration.userContentController addUserScript:userScript];
-    }
-    
-    //2.指定MessageHandler
-    {
-        [self.configuration.userContentController addScriptMessageHandler:[[WKCallNativeMethodMessageHandler alloc] init] name:@"WKNativeMethodMessage"];
-    }
-    
-    //3.视频播放相关
-    {
-        if ([self.configuration respondsToSelector:@selector(setAllowsInlineMediaPlayback:)]) {
-            [self.configuration setAllowsInlineMediaPlayback:YES];
-        }
-        
-        //视频播放
-        if (@available(iOS 10.0, *)) {
-            if ([self.configuration respondsToSelector:@selector(setMediaTypesRequiringUserActionForPlayback:)]){
-                [self.configuration setMediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypeNone];
-            }
-        } else if (@available(iOS 9.0, *)) {
-            if ( [self.configuration respondsToSelector:@selector(setRequiresUserActionForMediaPlayback:)]) {
-                [self.configuration setRequiresUserActionForMediaPlayback:NO];
-            }
-        } else {
-            if ( [self.configuration respondsToSelector:@selector(setMediaPlaybackRequiresUserAction:)]) {
-                [self.configuration setMediaPlaybackRequiresUserAction:NO];
-            }
-        }
-    }
 }
 
 #pragma mark - MSWKWebViewReuseProtocol
 //即将被复用时
 - (void)webViewWillReuse{
+    _recycleDate = nil;
     [self useExternalNavigationDelegate];
 }
 
 //被回收
 - (void)webViewEndReuse{
+    _recycleDate = NSDate.new;
     _holderObject = nil;
     self.scrollView.delegate = nil;
     
@@ -208,5 +168,54 @@
     [super unregisterSupportProtocolWithHTTP:supportHTTP customSchemeArray:customSchemeArray];
 }
 
+
++ (instancetype)webView {
+    JXBWKWebView *webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero
+                                                  configuration:[self defaultConfiguration]];
+    return webView;
+}
+
+
++ (WKWebViewConfiguration *)defaultConfiguration {
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    
+    NSString *bundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"JSResources" ofType:@"bundle"];
+    
+    NSString *scriptPath = [NSString stringWithFormat:@"%@/%@",bundlePath, @"JXBJSBridge.js"];
+    
+    NSString *bridgeJSString = [[NSString alloc] initWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:NULL];
+    
+    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:bridgeJSString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+    
+    [configuration.userContentController addUserScript:userScript];
+    
+    
+    
+    [configuration.userContentController addScriptMessageHandler:[[WKCallNativeMethodMessageHandler alloc] init] name:@"WKNativeMethodMessage"];
+    
+    
+    //3.视频播放相关
+    
+    if ([configuration respondsToSelector:@selector(setAllowsInlineMediaPlayback:)]) {
+        [configuration setAllowsInlineMediaPlayback:YES];
+    }
+    
+    //视频播放
+    if (@available(iOS 10.0, *)) {
+        if ([configuration respondsToSelector:@selector(setMediaTypesRequiringUserActionForPlayback:)]){
+            [configuration setMediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypeNone];
+        }
+    } else if (@available(iOS 9.0, *)) {
+        if ([configuration respondsToSelector:@selector(setRequiresUserActionForMediaPlayback:)]) {
+            [configuration setRequiresUserActionForMediaPlayback:NO];
+        }
+    } else {
+        if ([configuration respondsToSelector:@selector(setMediaPlaybackRequiresUserAction:)]) {
+            [configuration setMediaPlaybackRequiresUserAction:NO];
+        }
+    }
+    
+    return configuration;
+}
 
 @end

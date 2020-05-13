@@ -14,8 +14,8 @@
 
 @interface JXBWKWebViewPool()
 @property(nonatomic, strong, readwrite) dispatch_semaphore_t lock;
-@property(nonatomic, strong, readwrite) NSMutableSet<__kindof JXBWKWebView *> *visiableWebViewSet;
-@property(nonatomic, strong, readwrite) NSMutableSet<__kindof JXBWKWebView *> *reusableWebViewSet;
+@property(nonatomic, strong, readwrite) NSMutableArray<__kindof JXBWKWebView *> *visiableWebViewSet;
+@property(nonatomic, strong, readwrite) NSMutableArray<__kindof JXBWKWebView *> *reusableWebViewSet;
 @end
 
 @implementation JXBWKWebViewPool
@@ -41,14 +41,11 @@
 }
 
 - (instancetype)init{
-    self = [super init];
-    if(self){
+    if(self = [super init]){
         _prepare = YES;
-        _visiableWebViewSet = [NSSet set].mutableCopy;
-        _reusableWebViewSet = [NSSet set].mutableCopy;
-        
+        _visiableWebViewSet = [NSMutableArray array];
+        _reusableWebViewSet = [NSMutableArray array];
         _lock = dispatch_semaphore_create(1);
-        
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(_clearReusableWebViews) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
     }
@@ -58,9 +55,6 @@
 #pragma mark - Public Method
 - (__kindof JXBWKWebView *)getReusedWebViewForHolder:(id)holder{
     if (!holder) {
-        #if DEBUG
-        NSLog(@"MSWKWebViewPool must have a holder");
-        #endif
         return nil;
     }
     
@@ -71,13 +65,18 @@
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
     
     if (_reusableWebViewSet.count > 0) {
-        webView = (JXBWKWebView *)[_reusableWebViewSet anyObject];
-        [_reusableWebViewSet removeObject:webView];
-        [_visiableWebViewSet addObject:webView];
-        
-        [webView webViewWillReuse];
+        webView = [_reusableWebViewSet firstObject];
+        NSTimeInterval diff = [NSDate.new timeIntervalSinceDate:webView.recycleDate];
+        if (diff > 2.f) {
+            [_reusableWebViewSet removeObject:webView];
+            [_visiableWebViewSet addObject:webView];
+            [webView webViewWillReuse];
+        } else {
+            webView = [JXBWKWebView webView];
+            [_visiableWebViewSet addObject:webView];
+        }
     } else {
-        webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero configuration:[self webViewConfiguration]];
+        webView = [JXBWKWebView webView];
         [_visiableWebViewSet addObject:webView];
     }
     webView.holderObject = holder;
@@ -88,9 +87,7 @@
 }
 
 - (void)recycleReusedWebView:(__kindof JXBWKWebView *)webView{
-    if (!webView) {
-        return;
-    }
+    if (!webView) return;
     
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
     
@@ -100,7 +97,6 @@
         
         [_visiableWebViewSet removeObject:webView];
         [_reusableWebViewSet addObject:webView];
-        
     } else {
         if (![_reusableWebViewSet containsObject:webView]) {
             #if DEBUG
@@ -108,6 +104,7 @@
             #endif
         }
     }
+    
     dispatch_semaphore_signal(_lock);
 }
 
@@ -150,52 +147,11 @@
 - (void)_prepareReuseWebView {
     if (!_prepare) return;
     
+    __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        JXBWKWebView *webView = [[JXBWKWebView alloc] initWithFrame:CGRectZero configuration:[self webViewConfiguration]];
-        [self->_reusableWebViewSet addObject:webView];
+        JXBWKWebView *webView = [JXBWKWebView webView];
+        [weakSelf.reusableWebViewSet addObject:webView];
     });
-}
-
-- (WKWebViewConfiguration *)webViewConfiguration {
-    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    
-    NSString *bundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"JSResources" ofType:@"bundle"];
-    
-    NSString *scriptPath = [NSString stringWithFormat:@"%@/%@",bundlePath, @"JXBJSBridge.js"];
-    
-    NSString *bridgeJSString = [[NSString alloc] initWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:NULL];
-    
-    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:bridgeJSString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
-    
-    [configuration.userContentController addUserScript:userScript];
-    
-    
-    
-    [configuration.userContentController addScriptMessageHandler:[[WKCallNativeMethodMessageHandler alloc] init] name:@"WKNativeMethodMessage"];
-    
-    
-    //3.视频播放相关
-    
-    if ([configuration respondsToSelector:@selector(setAllowsInlineMediaPlayback:)]) {
-        [configuration setAllowsInlineMediaPlayback:YES];
-    }
-    
-    //视频播放
-    if (@available(iOS 10.0, *)) {
-        if ([configuration respondsToSelector:@selector(setMediaTypesRequiringUserActionForPlayback:)]){
-            [configuration setMediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypeNone];
-        }
-    } else if (@available(iOS 9.0, *)) {
-        if ([configuration respondsToSelector:@selector(setRequiresUserActionForMediaPlayback:)]) {
-            [configuration setRequiresUserActionForMediaPlayback:NO];
-        }
-    } else {
-        if ([configuration respondsToSelector:@selector(setMediaPlaybackRequiresUserAction:)]) {
-            [configuration setMediaPlaybackRequiresUserAction:NO];
-        }
-    }
-    
-    return configuration;
 }
 
 #pragma mark - Other
