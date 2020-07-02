@@ -310,7 +310,12 @@ static NSString *POSTRequest = @"POST";
     //是否需要拦截请求
     if (_needInterceptRequest) {
         [self interceptRequestWithNavigationAction:navigationAction decisionHandler:decisionHandler];
-    }else{
+    } else {
+        //wkwebview _blank问题。解决外部不可控网页问题的处理。
+        if (navigationAction.targetFrame == nil) {
+           [webView loadRequest:navigationAction.request];
+           decisionHandler(WKNavigationActionPolicyCancel);
+        }
         decisionHandler(WKNavigationActionPolicyAllow);
     }
 }
