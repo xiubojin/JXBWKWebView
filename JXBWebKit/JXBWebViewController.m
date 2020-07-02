@@ -115,7 +115,7 @@ static NSString *POSTRequest = @"POST";
 }
 
 - (void)fetchData {
-    if(!_request) return;
+    if((!_request) && (!_htmlString) && (!_fileURL)) return;
     [self.webView writeCookie:self.cookies completion:^{
         if (self.loadType == JXBWebViewLoadTypeNetRequest) {
             if(self.request) [self loadRequest:self.request];
