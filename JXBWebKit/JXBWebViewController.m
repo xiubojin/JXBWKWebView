@@ -24,6 +24,8 @@ static NSString *POSTRequest = @"POST";
 @property (nonatomic, assign) BOOL                   checkUrlCanOpen;
 @property (nonatomic, assign) BOOL                   terminate;
 @property (nonatomic, assign) JXBWebViewLoadType     loadType;
+@property(nonatomic, assign) BOOL canGoForward;
+@property(nonatomic, assign) BOOL canGoBack;
 @end
 
 @implementation JXBWebViewController
@@ -110,6 +112,8 @@ static NSString *POSTRequest = @"POST";
         [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     }
     [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
+    [_webView addObserver:self forKeyPath:@"canGoBack" options:NSKeyValueObservingOptionNew context:nil];
+    [_webView addObserver:self forKeyPath:@"canGoForward" options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:_webView];
     [self registerSupportProtocolWithHTTP:NO schemes:@[@"post", kWKWebViewReuseScheme] protocolClass:[JXBWKCustomProtocol class]];
 }
@@ -151,6 +155,11 @@ static NSString *POSTRequest = @"POST";
     }else if ([keyPath isEqualToString:@"title"]) {
         [self updateNavigationTitle];
         [self updateNavigationItems];
+    } else if ([keyPath isEqualToString:@"canGoBack"]) {
+        self.canGoBack= self.webView.canGoBack;
+        [self updateNavigationItems];
+    } else if ([keyPath isEqualToString:@"canGoForward"]) {
+        self.canGoForward = self.webView.canGoForward;
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -203,7 +212,7 @@ static NSString *POSTRequest = @"POST";
 
 //更新leftNavItems
 - (void)updateNavigationItems {
-    if (self.webView.canGoBack) {
+    if (self.webView.canGoBack || self.canGoBack) {
         if (_isRootController) {
             self.navigationItem.leftBarButtonItems = @[self.backItem];
         } else {
@@ -548,6 +557,8 @@ static NSString *POSTRequest = @"POST";
         [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
     }
     [_webView removeObserver:self forKeyPath:@"title"];
+    [_webView removeObserver:self forKeyPath:@"canGoBack"];
+    [_webView removeObserver:self forKeyPath:@"canGoForward"];
     if (!_terminate) {
         [[JXBWKWebViewPool sharedInstance] recycleReusedWebView:_webView];
     }
