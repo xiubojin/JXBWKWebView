@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F06FAEE2472805500CAABE7 /* CustomTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F06FAED2472805500CAABE7 /* CustomTwoViewController.m */; };
+		2F258E1124713CC4000DD625 /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F258E1024713CC4000DD625 /* CustomViewController.m */; };
 		2F5C9BE0211463C300DD0328 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9BDF211463C300DD0328 /* AppDelegate.m */; };
 		2F5C9BE3211463C300DD0328 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9BE2211463C300DD0328 /* ViewController.m */; };
 		2F5C9BE6211463C300DD0328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F5C9BE4211463C300DD0328 /* Main.storyboard */; };
@@ -52,6 +54,10 @@
 /* Begin PBXFileReference section */
 		183A696687D332D9AD8317F0 /* Pods-JXBWebKitProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXBWebKitProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXBWebKitProjectUITests/Pods-JXBWebKitProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BF3DA77B99E3D1B492F3266 /* Pods-JXBWebKitProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXBWebKitProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JXBWebKitProjectTests/Pods-JXBWebKitProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F06FAEC2472805500CAABE7 /* CustomTwoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTwoViewController.h; sourceTree = "<group>"; };
+		2F06FAED2472805500CAABE7 /* CustomTwoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTwoViewController.m; sourceTree = "<group>"; };
+		2F258E0F24713CC4000DD625 /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		2F258E1024713CC4000DD625 /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
 		2F5C9BDB211463C300DD0328 /* JXBWebKitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXBWebKitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5C9BDE211463C300DD0328 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F5C9BDF211463C300DD0328 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -170,6 +176,10 @@
 				2F5C9C142114656F00DD0328 /* H5EnterModel.m */,
 				2FDD43D2213E5F5C00F207CE /* TestWebViewController.h */,
 				2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */,
+				2F258E0F24713CC4000DD625 /* CustomViewController.h */,
+				2F258E1024713CC4000DD625 /* CustomViewController.m */,
+				2F06FAEC2472805500CAABE7 /* CustomTwoViewController.h */,
+				2F06FAED2472805500CAABE7 /* CustomTwoViewController.m */,
 			);
 			path = JXBWebKitProject;
 			sourceTree = "<group>";
@@ -488,12 +498,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F5C9C3A2115EF5000DD0328 /* Service_Good.m in Sources */,
+				2F258E1124713CC4000DD625 /* CustomViewController.m in Sources */,
 				2F5C9C402115EF6C00DD0328 /* GoodDetailController.m in Sources */,
 				2F5C9C122114653500DD0328 /* JXBNavigationController.m in Sources */,
 				2F5C9C372114737700DD0328 /* Service_location.m in Sources */,
 				2F5C9C342114736E00DD0328 /* Service_push.m in Sources */,
 				2F5C9BE3211463C300DD0328 /* ViewController.m in Sources */,
 				2F5C9C312114736600DD0328 /* Service_setting.m in Sources */,
+				2F06FAEE2472805500CAABE7 /* CustomTwoViewController.m in Sources */,
 				2F5C9C192114668700DD0328 /* User.m in Sources */,
 				2F5C9C1C2114669300DD0328 /* HybridViewController.m in Sources */,
 				2FDD43D4213E5F5C00F207CE /* TestWebViewController.m in Sources */,
@@ -679,7 +691,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.huber.test1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huber.test01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -700,7 +712,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.huber.test1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huber.test01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

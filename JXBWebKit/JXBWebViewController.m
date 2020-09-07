@@ -23,6 +23,7 @@ static NSString *POSTRequest = @"POST";
 @property (nonatomic, strong) UIProgressView         *progressView;
 @property (nonatomic, assign) BOOL                   checkUrlCanOpen;
 @property (nonatomic, assign) BOOL                   terminate;
+@property (nonatomic, assign) BOOL                   appeared;
 @property (nonatomic, assign) JXBWebViewLoadType     loadType;
 @end
 
@@ -70,6 +71,7 @@ static NSString *POSTRequest = @"POST";
         _webView = [[JXBWKWebViewPool sharedInstance] getReusedWebViewForHolder:self];
         [_webView useExternalNavigationDelegate];
         [_webView setMainNavigationDelegate:self];
+        _webView.allowsBackForwardNavigationGestures = _allowsBFNavigationGesture;
         _webView.UIDelegate = self;
     }
     return self;
@@ -96,20 +98,11 @@ static NSString *POSTRequest = @"POST";
 
 #pragma mark - UI & Fetch Data
 - (void)sutupUI {
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    if (_isRootController) {
-        self.navigationItem.leftBarButtonItems = nil;
-    } else {
-        self.navigationItem.leftBarButtonItem = self.backItem;
-    }
-    
-    //WebView
-    _webView.allowsBackForwardNavigationGestures = _allowsBFNavigationGesture;
-    if (_showProgressView) {
-        [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
-    }
+    _appeared = YES;
+    self.navigationItem.leftBarButtonItem = _isRootController ? nil : self.backItem;
+    if (_showProgressView) [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     [_webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:NULL];
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_webView];
     [self registerSupportProtocolWithHTTP:NO schemes:@[@"post", kWKWebViewReuseScheme] protocolClass:[JXBWKCustomProtocol class]];
 }
@@ -538,11 +531,11 @@ static NSString *POSTRequest = @"POST";
 }
 
 - (void)dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    if (_showProgressView) {
-        [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    if (_appeared) {
+        if (_showProgressView) [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+        [_webView removeObserver:self forKeyPath:@"title"];
     }
-    [_webView removeObserver:self forKeyPath:@"title"];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     if (!_terminate) {
         [[JXBWKWebViewPool sharedInstance] recycleReusedWebView:_webView];
     }

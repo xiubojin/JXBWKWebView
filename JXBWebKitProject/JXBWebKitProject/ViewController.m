@@ -13,6 +13,8 @@
 #import "H5EnterModel.h"
 #import "HybridViewController.h"
 #import "TestWebViewController.h"
+#import "CustomViewController.h"
+#import "CustomTwoViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -87,6 +89,18 @@
     model9.detailTitle = @"https://v.qq.com";
     model9.url = @"https://v.qq.com";
     [self.models addObject:model9];
+    
+    H5EnterModel *model10 = [[H5EnterModel alloc] init];
+    model10.title = @"测试启动时间";
+    model10.detailTitle = @"";
+    model10.url = @"";
+    [self.models addObject:model10];
+    
+    H5EnterModel *model11 = [[H5EnterModel alloc] init];
+    model11.title = @"测试启动时间2";
+    model11.detailTitle = @"";
+    model11.url = @"";
+    [self.models addObject:model11];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -123,7 +137,7 @@
         request.HTTPBody = [str dataUsingEncoding:NSUTF8StringEncoding];
         
         JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURLRequest:request];
-        [self.navigationController pushViewController:webVC animated:YES];
+//        [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 2) {
         JXBWebViewController *webVC = [[JXBWebViewController alloc] initWithURLString:model.url];
         [self.navigationController pushViewController:webVC animated:YES];
@@ -135,6 +149,12 @@
         [self.navigationController pushViewController:webVC animated:YES];
     }else if (indexPath.row == 5) {
         [self requestOfflinePkg];
+    } else if (indexPath.row == 9) {
+        CustomViewController *webVC = [[CustomViewController alloc] init];
+        [self.navigationController pushViewController:webVC animated:YES];
+    } else if (indexPath.row == 10) {
+        CustomTwoViewController *webVC = [[CustomTwoViewController alloc] init];
+        [self.navigationController pushViewController:webVC animated:YES];
     }
 }
 
