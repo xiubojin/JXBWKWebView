@@ -40,8 +40,6 @@
 @property (nonatomic, weak)   id<JXBWebViewControllerDelegate>  delegate;
 @property (nonatomic, strong) NSArray<NSHTTPCookie *>           *cookies;
 @property (nonatomic, strong) UIColor                           *progressTintColor;
-@property (nonatomic, copy) NSString                            *backImagePath;
-@property (nonatomic, copy) NSString                            *closeImagePath;
 @property (nonatomic, strong) UIBarButtonItem                   *backItem;
 @property (nonatomic, strong) UIBarButtonItem                   *closeItem;
 @property (nonatomic, copy) NSURLRequest                        *request;

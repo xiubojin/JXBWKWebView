@@ -214,10 +214,7 @@ static NSString *POSTRequest = @"POST";
 //返回item
 - (UIBarButtonItem *)backItem {
     if (_backItem) return _backItem;
-    //NSString *backImgPath = [_resourcePath stringByAppendingString:@"/webView_back"];
-    NSString *bundlePath = _backImagePath ?: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JSResources.bundle"];
-    NSString *backImgPath = [bundlePath stringByAppendingPathComponent:@"webView_back"];
-    UIImage *backImage = [UIImage imageNamed:backImgPath];
+    UIImage *backImage = [self _readImageWithName:@"webView_back"];
     _backItem = [[UIBarButtonItem alloc] initWithImage:backImage
                                                  style:UIBarButtonItemStylePlain
                                                 target:self
@@ -228,10 +225,7 @@ static NSString *POSTRequest = @"POST";
 //关闭item
 - (UIBarButtonItem *)closeItem {
     if (_closeItem) return _closeItem;
-    //NSString *closeImgPath = [_resourcePath stringByAppendingString:@"/webView_close"];
-    NSString *bundlePath = _closeImagePath ?: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"JSResources.bundle"];
-    NSString *closeImgPath = [bundlePath stringByAppendingPathComponent:@"webView_close"];
-    UIImage *closeImage = [UIImage imageNamed:closeImgPath];
+    UIImage *closeImage = [self _readImageWithName:@"webView_close"];
     _closeItem = [[UIBarButtonItem alloc] initWithImage:closeImage
                                                   style:UIBarButtonItemStylePlain
                                                  target:self
@@ -239,6 +233,12 @@ static NSString *POSTRequest = @"POST";
     return _closeItem;
 }
 
+- (UIImage *)_readImageWithName:(NSString *)imageNamed {
+    NSBundle *bundle = [NSBundle bundleForClass:[JXBWebViewController class]];
+    NSURL *URL = [bundle URLForResource:@"JSResources" withExtension:@"bundle"];
+    NSBundle *curBundle = [NSBundle bundleWithURL:URL];
+    return [UIImage imageNamed:imageNamed inBundle:curBundle compatibleWithTraitCollection:nil];
+}
 
 - (void)backItemClick:(UIBarButtonItem *)sender {
     if ([self.webView canGoBack]) {
