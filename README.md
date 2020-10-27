@@ -122,7 +122,7 @@ export PATH=$PATH:$GOBIN
 
 ### 图解
 
-![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png)
+![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png =200x200)
 
 
 
@@ -144,9 +144,9 @@ function getPushAuthState() {
              "name" : "zhangsan"
            },
            callback : {
-           success : function(result){document.getElementById('message').innerHTML = result;},
-           fail : function(result){document.getElementById('message').innerHTML = result;},
-           progress : function(result){document.getElementById('message').innerHTML = result;},
+              success : function(result){document.getElementById('message').innerHTML = result;},
+              fail : function(result){document.getElementById('message').innerHTML = result;},
+              progress : function(result){document.getElementById('message').innerHTML = result;},
            }
 	});
 }
