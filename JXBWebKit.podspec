@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JXBWebKit"
-  s.version      = "1.2.1"
+  s.version      = "1.3.0"
   s.summary      = "JXBWKWebView based on WKWebView"
 
   # This description is used to generate tags and improve search results.

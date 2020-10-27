@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JXBWKWebView.h"
 #import "WKWebViewExtension.h"
+#import "JXBWebViewNetworkInterceptor.h"
 @class JXBWebViewController;
 
 #ifndef JXB_REQUIRES_SUPER
@@ -46,7 +47,6 @@
 @property (nonatomic, copy) NSString                            *htmlString;
 @property (nonatomic, copy) NSURL                               *fileURL;
 @property (nonatomic, assign) BOOL                              showProgressView;
-@property (nonatomic, assign) BOOL                              needInterceptRequest;
 @property (nonatomic, assign) BOOL                              allowsBFNavigationGesture;
 @property (nonatomic, assign) BOOL                              isRootController;
 @property (nonatomic, readonly, getter=canGoBack)    BOOL       canGoBack;

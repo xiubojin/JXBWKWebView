@@ -10,6 +10,7 @@
 #import "JXBWebViewController.h"
 #import "UIProgressView+WKWebView.h"
 #import "JXBWKCustomProtocol.h"
+
 typedef enum : NSUInteger {
     JXBWebViewLoadTypeNetRequest,    //网络请求
     JXBWebViewLoadTypeHTMLString,    //HTML模板
@@ -66,7 +67,6 @@ static NSString *POSTRequest = @"POST";
     if (self = [super init]) {
         _allowsBFNavigationGesture  = NO;
         _showProgressView           = YES;
-        _needInterceptRequest       = NO;
         _terminate                  = NO;
         _webView = [[JXBWKWebViewPool sharedInstance] getReusedWebViewForHolder:self];
         [_webView useExternalNavigationDelegate];
@@ -300,10 +300,12 @@ static NSString *POSTRequest = @"POST";
     
     [self updateNavigationItems];
     
-    //是否需要拦截请求
-    if (_needInterceptRequest) {
-        [self interceptRequestWithNavigationAction:navigationAction decisionHandler:decisionHandler];
-    }else{
+    //是否需要拦截
+    if ([JXBWebViewNetworkInterceptor sharedInstance].shouldIntercept) {
+        [[JXBWebViewNetworkInterceptor sharedInstance] handleInterceptorDataWithWebView:webView
+                                                        decidePolicyForNavigationAction:navigationAction
+                                                                        decisionHandler:decisionHandler];
+    } else {
         decisionHandler(WKNavigationActionPolicyAllow);
     }
 }

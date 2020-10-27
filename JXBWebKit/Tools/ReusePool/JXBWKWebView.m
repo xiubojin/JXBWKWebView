@@ -27,7 +27,6 @@
         [self.URL.absoluteString isEqualToString:kWKWebViewReuseUrlString]) {
         return NO;
     }
-    
     return [super canGoBack];
 }
 
@@ -36,38 +35,30 @@
         [self.URL.absoluteString isEqualToString:kWKWebViewReuseUrlString]) {
         return NO;
     }
-    
     return [super canGoForward];
 }
-
 
 - (void)dealloc{
     //清除handler
     [self.configuration.userContentController removeScriptMessageHandlerForName:@"WKNativeMethodMessage"];
-    
     //清除UserScript
     [self.configuration.userContentController removeAllUserScripts];
-    
     //停止加载
     [self stopLoading];
-    
     //清空Dispatcher
     [self unUseExternalNavigationDelegate];
-    
     //清空相关delegate
     [super setUIDelegate:nil];
     [super setNavigationDelegate:nil];
-    
     //持有者置为nil
     _holderObject = nil;
-    
     NSLog(@"MSWKWebView dealloc");
 }
 
 #pragma mark - Configuration
 - (void)config {
-        self.backgroundColor = [UIColor clearColor];
-        self.scrollView.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
+    self.scrollView.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - MSWKWebViewReuseProtocol
@@ -82,21 +73,12 @@
     _recycleDate = NSDate.new;
     _holderObject = nil;
     self.scrollView.delegate = nil;
-    
     [self stopLoading];
-    
     [self unUseExternalNavigationDelegate];
-    
     [super setUIDelegate:nil];
-    
     [super clearBrowseHistory];
-
     [self loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kWKWebViewReuseUrlString]]];
-    
-    //删除所有的回调事件
-    [self evaluateJavaScript:@"JSCallBackMethodManager.removeAllCallBacks();" completionHandler:^(id _Nullable data, NSError * _Nullable error) {
-
-    }];
+    [self evaluateJavaScript:@"JSCallBackMethodManager.removeAllCallBacks();" completionHandler:nil];
 }
 
 #pragma mark - public method
@@ -110,18 +92,14 @@
 
 - (void)jxb_loadRequestURL:(NSURL *)url cookie:(NSDictionary *)params {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    
     __block NSMutableString *cookieStr = [NSMutableString string];
     if (params) {
         [params enumerateKeysAndObjectsUsingBlock:^(NSString* _Nonnull key, NSString* _Nonnull value, BOOL * _Nonnull stop) {
              [cookieStr appendString:[NSString stringWithFormat:@"%@ = %@;", key, value]];
         }];
     }
-    
-    if (cookieStr.length > 1)[cookieStr deleteCharactersInRange:NSMakeRange(cookieStr.length - 1, 1)];
-    
+    if (cookieStr.length > 1) [cookieStr deleteCharactersInRange:NSMakeRange(cookieStr.length - 1, 1)];
     [request addValue:cookieStr forHTTPHeaderField:@"Cookie"];
-    
     [self jxb_loadRequest:request.copy];
 }
 
@@ -147,11 +125,7 @@
 + (void)jxb_registerProtocolWithHTTP:(BOOL)supportHTTP
                   customSchemeArray:(NSArray<NSString *> *)customSchemeArray
                    urlProtocolClass:(Class)urlProtocolClass {
-    
-    if (!urlProtocolClass) {
-        return;
-    }
-    
+    if (!urlProtocolClass) return;
     [NSURLProtocol registerClass:urlProtocolClass];
     [super registerSupportProtocolWithHTTP:supportHTTP customSchemeArray:customSchemeArray];
 }
@@ -159,11 +133,7 @@
 + (void)jxb_unregisterProtocolWithHTTP:(BOOL)supportHTTP
                     customSchemeArray:(NSArray<NSString *> *)customSchemeArray
                      urlProtocolClass:(Class)urlProtocolClass {
-    
-    if (!urlProtocolClass) {
-        return;
-    }
-    
+    if (!urlProtocolClass) return;
     [NSURLProtocol unregisterClass:urlProtocolClass];
     [super unregisterSupportProtocolWithHTTP:supportHTTP customSchemeArray:customSchemeArray];
 }
@@ -178,29 +148,15 @@
 
 + (WKWebViewConfiguration *)defaultConfiguration {
     WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    
     NSString *bundlePath = [[NSBundle bundleForClass:self.class] pathForResource:@"JSResources" ofType:@"bundle"];
-    
     NSString *scriptPath = [NSString stringWithFormat:@"%@/%@",bundlePath, @"JXBJSBridge.js"];
-    
     NSString *bridgeJSString = [[NSString alloc] initWithContentsOfFile:scriptPath encoding:NSUTF8StringEncoding error:NULL];
-    
     WKUserScript *userScript = [[WKUserScript alloc] initWithSource:bridgeJSString injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
-    
     [configuration.userContentController addUserScript:userScript];
-    
-    
-    
     [configuration.userContentController addScriptMessageHandler:[[WKCallNativeMethodMessageHandler alloc] init] name:@"WKNativeMethodMessage"];
-    
-    
-    //3.视频播放相关
-    
     if ([configuration respondsToSelector:@selector(setAllowsInlineMediaPlayback:)]) {
         [configuration setAllowsInlineMediaPlayback:YES];
     }
-    
-    //视频播放
     if (@available(iOS 10.0, *)) {
         if ([configuration respondsToSelector:@selector(setMediaTypesRequiringUserActionForPlayback:)]){
             [configuration setMediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypeNone];
@@ -214,7 +170,6 @@
             [configuration setMediaPlaybackRequiresUserAction:NO];
         }
     }
-    
     return configuration;
 }
 

@@ -11,8 +11,6 @@
 
 @interface WKAppManager : NSObject
 
-+ (instancetype)sharedInstance;
-
 + (__kindof UINavigationController *)currentNavigationController;
 
 @end

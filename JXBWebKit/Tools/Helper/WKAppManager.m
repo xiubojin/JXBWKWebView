@@ -33,15 +33,6 @@ FOUNDATION_STATIC_INLINE UIViewController * WKCurrentViewController() {
 
 @implementation WKAppManager
 
-+ (instancetype)sharedInstance {
-    static WKAppManager *appManager = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        appManager = [[WKAppManager alloc] init];
-    });
-    return appManager;
-}
-
 + (__kindof UINavigationController *)currentNavigationController {
     return WKCurrentViewController().navigationController;
 }

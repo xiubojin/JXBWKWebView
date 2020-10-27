@@ -28,6 +28,7 @@
 		2F5C9C3A2115EF5000DD0328 /* Service_Good.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C392115EF5000DD0328 /* Service_Good.m */; };
 		2F5C9C3D2115EF6100DD0328 /* GoodListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C3C2115EF6100DD0328 /* GoodListController.m */; };
 		2F5C9C402115EF6C00DD0328 /* GoodDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5C9C3F2115EF6C00DD0328 /* GoodDetailController.m */; };
+		2F9B0D8A2547C1C40099CF2A /* IneterceptorRequsetHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B0D892547C1C40099CF2A /* IneterceptorRequsetHandler.m */; };
 		2FDD43D4213E5F5C00F207CE /* TestWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */; };
 		7EBDD8166B8D82D44C00071B /* libPods-JXBWebKitProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3EA6EBD43AFCB5CA608316C /* libPods-JXBWebKitProject.a */; };
 		88D2D7D00AE0ECF8692DEECB /* libPods-JXBWebKitProjectUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AAC278F6DEEE1A531950BC /* libPods-JXBWebKitProjectUITests.a */; };
@@ -95,6 +96,8 @@
 		2F5C9C3C2115EF6100DD0328 /* GoodListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodListController.m; sourceTree = "<group>"; };
 		2F5C9C3E2115EF6C00DD0328 /* GoodDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodDetailController.h; sourceTree = "<group>"; };
 		2F5C9C3F2115EF6C00DD0328 /* GoodDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodDetailController.m; sourceTree = "<group>"; };
+		2F9B0D882547C1C40099CF2A /* IneterceptorRequsetHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IneterceptorRequsetHandler.h; sourceTree = "<group>"; };
+		2F9B0D892547C1C40099CF2A /* IneterceptorRequsetHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IneterceptorRequsetHandler.m; sourceTree = "<group>"; };
 		2FDD43D2213E5F5C00F207CE /* TestWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestWebViewController.h; sourceTree = "<group>"; };
 		2FDD43D3213E5F5C00F207CE /* TestWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestWebViewController.m; sourceTree = "<group>"; };
 		30AAC278F6DEEE1A531950BC /* libPods-JXBWebKitProjectUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JXBWebKitProjectUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +183,8 @@
 				2F258E1024713CC4000DD625 /* CustomViewController.m */,
 				2F06FAEC2472805500CAABE7 /* CustomTwoViewController.h */,
 				2F06FAED2472805500CAABE7 /* CustomTwoViewController.m */,
+				2F9B0D882547C1C40099CF2A /* IneterceptorRequsetHandler.h */,
+				2F9B0D892547C1C40099CF2A /* IneterceptorRequsetHandler.m */,
 			);
 			path = JXBWebKitProject;
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				2F5C9C372114737700DD0328 /* Service_location.m in Sources */,
 				2F5C9C342114736E00DD0328 /* Service_push.m in Sources */,
 				2F5C9BE3211463C300DD0328 /* ViewController.m in Sources */,
+				2F9B0D8A2547C1C40099CF2A /* IneterceptorRequsetHandler.m in Sources */,
 				2F5C9C312114736600DD0328 /* Service_setting.m in Sources */,
 				2F06FAEE2472805500CAABE7 /* CustomTwoViewController.m in Sources */,
 				2F5C9C192114668700DD0328 /* User.m in Sources */,
