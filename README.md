@@ -122,7 +122,7 @@ export PATH=$PATH:$GOBIN
 
 ### 图解
 
-![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png =200x200)
+![image](https://github.com/xiubojin/JXBWebKit/blob/master/doc_imgs/share02.png)
 
 
 
