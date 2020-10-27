@@ -193,12 +193,14 @@
                 });
             }
         }else{
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"请部署接口服务" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"请部署接口服务，步骤见文档" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *action = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
 
-            }];
-            [alertController addAction:action];
-            [self presentViewController:alertController animated:YES completion:nil];
+                }];
+                [alertController addAction:action];
+                [self presentViewController:alertController animated:YES completion:nil];
+            });
         }
     }];
 
