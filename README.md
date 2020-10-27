@@ -173,9 +173,9 @@ function getPushAuthState() {
 ```objective-c
 //获取推送权限状态
 - (void)func_getAuthorityState:(NSDictionary *)param {
-  	//获取id
+    //获取id
     NSString *ID = param[@"id"];
-  	//获取name
+    //获取name
     NSString *name = param[@"name"];
     
     BOOL isOpen = NO;
