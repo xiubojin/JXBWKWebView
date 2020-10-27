@@ -174,11 +174,11 @@ function getPushAuthState() {
 //获取推送权限状态
 - (void)func_getAuthorityState:(NSDictionary *)param {
   	//获取id
-  	NSString *ID = param[@"id"];
+    NSString *ID = param[@"id"];
   	//获取name
-  	NSString *name = param[@"name"];
+    NSString *name = param[@"name"];
     
-	  BOOL isOpen = NO;
+    BOOL isOpen = NO;
     UIUserNotificationSettings *setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
     if (setting.types != UIUserNotificationTypeNone) {
         isOpen = YES;
