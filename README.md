@@ -37,7 +37,7 @@ pod 'JXBWebKit', '~> 1.3.0'
 
 ## 提供的功能
 
-1.`WebView`适配不通机型.
+1.`WebView`适配不同机型.
 
 2.`UI`支持（进度条、进度条颜色、back&close按钮）.
 
